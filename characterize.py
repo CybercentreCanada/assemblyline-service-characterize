@@ -15,7 +15,7 @@ class Characterize(ServiceBase):
     SERVICE_CATEGORY = 'Static Analysis'
     SERVICE_DESCRIPTION = "Partitions the file and calculates visual entropy for each partition."
     SERVICE_ENABLED = True
-    SERVICE_REVISION = ServiceBase.parse_revision('$Id: b605ff7747fa3638fab5e7e67045485dd0f00fb6 $')
+    SERVICE_REVISION = ServiceBase.parse_revision('$Id$')
     SERVICE_VERSION = '1'
     SERVICE_CPU_CORES = 0.25
     SERVICE_RAM_MB = 256
