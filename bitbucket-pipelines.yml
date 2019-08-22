@@ -3,6 +3,10 @@ options:
   max-time: 5
 
 pipelines:
+  default:
+    - step:
+        script:
+          - echo 'In the future, Python tests will be run here.'
   tags:
     v*:
       - step:
