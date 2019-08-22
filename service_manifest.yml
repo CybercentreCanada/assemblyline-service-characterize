@@ -1,12 +1,12 @@
-name: ExampleService
+name: Characterize
 version: 1
-description: ALv4 Service Example
+description: Partitions the file and calculates visual entropy for each partition.
 
 accepts: .*
 rejects: empty|metadata/.*
 
 stage: CORE
-category: Uncategorized
+category: Static Analysis
 
 file_required: true
 timeout: 60
@@ -17,36 +17,12 @@ install_by_default: true
 is_external: false
 licence_count: 0
 supported_platforms: [linux]
-cpu_cores: 1
-ram_mb: 1024
+cpu_cores: 0.25
+ram_mb: 256
 
 config: {}
 
 submission_params: []
 
-heuristics:
-  - description: This is a Heuristic for ExampleService.
-    filetype: pdf
-    heur_id: AL_EXAMPLESERVICE_1
-    name: Example Service Heuristic 1
-    score: 500
-  - description: This is a Heuristic for ExampleService.
-    filetype: exe
-    heur_id: AL_EXAMPLESERVICE_2
-    name: Example Service Heuristic 2
-    score: 1000
-
 docker_config:
-  image: cccs/alsvc_exampleservice:latest
-
-update_config:
-  method: run
-  sources:
-    - uri: https://file-examples.com/wp-content/uploads/2017/02/zip_2MB.zip
-      name: sample_2mb_file
-    - uri: https://file-examples.com/wp-content/uploads/2017/02/zip_5MB.zip
-      name: sample_5mb_file
-  update_interval_seconds: 300
-  run_options:
-    image: cccs/assemblyline_dev:latest
-    command: python3 -m assemblyline_core.updater.url_update
+  image: cccs/alsvc_characterize:latest

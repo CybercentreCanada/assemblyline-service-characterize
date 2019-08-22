@@ -1,8 +1,8 @@
-from assemblyline.common.entropy import calculate_partition_entropy
-from assemblyline.al.common.result import Result, ResultSection, SCORE, TEXT_FORMAT
-from assemblyline.al.service.base import ServiceBase
-
 import json
+
+from assemblyline.common.entropy import calculate_partition_entropy
+from assemblyline_v4_service.common.base import ServiceBase
+from assemblyline_v4_service.common.result import Result, ResultSection, BODY_FORMAT
 
 
 class Characterize(ServiceBase):
@@ -10,21 +10,11 @@ class Characterize(ServiceBase):
 
     Currently characterize only generates file partition entropy data.
     """
-
-    SERVICE_ACCEPTS = '.*'
-    SERVICE_CATEGORY = 'Static Analysis'
-    SERVICE_DESCRIPTION = "Partitions the file and calculates visual entropy for each partition."
-    SERVICE_ENABLED = True
-    SERVICE_REVISION = ServiceBase.parse_revision('$Id$')
-    SERVICE_VERSION = '1'
-    SERVICE_CPU_CORES = 0.25
-    SERVICE_RAM_MB = 256
-
-    def __init__(self, cfg=None):
-        super(Characterize, self).__init__(cfg)
+    def __init__(self, config=None):
+        super(Characterize, self).__init__(config)
 
     def execute(self, request):
-        path = request.download()
+        path = request.download_file()
         with open(path, 'rb') as fin:
             (entropy, part_entropies) = calculate_partition_entropy(fin)
 
@@ -36,11 +26,10 @@ class Characterize(ServiceBase):
             }
         }
         section = ResultSection(
-            SCORE.NULL, 
-            'Entropy.\tEntire File: {}'.format(round(entropy, 3)),
-            self.SERVICE_CLASSIFICATION,
-            body_format=TEXT_FORMAT.GRAPH_DATA,
-            body=json.dumps(entropy_graph_data))
+            title_text=f"File entropy: {round(entropy, 3)}",
+            body_format=BODY_FORMAT.GRAPH_DATA,
+            body=json.dumps(entropy_graph_data)
+        )
         result = Result()
         result.add_section(section)
         request.result = result
