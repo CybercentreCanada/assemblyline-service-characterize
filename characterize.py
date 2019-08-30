@@ -14,7 +14,7 @@ class Characterize(ServiceBase):
         super(Characterize, self).__init__(config)
 
     def execute(self, request):
-        path = request.download_file()
+        path = request.file_path
         with open(path, 'rb') as fin:
             (entropy, part_entropies) = calculate_partition_entropy(fin)
 

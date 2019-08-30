@@ -1,1 +1,1 @@
-from characterize import Characterize
+from .characterize import Characterize
