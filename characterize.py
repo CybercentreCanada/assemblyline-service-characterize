@@ -25,11 +25,8 @@ class Characterize(ServiceBase):
                 'values': part_entropies
             }
         }
-        section = ResultSection(
-            title_text=f"File entropy: {round(entropy, 3)}",
-            body_format=BODY_FORMAT.GRAPH_DATA,
-            body=json.dumps(entropy_graph_data)
-        )
+
         result = Result()
-        result.add_section(section)
+        ResultSection(f"File entropy: {round(entropy, 3)}", parent=result, body_format=BODY_FORMAT.GRAPH_DATA,
+                      body=json.dumps(entropy_graph_data))
         request.result = result
