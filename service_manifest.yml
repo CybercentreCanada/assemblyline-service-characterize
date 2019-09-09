@@ -23,6 +23,6 @@ config: {}
 submission_params: []
 
 docker_config:
-  image: cccs/alsvc_characterize:latest
+  image: cccs/assemblyline-service-characterize:latest
   cpu_cores: 0.25
   ram_mb: 256
