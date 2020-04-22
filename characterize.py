@@ -191,15 +191,15 @@ class Characterize(ServiceBase):
                              if v and k not in ["SourceFile", "ExifToolVersion", "FileName", "Directory", "FileSize",
                                                 "FileModifyDate", "FileAccessDate", "FileInodeChangeDate",
                                                 "FilePermissions", "FileType", "FileTypeExtension", "MIMEType"]}
-
-                e_res = ResultSection(f"Metadata extracted by ExifTool",
-                                      body=json.dumps(exif_body), body_format=BODY_FORMAT.KEY_VALUE,
-                                      parent=request.result)
-                for k, v in exif_body.items():
-                    tag_type = TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}).get(k, None) or \
-                               TAG_MAP.get(None, {}).get(k, None)
-                    if tag_type:
-                        e_res.add_tag(tag_type, v)
+                if exif_body:
+                    e_res = ResultSection(f"Metadata extracted by ExifTool",
+                                          body=json.dumps(exif_body), body_format=BODY_FORMAT.KEY_VALUE,
+                                          parent=request.result)
+                    for k, v in exif_body.items():
+                        tag_type = TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}).get(k, None) or \
+                                   TAG_MAP.get(None, {}).get(k, None)
+                        if tag_type:
+                            e_res.add_tag(tag_type, v)
 
     def parse_link(self, parent_res, path):
         with open(path, "rb") as fh:
