@@ -1,5 +1,5 @@
 name: Characterize
-version: 1
+version: $SERVICE_TAG
 description: Partitions the file and calculates visual entropy for each partition.
 
 accepts: .*
@@ -28,6 +28,6 @@ heuristics:
     description: Found a suspicious command line that calls out to a URL
 
 docker_config:
-  image: ${REGISTRY}cccs/assemblyline-service-characterize:latest
+  image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG
   cpu_cores: 0.5
   ram_mb: 384
