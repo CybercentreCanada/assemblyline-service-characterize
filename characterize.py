@@ -60,6 +60,8 @@ TAG_MAP = {
     }
 }
 
+BAD_LINK_RE = re.compile("http[s]?://|powershell|cscript|wscript|mshta|<script")
+
 
 def build_key(input_string):
     list_string = list(input_string)
@@ -102,11 +104,9 @@ def get_type_val(data, src_name):
 class Characterize(ServiceBase):
     def __init__(self, config=None):
         super(Characterize, self).__init__(config)
-        self.bad_link_re = None
 
     def start(self):
         hachoir_config.quiet = True
-        self.bad_link_re = re.compile("http[s]?://|powershell|cscript|wscript|mshta|<script")
 
     def execute(self, request):
         request.result = Result()
@@ -216,7 +216,7 @@ class Characterize(ServiceBase):
         rp = metadata.get("RELATIVE_PATH", "").strip()
         nn = metadata.get("NetName", "").strip()
         cla = metadata.get("COMMAND_LINE_ARGUMENTS", "").strip()
-        s = self.bad_link_re.search(cla.lower())
+        s = BAD_LINK_RE.search(cla.lower())
         if s:
             res.set_heuristic(1)
         res.add_tag(tag_type="file.name.extracted", value=(bp or rp or nn).rsplit("\\")[-1])
