@@ -180,11 +180,9 @@ class Characterize(ServiceBase):
                                 res.add_tag(t_type, t_val)
 
         # 4. Get Exiftool Metadata
-        exif_proc = subprocess.Popen(["exiftool", "-j", request.file_path],
-                                     stderr=subprocess.PIPE, stdout=subprocess.PIPE)
-        stdout, _ = exif_proc.communicate()
-        exif_data = json.loads(stdout.decode('utf-8'))
-        if exif_data:
+        exif = subprocess.run(["exiftool", "-j", request.file_path], capture_output=True, check=False)
+        if exif.stdout:
+            exif_data = json.loads(exif.stdout.decode('utf-8'))
             res_data = exif_data[0]
             if "Error" not in res_data:
                 exif_body = {build_key(k): v for k, v in res_data.items()
@@ -192,7 +190,7 @@ class Characterize(ServiceBase):
                                                 "FileModifyDate", "FileAccessDate", "FileInodeChangeDate",
                                                 "FilePermissions", "FileType", "FileTypeExtension", "MIMEType"]}
                 if exif_body:
-                    e_res = ResultSection(f"Metadata extracted by ExifTool",
+                    e_res = ResultSection("Metadata extracted by ExifTool",
                                           body=json.dumps(exif_body), body_format=BODY_FORMAT.KEY_VALUE,
                                           parent=request.result)
                     for k, v in exif_body.items():
