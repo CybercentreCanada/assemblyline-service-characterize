@@ -182,7 +182,7 @@ class Characterize(ServiceBase):
         # 4. Get Exiftool Metadata
         exif = subprocess.run(["exiftool", "-j", request.file_path], capture_output=True, check=False)
         if exif.stdout:
-            exif_data = json.loads(exif.stdout.decode('utf-8'))
+            exif_data = json.loads(exif.stdout.decode('utf-8', errors="ignore"))
             res_data = exif_data[0]
             if "Error" not in res_data:
                 exif_body = {build_key(k): v for k, v in res_data.items()
