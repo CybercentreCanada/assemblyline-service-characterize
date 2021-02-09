@@ -32,5 +32,5 @@ stages:
         docker run -v `pwd`/test/:/opt/al_service/test/ cccs/assemblyline-service-characterize:$TAG bash -c 'pip install -U -r test/requirements.txt; pytest'
       displayName: Test containers
     - script: |
-        docker push cccs/assemblyline-service-characterize
+        docker push cccs/assemblyline-service-characterize --all-tags
       displayName: Deploy to Docker Hub
