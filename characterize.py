@@ -4,6 +4,7 @@ import json
 import re
 import subprocess
 import hachoir.core.config as hachoir_config
+from hachoir.core.log import log as hachoir_logger, Log
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
@@ -14,7 +15,6 @@ from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.result import Result, ResultSection, BODY_FORMAT
 
 from parse_lnk import decode_lnk
-
 
 TAG_MAP = {
     'ole2': {
@@ -102,11 +102,24 @@ def get_type_val(data, src_name):
 #                  Scan Execution Class                 #
 #########################################################
 class Characterize(ServiceBase):
+    def hachoir_logger_callback(self, level, prefix, _text, ctxt):
+        log = f"[{ctxt}] {_text}" if ctxt else _text
+        log = f"{prefix}: {log}"
+        if Log.LOG_INFO == level:
+            self.log.info(log)
+        elif Log.LOG_WARN == level:
+            self.log.warning(log)
+        elif Log.LOG_ERROR == level:
+            self.log.error(log)
+
     def __init__(self, config=None):
         super(Characterize, self).__init__(config)
 
     def start(self):
         hachoir_config.quiet = True
+        # Don't print to stdout, use our logger via callback
+        hachoir_logger.use_print = False
+        hachoir_logger.on_new_message = self.hachoir_logger_callback
 
     def execute(self, request):
         request.result = Result()
@@ -195,7 +208,7 @@ class Characterize(ServiceBase):
                                           parent=request.result)
                     for k, v in exif_body.items():
                         tag_type = TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}).get(k, None) or \
-                                   TAG_MAP.get(None, {}).get(k, None)
+                            TAG_MAP.get(None, {}).get(k, None)
                         if tag_type:
                             e_res.add_tag(tag_type, v)
 
@@ -222,7 +235,7 @@ class Characterize(ServiceBase):
 
         for k, v in body_output.items():
             tag_type = TAG_MAP.get("LNK", {}).get(k, None) or \
-                       TAG_MAP.get(None, {}).get(k, None)
+                TAG_MAP.get(None, {}).get(k, None)
             if tag_type:
                 res.add_tag(tag_type, v)
 
