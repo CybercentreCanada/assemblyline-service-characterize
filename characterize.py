@@ -103,8 +103,7 @@ def get_type_val(data, src_name):
 #########################################################
 class Characterize(ServiceBase):
     def hachoir_logger_callback(self, level, prefix, _text, ctxt):
-        log = f"[{ctxt}] {_text}" if ctxt else _text
-        log = f"{prefix}: {log}"
+        log = f"{prefix}: {_text}"
         if Log.LOG_INFO == level:
             self.log.info(log)
         elif Log.LOG_WARN == level:
