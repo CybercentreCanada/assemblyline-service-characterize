@@ -3,15 +3,17 @@ from __future__ import absolute_import
 import json
 import re
 import subprocess
+from typing import Dict, List, Tuple, Union
+
 import hachoir.core.config as hachoir_config
 from hachoir.core.log import log as hachoir_logger, Log
-
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
 
 from assemblyline.common.dict_utils import flatten
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline_v4_service.common.base import ServiceBase
+from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import Result, ResultSection, BODY_FORMAT
 
 from parse_lnk import decode_lnk
@@ -63,9 +65,9 @@ TAG_MAP = {
 BAD_LINK_RE = re.compile("http[s]?://|powershell|cscript|wscript|mshta|<script")
 
 
-def build_key(input_string):
+def build_key(input_string: str) -> str:
     list_string = list(input_string)
-    new_list = []
+    new_list: List[str] = []
     previous_upper = False
     for idx, i in enumerate(list_string):
         if i.isupper():
@@ -84,7 +86,7 @@ def build_key(input_string):
     return "".join(new_list)
 
 
-def get_type_val(data, src_name):
+def get_type_val(data: str, src_name: str) -> Tuple[str, str]:
     key = src_name
     val = data
 
@@ -111,16 +113,13 @@ class Characterize(ServiceBase):
         elif Log.LOG_ERROR == level:
             self.log.error(log)
 
-    def __init__(self, config=None):
-        super(Characterize, self).__init__(config)
-
-    def start(self):
+    def start(self) -> None:
         hachoir_config.quiet = True
         # Don't print to stdout, use our logger via callback
         hachoir_logger.use_print = False
         hachoir_logger.on_new_message = self.hachoir_logger_callback
 
-    def execute(self, request):
+    def execute(self, request: ServiceRequest) -> None:
         request.result = Result()
 
         # 1. Calculate entropy map
@@ -146,15 +145,15 @@ class Characterize(ServiceBase):
             parser = createParser(request.file_path)
             if parser is not None:
                 with parser:
-                    tags = parser.getParserTags()
-                    parser_id = tags.get('id', 'unknown')
+                    parser_tags = parser.getParserTags()
+                    parser_id = parser_tags.get('id', 'unknown')
 
                     # Do basic metadata extraction
                     metadata = extractMetadata(parser, 1)
 
                     if metadata:
-                        kv_body = {}
-                        tags = []
+                        kv_body: Dict[str, Union[str, List[str]]] = {}
+                        tags: List[Tuple[str, str]] = []
                         for m in metadata:
                             if m.key == "comment":
                                 for v in m.values:
@@ -211,7 +210,7 @@ class Characterize(ServiceBase):
                         if tag_type:
                             e_res.add_tag(tag_type, v)
 
-    def parse_link(self, parent_res, path):
+    def parse_link(self, parent_res: Result, path: str) -> bool:
         with open(path, "rb") as fh:
             metadata = decode_lnk(fh.read())
 
