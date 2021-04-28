@@ -105,7 +105,7 @@ def get_type_val(data: str, src_name: str) -> Tuple[str, str]:
 #########################################################
 class Characterize(ServiceBase):
     def hachoir_logger_callback(self, level, prefix, _text, ctxt):
-        log = f"{prefix}: {_text}"
+        log = f"hachoir: {_text}"
         if Log.LOG_INFO == level:
             self.log.info(log)
         elif Log.LOG_WARN == level:
