@@ -3,10 +3,10 @@ from __future__ import absolute_import
 import json
 import re
 import subprocess
-from typing import Dict, List, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
-from hachoir.core.log import log as hachoir_logger, Log
+from hachoir.core.log import log as hachoir_logger, Log, Logger
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
 
@@ -104,8 +104,10 @@ def get_type_val(data: str, src_name: str) -> Tuple[str, str]:
 #                  Scan Execution Class                 #
 #########################################################
 class Characterize(ServiceBase):
-    def hachoir_logger_callback(self, level, prefix, _text, ctxt):
-        log = f"{prefix}: {_text}"
+    def hachoir_logger_callback(self, level: int, prefix: str, _text: str,
+                                ctxt: Optional[Logger]) -> None:
+        # Show where in hachoir the log comes from using ctxt if it exists
+        log = f"hachoir [{ctxt._logger()}]: {_text}" if ctxt else f"hachoir: {_text}"
         if Log.LOG_INFO == level:
             self.log.info(log)
         elif Log.LOG_WARN == level:
