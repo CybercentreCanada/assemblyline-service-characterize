@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import json
 import re
 import subprocess
-from typing import Dict, List, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
 from hachoir.core.log import log as hachoir_logger, Log, Logger
