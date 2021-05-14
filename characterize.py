@@ -107,7 +107,9 @@ class Characterize(ServiceBase):
     def hachoir_logger_callback(self, level: int, prefix: str, _text: str,
                                 ctxt: Optional[Logger]) -> None:
         # Show where in hachoir the log comes from using ctxt if it exists
-        log = f"hachoir [{ctxt._logger()}]: {_text}" if ctxt else f"hachoir: {_text}"
+        log = f"hachoir {ctxt.__class__} [{ctxt._logger()}]: {_text}" \
+                if ctxt else f"hachoir: {_text}\n"
+        log += traceback.format_exc(limit=2)
         if Log.LOG_INFO == level:
             self.log.info(log)
         elif Log.LOG_WARN == level:
