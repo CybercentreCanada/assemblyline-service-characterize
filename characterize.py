@@ -131,11 +131,12 @@ class Characterize(ServiceBase):
         with open(request.file_path, 'rb') as fin:
             (entropy, part_entropies) = calculate_partition_entropy(fin)
 
+        p_entropies = [x[0] for x in part_entropies]
         entropy_graph_data = {
             'type': 'colormap',
             'data': {
                 'domain': [0, 8],
-                'values': part_entropies
+                'values': p_entropies
             }
         }
 
