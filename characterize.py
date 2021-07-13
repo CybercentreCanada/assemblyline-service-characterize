@@ -127,9 +127,18 @@ class Characterize(ServiceBase):
     def execute(self, request: ServiceRequest) -> None:
         request.result = Result()
 
-        # 1. Calculate entropy map
         with open(request.file_path, 'rb') as fin:
+            # 1. Calculate entropy map
             (entropy, part_entropies) = calculate_partition_entropy(fin)
+
+            # 2. Optionally get byte histogram
+            get_byte_histogram = self.config.get("get_entropy_histogram", False)
+            if get_byte_histogram:
+                file_bytes = f.read()
+                histogram = array.array('L', [0] * 256)
+                for byte in file_bytes:
+                    histogram[byte] += 1
+
 
         p_entropies = [x[0] for x in part_entropies]
         entropy_graph_data = {
@@ -140,8 +149,17 @@ class Characterize(ServiceBase):
             }
         }
 
-        ResultSection(f"File entropy: {round(entropy, 3)}", parent=request.result, body_format=BODY_FORMAT.GRAPH_DATA,
+        entropy_sec = ResultSection(f"File entropy: {round(entropy, 3)}", parent=request.result, body_format=BODY_FORMAT.GRAPH_DATA,
                       body=json.dumps(entropy_graph_data))
+
+        if get_byte_histogram:
+            histogram_data = { 'entropy_byte_histogram' : histogram.tolist() }
+            histo_subsec = ResultSection(
+                'File Byte Histogram',
+                body_format=BODY_FORMAT.KEY_VALUE,
+                body=histogram_data,
+                parent=entropy_sec
+            )
 
         if request.file_type == "meta/shortcut/windows":
             # 2. Parse windows shortcuts
