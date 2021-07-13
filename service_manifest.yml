@@ -16,7 +16,9 @@ enabled: true
 is_external: false
 licence_count: 0
 
-config: {}
+config: {
+  get_entropy_histogram: false
+}
 
 submission_params: []
 

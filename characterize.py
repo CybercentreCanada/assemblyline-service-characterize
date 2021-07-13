@@ -5,6 +5,7 @@ import re
 import subprocess
 import traceback
 from typing import Dict, List, Optional, Tuple, Union
+import array
 
 import hachoir.core.config as hachoir_config
 from hachoir.core.log import log as hachoir_logger, Log, Logger
@@ -134,18 +135,17 @@ class Characterize(ServiceBase):
             # 2. Optionally get byte histogram
             get_byte_histogram = self.config.get("get_entropy_histogram", False)
             if get_byte_histogram:
-                file_bytes = f.read()
+                fin.seek(0)
+                file_bytes = fin.read()
                 histogram = array.array('L', [0] * 256)
                 for byte in file_bytes:
                     histogram[byte] += 1
 
-
-        p_entropies = [x[0] for x in part_entropies]
         entropy_graph_data = {
             'type': 'colormap',
             'data': {
                 'domain': [0, 8],
-                'values': p_entropies
+                'values': part_entropies
             }
         }
 
