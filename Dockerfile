@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -yy libimage-exiftool-perl git && rm -rf /
 USER assemblyline
 
 # Install pip packages
-RUN pip install --no-cache-dir --user git+https://github.com/vstinner/hachoir && rm -rf ~/.cache/pip
+# Using fork temporarily while https://github.com/vstinner/hachoir/pull/69 is reviewed
+RUN pip install --no-cache-dir --user git+https://github.com/cccs-rs/hachoir && rm -rf ~/.cache/pip
 
 # Copy Characterize service code
 WORKDIR /opt/al_service
