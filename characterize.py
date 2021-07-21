@@ -154,7 +154,7 @@ class Characterize(ServiceBase):
 
         if get_byte_histogram:
             histogram_data = { 'entropy_byte_histogram' : histogram.tolist() }
-            histo_subsec = ResultSection(
+            ResultSection(
                 'File Byte Histogram',
                 body_format=BODY_FORMAT.KEY_VALUE,
                 body=histogram_data,
