@@ -1,5 +1,4 @@
 import pytest
-import re
 import os
 import json
 import shutil
