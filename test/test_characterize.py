@@ -105,7 +105,9 @@ class TestCharacterize:
 
         # Comparing everything in the response except for the date
         test_result_response["milestones"].pop("service_completed")
+        test_result_response["milestones"].pop("service_started")
         correct_result_response["milestones"].pop("service_completed")
+        correct_result_response["milestones"].pop("service_started")
         assert test_result_response == correct_result_response
 
     def test_parse_link(self, class_instance):
