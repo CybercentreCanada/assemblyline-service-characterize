@@ -79,7 +79,7 @@ class TestCharacterize:
         from assemblyline_v4_service.common.request import ServiceRequest
 
         # Creating the required objects for execution
-        service_task = ServiceTask(sample1)
+        service_task = ServiceTask(sample)
         task = Task(service_task)
         class_instance._task = task
         service_request = ServiceRequest(task)
@@ -104,10 +104,8 @@ class TestCharacterize:
         assert test_result == correct_result
 
         # Comparing everything in the response except for the date
-        test_result_response["milestones"].pop("service_completed")
-        test_result_response["milestones"].pop("service_started")
-        correct_result_response["milestones"].pop("service_completed")
-        correct_result_response["milestones"].pop("service_started")
+        test_result_response.pop("milestones")
+        correct_result_response.pop("milestones")
         assert test_result_response == correct_result_response
 
     def test_parse_link(self, class_instance):
