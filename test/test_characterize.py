@@ -99,14 +99,14 @@ class TestCharacterize:
         # Assert that the appropriate sections of the dict are equal
 
         # Avoiding date in the response
-        test_result_response = test_result.pop("response")
-        correct_result_response = correct_result.pop("response")
-        assert test_result == correct_result
+        test_response = test_result.pop("response")
+        correct_response = correct_result.pop("response")
+        assert test_result['result']['sections'][0] == correct_result['result']['sections'][0]
 
         # Comparing everything in the response except for the date
-        test_result_response.pop("milestones")
-        correct_result_response.pop("milestones")
-        assert test_result_response == correct_result_response
+        test_response.pop("milestones")
+        correct_response.pop("milestones")
+        assert test_response == correct_response
 
     def test_parse_link(self, class_instance):
         # TODO: Once a repo is available for samples, we can test this method
