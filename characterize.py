@@ -3,11 +3,10 @@ from __future__ import absolute_import
 import json
 import re
 import subprocess
-import traceback
 from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
-from hachoir.core.log import log as hachoir_logger, Log, Logger
+from hachoir.core.log import log as hachoir_logger, Logger
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
 
@@ -109,14 +108,8 @@ class Characterize(ServiceBase):
                                 ctxt: Optional[Logger]) -> None:
         # Show where in hachoir the log comes from using ctxt if it exists
         log = f"hachoir {ctxt.__class__} [{ctxt._logger()}]: {_text}" \
-                if ctxt else f"hachoir: {_text}\n"
-        log += traceback.format_exc(limit=2)
-        if Log.LOG_INFO == level:
-            self.log.info(log)
-        elif Log.LOG_WARN == level:
-            self.log.warning(log)
-        elif Log.LOG_ERROR == level:
-            self.log.error(log)
+            if ctxt else f"hachoir: {_text}\n"
+        self.log.info(log)
 
     def start(self) -> None:
         hachoir_config.quiet = True
@@ -204,7 +197,8 @@ class Characterize(ServiceBase):
                 exif_body = {build_key(k): v for k, v in res_data.items()
                              if v and k not in ["SourceFile", "ExifToolVersion", "FileName", "Directory", "FileSize",
                                                 "FileModifyDate", "FileAccessDate", "FileInodeChangeDate",
-                                                "FilePermissions", "FileType", "FileTypeExtension", "MIMEType"]}
+                                                "FilePermissions", "FileType", "FileTypeExtension",
+                                                "MIMEType", "Warning"]}
                 if exif_body:
                     e_res = ResultSection("Metadata extracted by ExifTool",
                                           body=json.dumps(exif_body), body_format=BODY_FORMAT.KEY_VALUE,
