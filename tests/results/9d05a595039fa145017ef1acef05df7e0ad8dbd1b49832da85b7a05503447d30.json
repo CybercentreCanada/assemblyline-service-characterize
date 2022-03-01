@@ -1,88 +1,44 @@
 {
-    "classification": "TLP:W",
     "response": {
-        "milestones": {
-            "service_started": null,
-            "service_completed": null
-        },
-        "service_version": null,
-        "service_name": "Not Important",
-        "service_tool_version": null,
         "supplementary": [],
-        "extracted": [],
-        "service_context": null,
-        "service_debug_info": null
+        "extracted": []
     },
     "result": {
-        "score": 0,
-        "sections": [
+        "heuristics": [],
+        "tags": [
             {
-                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.6567796494470395, 3.1464393446710157, 3.3414460711655214, 1.0219280948873624, 4.221928094887362, 3.0219280948873624, 3.641446071165521, 4.1219280948873624, 3.6841837197791887, 1.1219280948873622, 1.5567796494470396, 3.7414460711655213, 3.7414460711655213, 2.460964047443681, 1.1219280948873622, 2.560964047443681, 2.460964047443681, 2.460964047443681, 2.260964047443681, 1.8166422780956524, 1.3917601481809734, 2.1709505944546685, 2.695461844238322, 2.657717469130148, 3.6841837197791887, 3.821928094887362, 3.2414460711655217, 2.2464393446710154, 1.4406454496153465, 2.360964047443681, 2.5609640474436812, 2.660964047443681, 2.460964047443681, 2.560964047443681, 2.3232196723355076, 3.7414460711655213, 2.4192407046368487, 4.1219280948873624, 1.3917601481809734, 2.185475297227334, 2.085475297227334, 2.185475297227334, 2.5609640474436812, 1.0219280948873624, 1.9166422780956522, 3.121928094887362, 4.221928094887362, 4.321928094887363, 3.0306390622295662, 0]}}",
-                "classification": "TLP:W",
-                "body_format": "GRAPH_DATA",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {},
-                "title_text": "File entropy: 4.802",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
+                "file": {
+                    "name": {
+                        "extracted": [
+                            ""
+                        ]
+                    }
+                },
+                "dynamic": {
+                    "process": {
+                        "command_line": [
+                            "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
+                        ]
+                    }
+                }
             },
             {
-                "body": "{\"show_command\": \"SW_SHOWNORMAL\", \"link_flags\": [\"HasLinkTargetIDList\", \"HasLinkInfo\", \"HasRelativePath\", \"IsUnicode\"], \"file_atributes\": [\"FILE_ATTRIBUTE_ARCHIVE\"], \"base_path\": \"C:\\\\Users\\\\\", \"volume_id.drive_type\": \"DRIVE_FIXED\", \"volume_id.drive_serial_number\": 817661809, \"net_name\": \"\\u5c5c\\u4f57\\u4b52\\u555c\\u6573\\u7372\", \"common_network_relative_link.network_provider_type\": \"INVALID\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\..\\\\..\\\\hdwwiz\\\\DiagnosticsHub.StandardCollector.Service.exe.bat\"}",
-                "classification": "TLP:W",
-                "body_format": "KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "name": {
-                            "extracted": [
-                                ""
-                            ]
-                        }
+                "file": {
+                    "date": {
+                        "creation": [
+                            "2020:11:19 19:07:04+00:00"
+                        ],
+                        "last_modified": [
+                            "2020:11:19 19:07:04+00:00"
+                        ]
                     },
-                    "dynamic": {
-                        "process": {
-                            "command_line": [
-                                "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
-                            ]
-                        }
+                    "name": {
+                        "extracted": [
+                            "DIAGNO~1.BAT"
+                        ]
                     }
-                },
-                "title_text": "Metadata extracted by parse_lnk",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
-            },
-            {
-                "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, Unicode\", \"file_attributes\": \"Archive\", \"create_date\": \"2020:11:19 19:07:04+00:00\", \"access_date\": \"2020:11:19 19:07:04+00:00\", \"modify_date\": \"2020:11:19 19:07:04+00:00\", \"target_file_size\": 1419464, \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"DIAGNO~1.BAT\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Users\\\\\", \"net_name\": 8, \"net_provider_type\": \"Unknown (0x20000)\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\..\\\\..\\\\hdwwiz\\\\DiagnosticsHub.StandardCollector.Service.exe.bat\", \"machine_id\": \"work\"}",
-                "classification": "TLP:W",
-                "body_format": "KEY_VALUE",
-                "depth": 0,
-                "heuristic": null,
-                "tags": {
-                    "file": {
-                        "date": {
-                            "creation": [
-                                "2020:11:19 19:07:04+00:00"
-                            ],
-                            "last_modified": [
-                                "2020:11:19 19:07:04+00:00"
-                            ]
-                        },
-                        "name": {
-                            "extracted": [
-                                "DIAGNO~1.BAT"
-                            ]
-                        }
-                    }
-                },
-                "title_text": "Metadata extracted by ExifTool",
-                "zeroize_on_tag_safe": false,
-                "auto_collapse": false
+                }
             }
         ]
-    },
-    "sha256": "9d05a595039fa145017ef1acef05df7e0ad8dbd1b49832da85b7a05503447d30",
-    "drop_file": false,
-    "temp_submission_data": {}
+    }
 }

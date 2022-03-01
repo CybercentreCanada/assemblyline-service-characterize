@@ -67,32 +67,32 @@ def drop_ultimate_folder(path):
 
 
 def generalize_result(result):
+    # At first we were comparing the full result and removing the random/unpredictable information.
+    # Now we are only keeping the strict minimum to compare with.
+    # supplementary/extracted sha256 + heuristics heur_id + tags
+    trimed_result = {}
     if "response" in result:
-        # Ignore the service_started and service_completed timestamps
-        if "milestones" in result["response"]:
-            if "service_started" in result["response"]["milestones"]:
-                result["response"]["milestones"]["service_started"] = None
-            if "service_completed" in result["response"]["milestones"]:
-                result["response"]["milestones"]["service_completed"] = None
-
-        # Ignore the service_version and service_name
-        if "service_version" in result["response"]:
-            result["response"]["service_version"] = None
-        if "service_name" in result["response"]:
-            result["response"]["service_name"] = None
-
-        # Ignore the extracted and supplementary randomized last folder
-        if "extracted" in result["response"]:
-            for extracted in result["response"]["extracted"]:
-                if "path" in extracted:
-                    extracted["path"] = drop_ultimate_folder(extracted["path"])
+        trimed_result["response"] = {}
         if "supplementary" in result["response"]:
-            for supplementary in result["response"]["supplementary"]:
-                if "path" in supplementary:
-                    supplementary["path"] = drop_ultimate_folder(supplementary["path"])
-                if "is_section_image" in supplementary and "path" in supplementary:
-                    if supplementary["is_section_image"]:
-                        supplementary["path"] = str(Path(supplementary["path"]).parents[0])
+            trimed_result["response"]["supplementary"] = [x["sha256"] for x in result["response"]["supplementary"]]
+        if "extracted" in result["response"]:
+            trimed_result["response"]["extracted"] = [x["sha256"] for x in result["response"]["extracted"]]
+
+    if "result" in result:
+        trimed_result["result"] = {}
+        if "sections" in result["result"]:
+            trimed_result["result"] = {"heuristics": [], "tags": []}
+            for section in result["result"]["sections"]:
+                if "heuristic" in section:
+                    if section["heuristic"] is not None:
+                        if "heur_id" in section["heuristic"]:
+                            trimed_result["result"]["heuristics"].append(section["heuristic"]["heur_id"])
+                if "tags" in section:
+                    if section["tags"]:
+                        trimed_result["result"]["tags"].append(section["tags"])
+            trimed_result["result"]["heuristics"] = sorted(trimed_result["result"]["heuristics"])
+
+    return trimed_result
 
 
 class TestService:
@@ -122,16 +122,11 @@ class TestService:
         with open(correct_path, "r") as f:
             correct_result = json.loads(f.read())
 
-        if overwrite_results:
-            import copy
+        test_result = generalize_result(test_result)
 
-            orig_result = copy.deepcopy(test_result)
-
-        generalize_result(test_result)
-        generalize_result(correct_result)
         if overwrite_results:
             if test_result != correct_result:
                 with open(correct_path, "w") as f:
-                    f.write(json.dumps(orig_result))
+                    f.write(json.dumps(test_result))
         else:
             assert test_result == correct_result
