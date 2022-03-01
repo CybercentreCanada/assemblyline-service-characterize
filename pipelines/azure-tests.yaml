@@ -54,8 +54,14 @@ jobs:
           [ ! -d "$(pwd)/tests" ] && echo "No tests found" && exit
           sudo apt-get update
           sudo apt-get install -y libfuzzy-dev libfuzzy2
-          if [ -f "$(pwd)/pkglist.txt" ]; then
+          if [[ -f "$(pwd)/pkglist.txt" ]]; then
             sudo apt-get install -y < "$(pwd)/pkglist.txt"
+            echo "Debug installed"
+            ls $(pwd)
+            ls "$(pwd)"
+            ls $(pwd)/pkglist.txt
+            ls "$(pwd)/pkglist.txt"
+            cat $(pwd)/pkglist.txt
           else
             echo "Debug"
             ls $(pwd)
