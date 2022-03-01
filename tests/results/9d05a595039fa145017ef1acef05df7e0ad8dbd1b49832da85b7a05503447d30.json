@@ -5,40 +5,20 @@
     },
     "result": {
         "heuristics": [],
-        "tags": [
-            {
-                "file": {
-                    "name": {
-                        "extracted": [
-                            ""
-                        ]
-                    }
-                },
-                "dynamic": {
-                    "process": {
-                        "command_line": [
-                            "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
-                        ]
-                    }
-                }
-            },
-            {
-                "file": {
-                    "date": {
-                        "creation": [
-                            "2020:11:19 19:07:04+00:00"
-                        ],
-                        "last_modified": [
-                            "2020:11:19 19:07:04+00:00"
-                        ]
-                    },
-                    "name": {
-                        "extracted": [
-                            "DIAGNO~1.BAT"
-                        ]
-                    }
-                }
-            }
-        ]
+        "tags": {
+            "file.name.extracted": [
+                "",
+                "DIAGNO~1.BAT"
+            ],
+            "dynamic.process.command_line": [
+                "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
+            ],
+            "file.date.creation": [
+                "2020:11:19 19:07:04+00:00"
+            ],
+            "file.date.last_modified": [
+                "2020:11:19 19:07:04+00:00"
+            ]
+        }
     }
 }

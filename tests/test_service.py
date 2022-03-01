@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 
 import pytest
+from assemblyline.common.dict_utils import flatten
 from assemblyline.common.identify import fileinfo
 from assemblyline.odm.messages.task import Task as ServiceTask
 from assemblyline_v4_service.common.request import ServiceRequest
@@ -74,14 +75,16 @@ def generalize_result(result):
     if "response" in result:
         trimed_result["response"] = {}
         if "supplementary" in result["response"]:
-            trimed_result["response"]["supplementary"] = [x["sha256"] for x in result["response"]["supplementary"]]
+            trimed_result["response"]["supplementary"] = sorted(
+                [x["sha256"] for x in result["response"]["supplementary"]]
+            )
         if "extracted" in result["response"]:
-            trimed_result["response"]["extracted"] = [x["sha256"] for x in result["response"]["extracted"]]
+            trimed_result["response"]["extracted"] = sorted([x["sha256"] for x in result["response"]["extracted"]])
 
     if "result" in result:
         trimed_result["result"] = {}
         if "sections" in result["result"]:
-            trimed_result["result"] = {"heuristics": [], "tags": []}
+            trimed_result["result"] = {"heuristics": [], "tags": {}}
             for section in result["result"]["sections"]:
                 if "heuristic" in section:
                     if section["heuristic"] is not None:
@@ -89,8 +92,17 @@ def generalize_result(result):
                             trimed_result["result"]["heuristics"].append(section["heuristic"]["heur_id"])
                 if "tags" in section:
                     if section["tags"]:
-                        trimed_result["result"]["tags"].append(section["tags"])
+                        for k, v in flatten(section["tags"]).items():
+                            if k in trimed_result["result"]["tags"]:
+                                trimed_result["result"]["tags"][k].extend(v)
+                            else:
+                                trimed_result["result"]["tags"][k] = v
+
+            # Sort the heur_id and tags lists so they always appear in the same order even if
+            # the result sections where moved around.
             trimed_result["result"]["heuristics"] = sorted(trimed_result["result"]["heuristics"])
+            for k, v in trimed_result["result"]["tags"].items():
+                trimed_result["result"]["tags"][k] = sorted(v)
 
     return trimed_result
 

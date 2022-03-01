@@ -5,32 +5,14 @@
     },
     "result": {
         "heuristics": [],
-        "tags": [
-            {
-                "file": {
-                    "name": {
-                        "extracted": [
-                            ""
-                        ]
-                    }
-                },
-                "dynamic": {
-                    "process": {
-                        "command_line": [
-                            "bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
-                        ]
-                    }
-                }
-            },
-            {
-                "file": {
-                    "name": {
-                        "extracted": [
-                            "msoffice.exe"
-                        ]
-                    }
-                }
-            }
-        ]
+        "tags": {
+            "file.name.extracted": [
+                "",
+                "msoffice.exe"
+            ],
+            "dynamic.process.command_line": [
+                "bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
+            ]
+        }
     }
 }
