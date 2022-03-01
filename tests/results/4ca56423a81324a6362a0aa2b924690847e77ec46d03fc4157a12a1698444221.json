@@ -1,0 +1,88 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": null,
+            "service_completed": null
+        },
+        "service_version": null,
+        "service_name": "Not Important",
+        "service_tool_version": null,
+        "supplementary": [],
+        "extracted": [],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 0,
+        "sections": [
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.91829583405449, 4.136842188131013, 1.7201755214643453, 3.9387218755408684, 1.6896763215021662, 3.200825794518089, 3.584962500721157, 1.2220198859116513, 2.1431558784658327, 3.766150648454356, 2.9993896755123957, 1.91829583405449, 2.8327230088457287, 3.7720552088742014, 2.792481250360579, 2.2806721295208874, 1.9764892117991657, 1.2220198859116513, 3.200825794518089, 3.9701755214643457, 2.4972243200613984, 2.7091479170272454, 2.625814583693912, 2.7091479170272454, 2.625814583693912, 2.5424812503605785, 2.7091479170272454, 2.059822545132499, 3.93456081428629, 2.364005462854221, 4.501629167387823, 4.501629167387823, 4.501629167387823, 3.5016291673878235, 3.200825794518089, 2.413890986728065, 2.2806721295208874, 3.599483981787689, 2.364005462854221, 2.364005462854221, 1.91829583405449, 2.4972243200613984, 2.580557653394732, 4.168295834054491, 1.6896763215021662, 2.3443609377704338, 1.91829583405449, 4.220175521464346, 1.91829583405449, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "File entropy: 4.647",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"show_command\": \"SW_SHOWNORMAL\", \"link_flags\": [\"HasLinkTargetIDList\", \"HasLinkInfo\", \"HasRelativePath\", \"HasArguments\", \"HasIconLocation\", \"IsUnicode\", \"EnableTargetMetadata\"], \"file_atributes\": [\"FILE_ATTRIBUTE_ARCHIVE\"], \"base_path\": \"C:\\\\Windows\\\\System32\\\\rundll32.exe\", \"volume_id.drive_type\": \"DRIVE_FIXED\", \"volume_id.drive_serial_number\": 806159849, \"relative_path\": \"..\\\\Windows\\\\System32\\\\rundll32.exe\", \"command_line_arguments\": \"info.dat,msuspend\", \"icon_location\": \"%systemroot%\\\\system32\\\\imageres.dll\"}",
+                "classification": "TLP:W",
+                "body_format": "KEY_VALUE",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "name": {
+                            "extracted": [
+                                "rundll32.exe"
+                            ]
+                        }
+                    },
+                    "dynamic": {
+                        "process": {
+                            "command_line": [
+                                "..\\Windows\\System32\\rundll32.exe info.dat,msuspend"
+                            ]
+                        }
+                    }
+                },
+                "title_text": "Metadata extracted by parse_lnk",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:12:26 21:31:16+00:00\", \"access_date\": \"2022:02:07 12:15:39+00:00\", \"modify_date\": \"2021:12:26 21:31:16+00:00\", \"target_file_size\": 71680, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"rundll32.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\rundll32.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\rundll32.exe\", \"command_line_arguments\": \"info.dat,msuspend\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-i8bn9qk\"}",
+                "classification": "TLP:W",
+                "body_format": "KEY_VALUE",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "date": {
+                            "creation": [
+                                "2021:12:26 21:31:16+00:00"
+                            ],
+                            "last_modified": [
+                                "2021:12:26 21:31:16+00:00"
+                            ]
+                        },
+                        "name": {
+                            "extracted": [
+                                "rundll32.exe"
+                            ]
+                        }
+                    }
+                },
+                "title_text": "Metadata extracted by ExifTool",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "4ca56423a81324a6362a0aa2b924690847e77ec46d03fc4157a12a1698444221",
+    "drop_file": false,
+    "temp_submission_data": {}
+}

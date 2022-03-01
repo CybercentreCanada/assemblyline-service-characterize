@@ -1,0 +1,3 @@
+libimage-exiftool-perl
+# Using fork temporarily while https://github.com/vstinner/hachoir/pull/69 is reviewed
+git

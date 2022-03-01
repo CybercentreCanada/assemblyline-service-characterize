@@ -1,0 +1,80 @@
+{
+    "classification": "TLP:W",
+    "response": {
+        "milestones": {
+            "service_started": null,
+            "service_completed": null
+        },
+        "service_version": null,
+        "service_name": "Not Important",
+        "service_tool_version": null,
+        "supplementary": [],
+        "extracted": [],
+        "service_context": null,
+        "service_debug_info": null
+    },
+    "result": {
+        "score": 0,
+        "sections": [
+            {
+                "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.498778124459133, 0.3997900666170139, 3.334282221599798, 1.748689844084022, 2.4777930388928713, 0.3997900666170139, 2.0550416913014384, 2.4777930388928713, 0.9255636700495734, 2.2042028044502624, 1.9064514568588302, 1.1183927290103626, 2.5058269522460908, 2.5389097655573916, 2.6639097655573916, 2.426108500731241, 2.452819531114783, 2.7889097655573916, 3.021782221599798, 3.7373008763572906, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.20062232431271465, 2.875, 2.2667028044502624, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.686189844084022, 3.6858203810934294, 3.8993974703476995, 2.5160353655857572, 2.6014097655573916, 2.390319531114783, -0.0]}}",
+                "classification": "TLP:W",
+                "body_format": "GRAPH_DATA",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {},
+                "title_text": "File entropy: 2.208",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"show_command\": \"SW_SHOWNORMAL\", \"link_flags\": [\"HasLinkTargetIDList\", \"HasArguments\", \"HasIconLocation\", \"IsUnicode\", \"HasExpString\"], \"command_line_arguments\": \"bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition\", \"icon_location\": \"%windir%/system32/shell32.dll\"}",
+                "classification": "TLP:W",
+                "body_format": "KEY_VALUE",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "name": {
+                            "extracted": [
+                                ""
+                            ]
+                        }
+                    },
+                    "dynamic": {
+                        "process": {
+                            "command_line": [
+                                "bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
+                            ]
+                        }
+                    }
+                },
+                "title_text": "Metadata extracted by parse_lnk",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            },
+            {
+                "body": "{\"flags\": \"IDList, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"(none)\", \"icon_index\": 70, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"msoffice.exe\", \"command_line_arguments\": \"bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition\", \"icon_file_name\": \"%windir%/system32/shell32.dll\"}",
+                "classification": "TLP:W",
+                "body_format": "KEY_VALUE",
+                "depth": 0,
+                "heuristic": null,
+                "tags": {
+                    "file": {
+                        "name": {
+                            "extracted": [
+                                "msoffice.exe"
+                            ]
+                        }
+                    }
+                },
+                "title_text": "Metadata extracted by ExifTool",
+                "zeroize_on_tag_safe": false,
+                "auto_collapse": false
+            }
+        ]
+    },
+    "sha256": "fdce78f3acfa557414d3f2c6cf95d18bdb8de1f6ffd3585256dfa682a441ac04",
+    "drop_file": false,
+    "temp_submission_data": {}
+}
