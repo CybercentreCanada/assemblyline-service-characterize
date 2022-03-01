@@ -9,7 +9,7 @@ USER root
 
 # Install apt dependencies
 COPY pkglist.txt pkglist.txt
-RUN apt-get update && apt-get install -y < pkglist.txt && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && grep -vE '^#' pkglist.txt | xargs apt-get install -y && rm -rf /var/lib/apt/lists/*
 
 # Switch to assemblyline user
 USER assemblyline

@@ -55,7 +55,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libfuzzy-dev libfuzzy2
           if [[ -f "$(pwd)/pkglist.txt" ]]; then
-            xargs -a <(awk '! /^ *(#|$)/' "$(pwd)/pkglist.txt") -r -- sudo apt-get install -y
+            grep -vE '^#' "$(pwd)/pkglist.txt" | xargs sudo apt-get install -y
           fi
           sudo rm -rf /var/lib/apt/lists/*
           sudo env "PATH=$PATH" python -m pip install -U --no-cache-dir assemblyline assemblyline_v4_service
