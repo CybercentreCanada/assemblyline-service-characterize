@@ -1,0 +1,18 @@
+{
+    "response": {
+        "supplementary": [],
+        "extracted": []
+    },
+    "result": {
+        "heuristics": [],
+        "tags": {
+            "file.name.extracted": [
+                "",
+                "msoffice.exe"
+            ],
+            "dynamic.process.command_line": [
+                "bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
+            ]
+        }
+    }
+}
