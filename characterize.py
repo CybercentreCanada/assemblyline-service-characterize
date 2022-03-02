@@ -1,5 +1,6 @@
 from __future__ import absolute_import
 
+import datetime
 import json
 import re
 import subprocess
@@ -10,7 +11,13 @@ from assemblyline.common.dict_utils import flatten
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
-from assemblyline_v4_service.common.result import BODY_FORMAT, Result, ResultSection
+from assemblyline_v4_service.common.result import (
+    BODY_FORMAT,
+    Heuristic,
+    Result,
+    ResultKeyValueSection,
+    ResultSection,
+)
 from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
@@ -52,6 +59,7 @@ TAG_MAP = {
 }
 
 BAD_LINK_RE = re.compile("http[s]?://|powershell|cscript|wscript|mshta|<script")
+EXIFTOOL_DATE_FMT = "%Y:%m:%d %H:%M:%S%z"
 
 
 def build_key(input_string: str) -> str:
@@ -206,6 +214,7 @@ class Characterize(ServiceBase):
                     ]
                 }
                 if exif_body:
+                    timestamps = []
                     e_res = ResultSection(
                         "Metadata extracted by ExifTool",
                         body=json.dumps(exif_body),
@@ -218,6 +227,67 @@ class Characterize(ServiceBase):
                         ) or TAG_MAP.get(None, {}).get(k, None)
                         if tag_type:
                             e_res.add_tag(tag_type, v)
+
+                        if k in ["create_date", "creation_date", "modify_date"]:
+                            timestamps.append((k, v))
+
+                    if timestamps:
+                        heur22_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
+                            days=self.config.get("heur2_flag_more_recent_than_days", 3)
+                        )
+                        heur22_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
+                        recent_timestamps = []
+                        future_timestamps = []
+                        for k, timestamp in timestamps:
+                            ts = datetime.datetime.strptime(timestamp, EXIFTOOL_DATE_FMT)
+                            if ts < heur22_earliest_ts:
+                                continue
+                            if ts > heur22_latest_ts:
+                                future_timestamps.append((k, timestamp))
+                                continue
+                            recent_timestamps.append((k, timestamp))
+
+                        if recent_timestamps:
+                            heur = Heuristic(2)
+                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                            for k, timestamp in recent_timestamps:
+                                heur_section.set_item(k, timestamp)
+                        if future_timestamps:
+                            heur = Heuristic(3)
+                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                            for k, timestamp in future_timestamps:
+                                heur_section.set_item(k, timestamp)
+
+                    if request.file_type == "meta/shortcut/windows":
+                        heur_1_items = {}
+                        heur_4_items = {}
+                        for k, v in exif_body.items():
+                            if k in [
+                                "command_line_arguments",
+                                "target_file_dosname",
+                                "icon_file_name",
+                                "local_base_path",
+                                "relative_path",
+                            ]:
+                                if BAD_LINK_RE.search(v.lower()):
+                                    heur_1_items[k] = v
+                                elif k == "command_line_arguments" and " && " in v:
+                                    heur_1_items[k] = v
+
+                                extensions = v.split(".")
+                                if len(extensions) > 1:
+                                    if extensions[-2].lower() in ["exe", "bat", "msi"]:
+                                        heur_4_items[k] = v
+
+                        if heur_1_items:
+                            heur = Heuristic(1)
+                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                            heur_section.update_items(heur_1_items)
+
+                        if heur_4_items:
+                            heur = Heuristic(4)
+                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                            heur_section.update_items(heur_4_items)
 
     def parse_link(self, parent_res: Result, path: str) -> bool:
         with open(path, "rb") as fh:

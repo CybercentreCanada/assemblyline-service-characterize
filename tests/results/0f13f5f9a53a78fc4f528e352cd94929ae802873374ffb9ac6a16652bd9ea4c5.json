@@ -4,7 +4,9 @@
         "extracted": []
     },
     "result": {
-        "heuristics": [],
+        "heuristics": [
+            1
+        ],
         "tags": {
             "file.name.extracted": [
                 "",

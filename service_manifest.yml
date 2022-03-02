@@ -16,7 +16,8 @@ enabled: true
 is_external: false
 licence_count: 0
 
-config: {}
+config:
+  heur2_flag_more_recent_than_days: 3
 
 submission_params: []
 
@@ -26,6 +27,27 @@ heuristics:
     score: 500
     filetype: '*'
     description: Found a suspicious command line that calls out to a URL
+
+  - description: >-
+       A very recent timestamp is found.
+    filetype: "executable/windows"
+    heur_id: 2
+    name: Recent timestamp found
+    score: 500
+
+  - description: >-
+       A timestamp from the future is found. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
+    filetype: "executable/windows"
+    heur_id: 3
+    name: Future timestamp found
+    score: 1
+
+  - description: >-
+       A file with two extensions was found. It is usually a sign of maliciousness trying to hide as another filetype.
+    filetype: "executable/windows"
+    heur_id: 4
+    name: Double file extension
+    score: 500
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG
