@@ -232,17 +232,17 @@ class Characterize(ServiceBase):
                             timestamps.append((k, v))
 
                     if timestamps:
-                        heur22_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
+                        heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
                             days=self.config.get("heur2_flag_more_recent_than_days", 3)
                         )
-                        heur22_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
+                        heur2_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
                         recent_timestamps = []
                         future_timestamps = []
                         for k, timestamp in timestamps:
                             ts = datetime.datetime.strptime(timestamp, EXIFTOOL_DATE_FMT)
-                            if ts < heur22_earliest_ts:
+                            if ts < heur2_earliest_ts:
                                 continue
-                            if ts > heur22_latest_ts:
+                            if ts > heur2_latest_ts:
                                 future_timestamps.append((k, timestamp))
                                 continue
                             recent_timestamps.append((k, timestamp))
