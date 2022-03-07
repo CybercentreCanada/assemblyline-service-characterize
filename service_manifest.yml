@@ -26,7 +26,7 @@ heuristics:
     name: Suspicious command line arguments
     score: 500
     filetype: '*'
-    description: Found a suspicious command line that calls out to a URL
+    description: Found a suspicious command line
 
   - description: >-
        A very recent timestamp is found.
@@ -43,11 +43,11 @@ heuristics:
     score: 1
 
   - description: >-
-       A file with two extensions was found. It is usually a sign of maliciousness trying to hide as another filetype.
+       The shortcut used an icon that is could be deceptively used to hide a malicious behaviour.
     filetype: "executable/windows"
     heur_id: 4
-    name: Double file extension
-    score: 500
+    name: Deceptive icon used
+    score: 250
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG

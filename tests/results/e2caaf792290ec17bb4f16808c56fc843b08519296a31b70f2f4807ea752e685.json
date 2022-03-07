@@ -4,19 +4,21 @@
         "extracted": []
     },
     "result": {
-        "heuristics": [],
+        "heuristics": [
+            4
+        ],
         "tags": {
             "file.date.creation": [
-                "2020:11:19 19:07:04+00:00"
+                "2021:10:29 16:03:57+00:00"
             ],
             "file.date.last_modified": [
-                "2020:11:19 19:07:04+00:00"
+                "2021:10:29 16:03:59+00:00"
             ],
             "file.name.extracted": [
-                "DIAGNO~1.BAT"
+                "StormII.exe"
             ],
             "dynamic.process.command_line": [
-                "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
+                ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\""
             ]
         }
     }

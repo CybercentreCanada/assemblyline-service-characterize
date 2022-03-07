@@ -1,0 +1,17 @@
+{
+    "response": {
+        "supplementary": [],
+        "extracted": []
+    },
+    "result": {
+        "heuristics": [],
+        "tags": {
+            "file.date.creation": [
+                "2019:04:15 20:26:03+00:00"
+            ],
+            "file.date.last_modified": [
+                "2019:04:15 20:26:03+00:00"
+            ]
+        }
+    }
+}

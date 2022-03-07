@@ -7,7 +7,6 @@ import subprocess
 from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
-from assemblyline.common.dict_utils import flatten
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
@@ -22,8 +21,6 @@ from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
-
-from parse_lnk import decode_lnk
 
 TAG_MAP = {
     "ole2": {
@@ -128,10 +125,7 @@ class Characterize(ServiceBase):
             body=json.dumps(entropy_graph_data),
         )
 
-        if request.file_type == "meta/shortcut/windows":
-            # 2. Parse windows shortcuts
-            self.parse_link(request.result, request.file_path)
-        else:
+        if request.file_type != "meta/shortcut/windows":
             # 3. Get hachoir metadata
             parser = createParser(request.file_path)
             if parser is not None:
@@ -260,7 +254,8 @@ class Characterize(ServiceBase):
 
                     if request.file_type == "meta/shortcut/windows":
                         heur_1_items = {}
-                        heur_4_items = {}
+                        risky_executable = ["rundll32.exe", "powershell.exe"]
+                        deceptive_icons = ["wordpad.exe"]
                         for k, v in exif_body.items():
                             if k in [
                                 "command_line_arguments",
@@ -269,54 +264,38 @@ class Characterize(ServiceBase):
                                 "local_base_path",
                                 "relative_path",
                             ]:
-                                if BAD_LINK_RE.search(v.lower()):
+                                if any(x in v.lower() for x in risky_executable):
                                     heur_1_items[k] = v
                                 elif k == "command_line_arguments" and " && " in v:
                                     heur_1_items[k] = v
 
-                                extensions = v.split(".")
-                                if len(extensions) > 1:
-                                    if extensions[-2].lower() in ["exe", "bat", "msi"]:
-                                        heur_4_items[k] = v
+                                if k == "command_line_arguments" and BAD_LINK_RE.search(v.lower()):
+                                    heur = Heuristic(1)
+                                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                                    heur_section.set_item(k, v)
+
+                                if k == "icon_file_name" and any(
+                                    v.lower().strip('"').strip("'").endswith(x) for x in deceptive_icons
+                                ):
+                                    heur = Heuristic(4)
+                                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                                    heur_section.set_item(k, v)
 
                         if heur_1_items:
                             heur = Heuristic(1)
                             heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
                             heur_section.update_items(heur_1_items)
 
-                        if heur_4_items:
-                            heur = Heuristic(4)
-                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                            heur_section.update_items(heur_4_items)
+                        # Adapted code from previous logic. May be best replaced by new heuristics and logic.
+                        bp = str(exif_body.get("local_base_path", "")).strip()
+                        rp = str(exif_body.get("relative_path", "")).strip()
+                        nn = str(exif_body.get("net_name", "")).strip()
+                        cla = str(exif_body.get("command_line_arguments", "")).strip()
 
-    def parse_link(self, parent_res: Result, path: str) -> bool:
-        with open(path, "rb") as fh:
-            metadata = decode_lnk(fh.read())
+                        filename_extracted = (bp or rp or nn).rsplit("\\")[-1].strip()
+                        if filename_extracted:
+                            e_res.add_tag(tag_type="file.name.extracted", value=(bp or rp or nn).rsplit("\\")[-1])
 
-        if metadata is None:
-            return False
-
-        body_output = {build_key(k): v for k, v in flatten(metadata).items() if v}
-        res = ResultSection(
-            "Metadata extracted by parse_lnk",
-            body_format=BODY_FORMAT.KEY_VALUE,
-            body=json.dumps(body_output),
-            parent=parent_res,
-        )
-
-        bp = metadata.get("BasePath", "").strip()
-        rp = metadata.get("RELATIVE_PATH", "").strip()
-        nn = metadata.get("NetName", "").strip()
-        cla = metadata.get("COMMAND_LINE_ARGUMENTS", "").strip()
-        s = BAD_LINK_RE.search(cla.lower())
-        if s:
-            res.set_heuristic(1)
-        res.add_tag(tag_type="file.name.extracted", value=(bp or rp or nn).rsplit("\\")[-1])
-        res.add_tag(tag_type="dynamic.process.command_line", value=f"{(rp or bp or nn)} {cla}".strip())
-
-        for k, v in body_output.items():
-            tag_type = TAG_MAP.get("LNK", {}).get(k, None) or TAG_MAP.get(None, {}).get(k, None)
-            if tag_type:
-                res.add_tag(tag_type, v)
-
-        return True
+                        process_cmdline = f"{(rp or bp or nn)} {cla}".strip()
+                        if process_cmdline:
+                            e_res.add_tag(tag_type="dynamic.process.command_line", value=process_cmdline)

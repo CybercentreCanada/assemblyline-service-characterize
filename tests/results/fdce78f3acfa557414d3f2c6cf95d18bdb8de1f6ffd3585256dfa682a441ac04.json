@@ -7,7 +7,6 @@
         "heuristics": [],
         "tags": {
             "file.name.extracted": [
-                "",
                 "msoffice.exe"
             ],
             "dynamic.process.command_line": [
