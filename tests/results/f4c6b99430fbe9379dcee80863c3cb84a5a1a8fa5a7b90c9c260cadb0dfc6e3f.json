@@ -12,11 +12,14 @@
             "file.date.last_modified": [
                 "2021:05:30 11:17:08+00:00"
             ],
+            "file.shortcut.icon_location": [
+                "%SystemRoot%\\System32\\SHELL32.dll"
+            ],
+            "file.shortcut.command_line": [
+                ".\\information priver de andrea.bat"
+            ],
             "file.name.extracted": [
                 "information priver de andrea.bat"
-            ],
-            "dynamic.process.command_line": [
-                ".\\information priver de andrea.bat"
             ]
         }
     }

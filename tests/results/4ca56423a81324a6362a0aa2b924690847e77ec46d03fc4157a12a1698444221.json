@@ -17,7 +17,10 @@
             "file.name.extracted": [
                 "rundll32.exe"
             ],
-            "dynamic.process.command_line": [
+            "file.shortcut.icon_location": [
+                "%systemroot%\\system32\\imageres.dll"
+            ],
+            "file.shortcut.command_line": [
                 "..\\Windows\\System32\\rundll32.exe info.dat,msuspend"
             ]
         }

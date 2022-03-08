@@ -15,7 +15,7 @@
             "file.name.extracted": [
                 "DIAGNO~1.BAT"
             ],
-            "dynamic.process.command_line": [
+            "file.shortcut.command_line": [
                 "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
             ]
         }

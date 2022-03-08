@@ -274,12 +274,12 @@ class Characterize(ServiceBase):
                                     heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
                                     heur_section.set_item(k, v)
 
-                                if k == "icon_file_name" and any(
-                                    v.lower().strip('"').strip("'").endswith(x) for x in deceptive_icons
-                                ):
-                                    heur = Heuristic(4)
-                                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                                    heur_section.set_item(k, v)
+                                if k == "icon_file_name":
+                                    e_res.add_tag(tag_type="file.shortcut.icon_location", value=v)
+                                    if any(v.lower().strip('"').strip("'").endswith(x) for x in deceptive_icons):
+                                        heur = Heuristic(4)
+                                        heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                                        heur_section.set_item(k, v)
 
                         if heur_1_items:
                             heur = Heuristic(1)
@@ -298,4 +298,4 @@ class Characterize(ServiceBase):
 
                         process_cmdline = f"{(rp or bp or nn)} {cla}".strip()
                         if process_cmdline:
-                            e_res.add_tag(tag_type="dynamic.process.command_line", value=process_cmdline)
+                            e_res.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)

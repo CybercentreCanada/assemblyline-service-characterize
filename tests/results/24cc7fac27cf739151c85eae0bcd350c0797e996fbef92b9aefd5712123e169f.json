@@ -11,7 +11,10 @@
             "file.name.extracted": [
                 "cmd.exe"
             ],
-            "dynamic.process.command_line": [
+            "file.shortcut.icon_location": [
+                "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\""
+            ],
+            "file.shortcut.command_line": [
                 "/c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit"
             ]
         }

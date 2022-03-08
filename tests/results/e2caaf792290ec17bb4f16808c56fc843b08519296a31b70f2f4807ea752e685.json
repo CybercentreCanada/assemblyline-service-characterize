@@ -17,7 +17,10 @@
             "file.name.extracted": [
                 "StormII.exe"
             ],
-            "dynamic.process.command_line": [
+            "file.shortcut.icon_location": [
+                "%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe"
+            ],
+            "file.shortcut.command_line": [
                 ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\""
             ]
         }
