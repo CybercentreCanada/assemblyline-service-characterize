@@ -29,14 +29,14 @@ heuristics:
     description: Found a suspicious command line
 
   - description: >-
-       A very recent timestamp is found.
+       Only applies to windows shortcut files. A very recent timestamp is found.
     filetype: "executable/windows"
     heur_id: 2
     name: Recent timestamp found
     score: 500
 
   - description: >-
-       A timestamp from the future is found. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
+       Only applies to windows shortcut files. A timestamp from the future is found. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
     filetype: "executable/windows"
     heur_id: 3
     name: Future timestamp found

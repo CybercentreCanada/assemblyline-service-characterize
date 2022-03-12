@@ -208,7 +208,6 @@ class Characterize(ServiceBase):
                     ]
                 }
                 if exif_body:
-                    timestamps = []
                     e_res = ResultSection(
                         "Metadata extracted by ExifTool",
                         body=json.dumps(exif_body),
@@ -222,41 +221,15 @@ class Characterize(ServiceBase):
                         if tag_type:
                             e_res.add_tag(tag_type, v)
 
-                        if k in ["create_date", "creation_date", "modify_date"]:
-                            timestamps.append((k, v))
-
-                    if timestamps:
-                        heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
-                            days=self.config.get("heur2_flag_more_recent_than_days", 3)
-                        )
-                        heur2_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
-                        recent_timestamps = []
-                        future_timestamps = []
-                        for k, timestamp in timestamps:
-                            ts = datetime.datetime.strptime(timestamp, EXIFTOOL_DATE_FMT)
-                            if ts < heur2_earliest_ts:
-                                continue
-                            if ts > heur2_latest_ts:
-                                future_timestamps.append((k, timestamp))
-                                continue
-                            recent_timestamps.append((k, timestamp))
-
-                        if recent_timestamps:
-                            heur = Heuristic(2)
-                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                            for k, timestamp in recent_timestamps:
-                                heur_section.set_item(k, timestamp)
-                        if future_timestamps:
-                            heur = Heuristic(3)
-                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                            for k, timestamp in future_timestamps:
-                                heur_section.set_item(k, timestamp)
-
                     if request.file_type == "meta/shortcut/windows":
                         heur_1_items = {}
                         risky_executable = ["rundll32.exe", "powershell.exe"]
                         deceptive_icons = ["wordpad.exe"]
+                        timestamps = []
                         for k, v in exif_body.items():
+                            if k in ["create_date", "creation_date", "modify_date"]:
+                                timestamps.append((k, v))
+
                             if k in [
                                 "command_line_arguments",
                                 "target_file_dosname",
@@ -285,6 +258,33 @@ class Characterize(ServiceBase):
                             heur = Heuristic(1)
                             heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
                             heur_section.update_items(heur_1_items)
+
+                        if timestamps:
+                            heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
+                                days=self.config.get("heur2_flag_more_recent_than_days", 3)
+                            )
+                            heur2_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
+                            recent_timestamps = []
+                            future_timestamps = []
+                            for k, timestamp in timestamps:
+                                ts = datetime.datetime.strptime(timestamp, EXIFTOOL_DATE_FMT)
+                                if ts < heur2_earliest_ts:
+                                    continue
+                                if ts > heur2_latest_ts:
+                                    future_timestamps.append((k, timestamp))
+                                    continue
+                                recent_timestamps.append((k, timestamp))
+
+                            if recent_timestamps:
+                                heur = Heuristic(2)
+                                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                                for k, timestamp in recent_timestamps:
+                                    heur_section.set_item(k, timestamp)
+                            if future_timestamps:
+                                heur = Heuristic(3)
+                                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
+                                for k, timestamp in future_timestamps:
+                                    heur_section.set_item(k, timestamp)
 
                         # Adapted code from previous logic. May be best replaced by new heuristics and logic.
                         bp = str(exif_body.get("local_base_path", "")).strip()
