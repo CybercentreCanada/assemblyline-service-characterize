@@ -126,7 +126,7 @@ class Characterize(ServiceBase):
         )
 
         if request.file_type != "meta/shortcut/windows":
-            # 3. Get hachoir metadata
+            # 2. Get hachoir metadata
             parser = createParser(request.file_path)
             if parser is not None:
                 with parser:
@@ -180,7 +180,7 @@ class Characterize(ServiceBase):
                             for t_type, t_val in tags:
                                 res.add_tag(t_type, t_val)
 
-        # 4. Get Exiftool Metadata
+        # 3. Get Exiftool Metadata
         exif = subprocess.run(["exiftool", "-j", request.file_path], capture_output=True, check=False)
         if exif.stdout:
             exif_data = json.loads(exif.stdout.decode("utf-8", errors="ignore"))
@@ -259,7 +259,7 @@ class Characterize(ServiceBase):
                             heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
                             heur_section.update_items(heur_1_items)
 
-                        if timestamps:
+                        if timestamps and request.task.depth != 0:
                             heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
                                 days=self.config.get("heur2_flag_more_recent_than_days", 3)
                             )
