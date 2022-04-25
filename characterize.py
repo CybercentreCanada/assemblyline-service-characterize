@@ -223,7 +223,7 @@ class Characterize(ServiceBase):
 
                     if request.file_type == "meta/shortcut/windows":
                         heur_1_items = {}
-                        risky_executable = ["rundll32.exe", "powershell.exe", "cmd.exe"]
+                        risky_executable = ["rundll32.exe", "powershell.exe", "cmd.exe", "mshta.exe"]
                         deceptive_icons = ["wordpad.exe", "shell32.dll"]
                         timestamps = []
                         for k, v in exif_body.items():
