@@ -58,6 +58,11 @@ def create_service_task(sample):
             "min_classification": "TLP:WHITE",
             "max_files": 501,
             "ttl": 3600,
+            "safelist_config": {
+                "enabled": False,
+                "hash_types": ['sha1', 'sha256'],
+                "enforce_safelist_service": False
+            }
         }
     )
 
