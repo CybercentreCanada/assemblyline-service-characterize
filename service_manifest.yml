@@ -19,7 +19,15 @@ licence_count: 0
 config:
   heur2_flag_more_recent_than_days: 3
 
-submission_params: []
+submission_params:
+  - default: false
+    name: new_param
+    type: bool
+    value: false
+  - default: true
+    name: second_param
+    type: bool
+    value: true
 
 heuristics:
   - heur_id: 1
