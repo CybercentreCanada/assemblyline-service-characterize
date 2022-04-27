@@ -223,8 +223,8 @@ class Characterize(ServiceBase):
 
                     if request.file_type == "meta/shortcut/windows":
                         heur_1_items = {}
-                        risky_executable = ["rundll32.exe", "powershell.exe"]
-                        deceptive_icons = ["wordpad.exe"]
+                        risky_executable = ["rundll32.exe", "powershell.exe", "cmd.exe", "mshta.exe"]
+                        deceptive_icons = ["wordpad.exe", "shell32.dll"]
                         timestamps = []
                         for k, v in exif_body.items():
                             if k in ["create_date", "creation_date", "modify_date"]:
@@ -241,11 +241,8 @@ class Characterize(ServiceBase):
                                     heur_1_items[k] = v
                                 elif k == "command_line_arguments" and " && " in v:
                                     heur_1_items[k] = v
-
-                                if k == "command_line_arguments" and BAD_LINK_RE.search(v.lower()):
-                                    heur = Heuristic(1)
-                                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                                    heur_section.set_item(k, v)
+                                elif k == "command_line_arguments" and BAD_LINK_RE.search(v.lower()):
+                                    heur_1_items[k] = v
 
                                 if k == "icon_file_name":
                                     e_res.add_tag(tag_type="file.shortcut.icon_location", value=v)

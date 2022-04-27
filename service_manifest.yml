@@ -43,10 +43,10 @@ heuristics:
     score: 1
 
   - description: >-
-       The shortcut used an icon that is could be deceptively used to hide a malicious behaviour.
+       The shortcut used an icon that could be deceptively used to hide a malicious behaviour or simply a suspicious one.
     filetype: "executable/windows"
     heur_id: 4
-    name: Deceptive icon used
+    name: Suspicious icon used
     score: 250
 
 docker_config:
