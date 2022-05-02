@@ -1,22 +1,23 @@
 {
     "response": {
-        "supplementary": [],
+        "supplementary": [
+            "4edf04a119ca46c8273e5dab10e72c02ce3634f8c29aabbc9579894606f2905e"
+        ],
         "extracted": []
     },
     "result": {
         "heuristics": [
-            1,
             4
         ],
         "tags": {
             "file.name.extracted": [
-                "cmd.exe"
+                "msoffice.exe"
             ],
             "file.shortcut.icon_location": [
-                "shell32.dll"
+                "%windir%/system32/shell32.dll"
             ],
             "file.shortcut.command_line": [
-                "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
+                "msoffice.exe bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
             ]
         }
     }

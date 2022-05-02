@@ -2,11 +2,14 @@ from __future__ import absolute_import
 
 import datetime
 import json
+import os
 import re
 import subprocess
+from tempfile import mkstemp
 from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
+import LnkParse3
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
@@ -29,7 +32,7 @@ TAG_MAP = {
         "subject": "file.ole.summary.subject",
         "title": "file.ole.summary.title",
     },
-    "LNK": {"target_file_dosname": "file.name.extracted"},
+    # "LNK": {"target_file_dosname": "file.name.extracted"},
     "ZIP": {"zip_modify_date": "file.date.last_modified"},
     "EXE": {"file_description": "file.pe.versions.description", "time_stamp": "file.pe.linker.timestamp"},
     "DLL": {"file_description": "file.pe.versions.description", "time_stamp": "file.pe.linker.timestamp"},
@@ -221,80 +224,138 @@ class Characterize(ServiceBase):
                         if tag_type:
                             e_res.add_tag(tag_type, v)
 
-                    if request.file_type == "meta/shortcut/windows":
-                        heur_1_items = {}
-                        risky_executable = ["rundll32.exe", "powershell.exe", "cmd.exe", "mshta.exe"]
-                        deceptive_icons = ["wordpad.exe", "shell32.dll"]
-                        timestamps = []
-                        for k, v in exif_body.items():
-                            v = str(v)  # Got a case where v turned out to be a number.
+        # 4. Lnk management.
+        if request.file_type == "meta/shortcut/windows":
+            with open(request.file_path, "rb") as indata:
+                lnk = LnkParse3.lnk_file(indata)
 
-                            if k in ["create_date", "creation_date", "modify_date"]:
-                                timestamps.append((k, v))
+            features = lnk.get_json(get_all=True)
 
-                            if k in [
-                                "command_line_arguments",
-                                "target_file_dosname",
-                                "icon_file_name",
-                                "local_base_path",
-                                "relative_path",
-                            ]:
-                                if any(x in v.lower() for x in risky_executable):
-                                    heur_1_items[k] = v
-                                elif k == "command_line_arguments" and " && " in v:
-                                    heur_1_items[k] = v
-                                elif k == "command_line_arguments" and BAD_LINK_RE.search(v.lower()):
-                                    heur_1_items[k] = v
+            lnk_result_section = ResultSection(
+                "Extra metadata extracted by LnkParse3",
+                parent=request.result,
+            )
 
-                                if k == "icon_file_name":
-                                    e_res.add_tag(tag_type="file.shortcut.icon_location", value=v)
-                                    if any(v.lower().strip('"').strip("'").endswith(x) for x in deceptive_icons):
-                                        heur = Heuristic(4)
-                                        heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                                        heur_section.set_item(k, v)
+            heur_1_items = {}
+            risky_executable = ["rundll32.exe", "powershell.exe", "cmd.exe", "mshta.exe"]
 
-                        if heur_1_items:
-                            heur = Heuristic(1)
-                            heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                            heur_section.update_items(heur_1_items)
+            if "command_line_arguments" in features["data"]:
+                if any(x in features["data"]["command_line_arguments"].lower() for x in risky_executable):
+                    heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
+                if " && " in features["data"]["command_line_arguments"]:
+                    heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
+                elif BAD_LINK_RE.search(features["data"]["command_line_arguments"].lower()):
+                    heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
 
-                        if timestamps and request.task.depth != 0:
-                            heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
-                                days=self.config.get("heur2_flag_more_recent_than_days", 3)
-                            )
-                            heur2_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
-                            recent_timestamps = []
-                            future_timestamps = []
-                            for k, timestamp in timestamps:
-                                ts = datetime.datetime.strptime(timestamp, EXIFTOOL_DATE_FMT)
-                                if ts < heur2_earliest_ts:
-                                    continue
-                                if ts > heur2_latest_ts:
-                                    future_timestamps.append((k, timestamp))
-                                    continue
-                                recent_timestamps.append((k, timestamp))
+            lbp = ""
+            if "local_base_path" in features["link_info"]:
+                lbp = features["link_info"]["local_base_path"]
+                if "common_path_suffix" in features["link_info"]:
+                    lbp = f"{lbp}{features['link_info']['common_path_suffix']}"
+                if any(x in lbp.lower() for x in risky_executable):
+                    heur_1_items["local_base_path"] = features["link_info"]["local_base_path"]
 
-                            if recent_timestamps:
-                                heur = Heuristic(2)
-                                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                                for k, timestamp in recent_timestamps:
-                                    heur_section.set_item(k, timestamp)
-                            if future_timestamps:
-                                heur = Heuristic(3)
-                                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=e_res)
-                                for k, timestamp in future_timestamps:
-                                    heur_section.set_item(k, timestamp)
+            if "relative_path" in features["data"]:
+                if any(x in features["data"]["relative_path"].lower() for x in risky_executable):
+                    heur_1_items["relative_path"] = features["data"]["relative_path"]
 
-                        # Adapted code from previous logic. May be best replaced by new heuristics and logic.
-                        bp = str(exif_body.get("local_base_path", "")).strip()
-                        rp = str(exif_body.get("relative_path", "")).strip()
-                        nn = str(exif_body.get("net_name", "")).strip()
-                        cla = str(exif_body.get("command_line_arguments", "")).strip()
+            target = ""
+            if "target" in features:
+                import ntpath
 
-                        filename_extracted = (bp or rp or nn).rsplit("\\")[-1].strip()
-                        if filename_extracted:
-                            e_res.add_tag(tag_type="file.name.extracted", value=(bp or rp or nn).rsplit("\\")[-1])
+                if "items" in features["target"]:
+                    last_item = None
+                    for item in features["target"]["items"]:
+                        if "primary_name" in item:
+                            last_item = item
+                            target = ntpath.join(target, item["primary_name"])
 
-                        process_cmdline = f"{(rp or bp or nn)} {cla}".strip()
-                        if process_cmdline:
-                            e_res.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
+                    if last_item and last_item["flags"] == "Is directory":
+                        target = ""
+
+                    if any(x in target.lower() for x in risky_executable):
+                        heur_1_items["target_file_dosname"] = target
+
+            if "icon_location" in features["data"]:
+                deceptive_icons = ["wordpad.exe", "shell32.dll"]
+
+                lnk_result_section.add_tag(
+                    tag_type="file.shortcut.icon_location", value=features["data"]["icon_location"]
+                )
+                if any(
+                    features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x) for x in deceptive_icons
+                ):
+                    heur = Heuristic(4)
+                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    heur_section.set_item("icon_location", features["data"]["icon_location"])
+
+            if heur_1_items:
+                heur = Heuristic(1)
+                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                heur_section.update_items(heur_1_items)
+
+            timestamps = [
+                ("creation_time", features["header"]["creation_time"]),
+                ("modified_time", features["header"]["modified_time"]),
+            ]
+
+            if request.task.depth != 0:
+                heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
+                    days=self.config.get("heur2_flag_more_recent_than_days", 3)
+                )
+                heur2_latest_ts = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=2)
+                recent_timestamps = []
+                future_timestamps = []
+                for k, timestamp in timestamps:
+                    if timestamp < heur2_earliest_ts:
+                        continue
+                    if timestamp > heur2_latest_ts:
+                        future_timestamps.append((k, timestamp))
+                        continue
+                    recent_timestamps.append((k, timestamp))
+
+                if recent_timestamps:
+                    heur = Heuristic(2)
+                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    for k, timestamp in recent_timestamps:
+                        heur_section.set_item(k, timestamp.isoformat())
+                if future_timestamps:
+                    heur = Heuristic(3)
+                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    for k, timestamp in future_timestamps:
+                        heur_section.set_item(k, timestamp.isoformat())
+
+            # Adapted code from previous logic. May be best replaced by new heuristics and logic.
+            bp = str(lbp).strip()
+            rp = str(features["data"].get("relative_path", "")).strip()
+            nn = str(features["data"].get("net_name", "")).strip()
+            t = str(target).strip().rsplit("\\")[-1].strip()
+            cla = str(features["data"].get("command_line_arguments", "")).strip()
+
+            filename_extracted = (bp or rp or t or nn).rsplit("\\")[-1].strip()
+            if filename_extracted:
+                lnk_result_section.add_tag(tag_type="file.name.extracted", value=(bp or rp or t or nn).rsplit("\\")[-1])
+
+            process_cmdline = f"{(rp or bp or t or nn)} {cla}".strip()
+            if process_cmdline:
+                lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
+
+            def _datetime_to_str(obj):
+                if isinstance(obj, datetime.datetime):
+                    return obj.isoformat()
+                return obj
+
+            temp_path = os.path.join(self.working_directory, "features.json")
+            with open(temp_path, "w") as f:
+                json.dump(features, f, default=_datetime_to_str)
+            request.add_supplementary(temp_path, "features.json", "Features extracted from the LNK file")
+
+            if lnk.appended_data:
+                appended_data_fd, appended_data_path = mkstemp(dir=self.working_directory)
+                with open(appended_data_path, "wb") as appended_data_f:
+                    appended_data_f.write(lnk.appended_data)
+                request.add_extracted(
+                    appended_data_path,
+                    os.path.basename(appended_data_path),
+                    "Additional data at the end of the LNK file",
+                )

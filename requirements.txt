@@ -1,2 +1,4 @@
 # Using fork temporarily while https://github.com/vstinner/hachoir/pull/69 is reviewed
 git+https://github.com/cccs-rs/hachoir
+# Using fork to get wmetcalf's extra-data parsing
+git+https://github.com/gdesmar/LnkParse3
