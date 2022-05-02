@@ -1,6 +1,8 @@
 {
     "response": {
-        "supplementary": [],
+        "supplementary": [
+            "f504204e164ceff13e0f9de62d0ab084a1f52529734d3d300e91c213e16f1bb5"
+        ],
         "extracted": []
     },
     "result": {
@@ -13,7 +15,7 @@
                 "2020:11:19 19:07:04+00:00"
             ],
             "file.name.extracted": [
-                "DIAGNO~1.BAT"
+                "DiagnosticsHub.StandardCollector.Service.exe.bat"
             ],
             "file.shortcut.command_line": [
                 "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"

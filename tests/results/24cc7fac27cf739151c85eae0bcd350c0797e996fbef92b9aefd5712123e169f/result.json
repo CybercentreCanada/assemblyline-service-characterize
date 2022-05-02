@@ -1,6 +1,8 @@
 {
     "response": {
-        "supplementary": [],
+        "supplementary": [
+            "2bac289b4fef5c9bf00821b0a9667a8bcc67e6ec5ebd600f51955759f32e2b9f"
+        ],
         "extracted": []
     },
     "result": {
@@ -16,7 +18,7 @@
                 "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\""
             ],
             "file.shortcut.command_line": [
-                "/c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit"
+                "cmd.exe /c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit"
             ]
         }
     }
