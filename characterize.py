@@ -227,6 +227,8 @@ class Characterize(ServiceBase):
                         deceptive_icons = ["wordpad.exe", "shell32.dll"]
                         timestamps = []
                         for k, v in exif_body.items():
+                            v = str(v)  # Got a case where v turned out to be a number.
+
                             if k in ["create_date", "creation_date", "modify_date"]:
                                 timestamps.append((k, v))
 

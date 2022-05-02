@@ -53,16 +53,11 @@ def create_service_task(sample):
             "deep_scan": False,
             "service_name": "Not Important",
             "service_config": {},
-            "fileinfo": dict((k, v) for k, v in fileinfo(f"/tmp/{sample}").items() if k in fileinfo_keys),
+            "fileinfo": {k: v for k, v in fileinfo(f"/tmp/{sample}").items() if k in fileinfo_keys},
             "filename": sample,
             "min_classification": "TLP:WHITE",
             "max_files": 501,
             "ttl": 3600,
-            "safelist_config": {
-                "enabled": False,
-                "hash_types": ['sha1', 'sha256'],
-                "enforce_safelist_service": False
-            }
         }
     )
 
@@ -137,13 +132,13 @@ class TestService:
         # Get the assumed "correct" result of the sample
         correct_path = os.path.join(SELF_LOCATION, "tests", "results", f"{sample}.json")
         with open(correct_path, "r") as f:
-            correct_result = json.loads(f.read())
+            correct_result = json.load(f)
 
         test_result = generalize_result(test_result)
 
         if overwrite_results:
             if test_result != correct_result:
                 with open(correct_path, "w") as f:
-                    f.write(json.dumps(test_result))
+                    json.dump(test_result, f)
         else:
             assert test_result == correct_result
