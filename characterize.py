@@ -290,11 +290,6 @@ class Characterize(ServiceBase):
                     heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                     heur_section.set_item("icon_location", features["data"]["icon_location"])
 
-            if heur_1_items:
-                heur = Heuristic(1)
-                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
-                heur_section.update_items(heur_1_items)
-
             timestamps = [
                 ("creation_time", features["header"]["creation_time"]),
                 ("modified_time", features["header"]["modified_time"]),
@@ -361,8 +356,15 @@ class Characterize(ServiceBase):
             cmd_code = ""
             if filename_extracted in ["cmd", "cmd.exe"]:
                 cmd_code = get_cmd_command(f"{filename_extracted} {cla}".encode())
+                if "rundll32 " in cla:  # We are already checking for rundll32.exe as part of risky_executable
+                    heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
             elif filename_extracted in ["powershell", "powershell.exe"]:
                 cmd_code = get_powershell_command(f"{filename_extracted} {cla}".encode())
+
+            if heur_1_items:
+                heur = Heuristic(1)
+                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                heur_section.update_items(heur_1_items)
 
             if cmd_code:
                 sha256hash = hashlib.sha256(cmd_code).hexdigest()

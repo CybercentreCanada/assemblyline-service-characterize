@@ -1,0 +1,39 @@
+{
+    "response": {
+        "supplementary": [
+            "156b9ff9509f641297f395302360c2add7691a8933bf981ce1de8747aabfd55c"
+        ],
+        "extracted": [
+            "9d95f759e876a9157e0070e1b407fc109669ff9db9531b0e3d76ae8f053f1769"
+        ]
+    },
+    "result": {
+        "heuristics": [
+            1,
+            5
+        ],
+        "tags": {
+            "file.date.creation": [
+                "2022:02:11 18:01:47+00:00"
+            ],
+            "file.date.last_modified": [
+                "2022:02:11 18:01:47+00:00"
+            ],
+            "file.shortcut.icon_location": [
+                "%systemroot%\\system32\\imageres.dll"
+            ],
+            "file.shortcut.machine_id": [
+                "desktop-30fdj39"
+            ],
+            "file.shortcut.tracker_mac": [
+                "EB:33:6A:3B:D0:E3"
+            ],
+            "file.shortcut.command_line": [
+                "..\\..\\..\\..\\Windows\\System32\\cmd.exe /c start rundll32 namr.dll,PluginInit"
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
+            ]
+        }
+    }
+}

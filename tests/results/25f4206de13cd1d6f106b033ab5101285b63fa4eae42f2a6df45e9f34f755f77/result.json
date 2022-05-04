@@ -1,0 +1,39 @@
+{
+    "response": {
+        "supplementary": [
+            "8bfc33dea495669961ef7b71c08fc4b0c2e5c74c06729a9c72b39f940d141484"
+        ],
+        "extracted": [
+            "b3611423514051f092012b5073a863a55ebc0718957b69ac4c2f54b6b42c8d5e"
+        ]
+    },
+    "result": {
+        "heuristics": [
+            1,
+            5
+        ],
+        "tags": {
+            "file.date.creation": [
+                "2022:02:11 18:01:47+00:00"
+            ],
+            "file.date.last_modified": [
+                "2022:02:11 18:01:47+00:00"
+            ],
+            "file.shortcut.icon_location": [
+                "%systemroot%\\system32\\imageres.dll"
+            ],
+            "file.shortcut.machine_id": [
+                "desktop-30fdj39"
+            ],
+            "file.shortcut.tracker_mac": [
+                "EB:33:6A:3B:D0:E3"
+            ],
+            "file.shortcut.command_line": [
+                "..\\..\\..\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
+            ]
+        }
+    }
+}
