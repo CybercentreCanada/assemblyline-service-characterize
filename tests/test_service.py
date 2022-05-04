@@ -1,4 +1,5 @@
 import errno
+import glob
 import json
 import os
 from pathlib import Path
@@ -115,6 +116,7 @@ class TestService:
 
     @staticmethod
     @pytest.mark.parametrize("sample", list_results(SELF_LOCATION), indirect=True)
+    @pytest.mark.skip()
     def test_service(sample):
         overwrite_results = False  # Used temporarily to mass-correct tests
 
@@ -126,8 +128,13 @@ class TestService:
 
         cls.execute(service_request)
 
+        result_dir_files = [
+            os.path.basename(x) for x in glob.glob(os.path.join(SELF_LOCATION, "tests", "results", sample, "*"))
+        ]
+
         correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "features.json")
         if os.path.exists(correct_path):
+            result_dir_files.remove("features.json")
             with open(correct_path, "r") as f:
                 correct_result = json.load(f)
 
@@ -145,6 +152,7 @@ class TestService:
         # Get the result of execute() from the test method
         test_result = task.get_service_result()
 
+        result_dir_files.remove("result.json")
         # Get the assumed "correct" result of the sample
         correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, "result.json")
         with open(correct_path, "r") as f:
@@ -158,3 +166,22 @@ class TestService:
                     json.dump(test_result, f)
         else:
             assert test_result == correct_result
+
+        for extracted_file in test_result["response"]["extracted"]:
+            result_dir_files.remove(extracted_file)
+            correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, extracted_file)
+            with open(correct_path, "rb") as f:
+                correct_result = f.read()
+
+            test_path = os.path.join(cls.working_directory, extracted_file)
+            with open(test_path, "rb") as f:
+                test_result = f.read()
+
+            if overwrite_results:
+                if test_result != correct_result:
+                    with open(correct_path, "wb") as f:
+                        f.write(test_result)
+            else:
+                assert test_result == correct_result
+
+        assert not result_dir_files

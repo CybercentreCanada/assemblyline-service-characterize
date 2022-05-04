@@ -4,23 +4,25 @@
             "20c4b67e22a452e40cd0cff98be0f6bbc164f2d8d2aeb5095535f8f914cd2871"
         ],
         "extracted": [
-            "0650d1da5bd02438c20c49a438d3ed1261bf36cb5ed1cf71b79326c43b78ddf4"
+            "0650d1da5bd02438c20c49a438d3ed1261bf36cb5ed1cf71b79326c43b78ddf4",
+            "1d9dbbda54b6571aa26639da7a41063a2534920aa88934187964626c2cd1852e"
         ]
     },
     "result": {
         "heuristics": [
             1,
-            4
+            4,
+            6
         ],
         "tags": {
-            "file.name.extracted": [
-                "cmd.exe"
-            ],
             "file.shortcut.icon_location": [
                 "shell32.dll"
             ],
             "file.shortcut.command_line": [
                 "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
             ]
         }
     }

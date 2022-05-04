@@ -7,7 +7,8 @@
     },
     "result": {
         "heuristics": [
-            1
+            1,
+            5
         ],
         "tags": {
             "file.date.creation": [
@@ -16,14 +17,20 @@
             "file.date.last_modified": [
                 "2021:12:26 21:31:16+00:00"
             ],
-            "file.name.extracted": [
-                "rundll32.exe"
-            ],
             "file.shortcut.icon_location": [
                 "%systemroot%\\system32\\imageres.dll"
             ],
+            "file.shortcut.machine_id": [
+                "desktop-i8bn9qk"
+            ],
+            "file.shortcut.tracker_mac": [
+                "B2:63:FD:AF:B6:EF"
+            ],
             "file.shortcut.command_line": [
                 "..\\Windows\\System32\\rundll32.exe info.dat,msuspend"
+            ],
+            "file.name.extracted": [
+                "rundll32.exe"
             ]
         }
     }

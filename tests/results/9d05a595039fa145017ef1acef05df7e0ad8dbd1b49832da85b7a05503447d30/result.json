@@ -14,11 +14,17 @@
             "file.date.last_modified": [
                 "2020:11:19 19:07:04+00:00"
             ],
-            "file.name.extracted": [
-                "DiagnosticsHub.StandardCollector.Service.exe.bat"
+            "file.shortcut.machine_id": [
+                "work"
+            ],
+            "file.shortcut.tracker_mac": [
+                "42:01:0A:96:00:00"
             ],
             "file.shortcut.command_line": [
                 "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
+            ],
+            "file.name.extracted": [
+                "DiagnosticsHub.StandardCollector.Service.exe.bat"
             ]
         }
     }

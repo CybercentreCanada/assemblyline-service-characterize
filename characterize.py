@@ -1,11 +1,11 @@
 from __future__ import absolute_import
 
 import datetime
+import hashlib
 import json
 import os
 import re
 import subprocess
-from tempfile import mkstemp
 from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
@@ -24,6 +24,7 @@ from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
+from multidecoder.analyzers.shell import get_cmd_command, get_powershell_command
 
 TAG_MAP = {
     "ole2": {
@@ -325,6 +326,23 @@ class Characterize(ServiceBase):
                     for k, timestamp in future_timestamps:
                         heur_section.set_item(k, timestamp.isoformat())
 
+            if "DISTRIBUTED_LINK_TRACKER_BLOCK" in features["extra"]:
+                if "machine_identifier" in features["extra"]["DISTRIBUTED_LINK_TRACKER_BLOCK"]:
+                    machine_id = features["extra"]["DISTRIBUTED_LINK_TRACKER_BLOCK"]["machine_identifier"]
+                    lnk_result_section.add_tag("file.shortcut.machine_id", machine_id)
+                    if machine_id.lower().startswith("desktop-"):
+                        heur = Heuristic(5)
+                        heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                        heur_section.set_item("machine_identifier", machine_id)
+                if "droid_file_identifier" in features["extra"]["DISTRIBUTED_LINK_TRACKER_BLOCK"]:
+                    mac = features["extra"]["DISTRIBUTED_LINK_TRACKER_BLOCK"]["droid_file_identifier"][-12:]
+                    mac = ":".join(a + b for a, b in zip(mac[::2], mac[1::2]))
+                    lnk_result_section.add_tag("file.shortcut.tracker_mac", mac)
+                elif "birth_droid_file_identifier" in features["extra"]["DISTRIBUTED_LINK_TRACKER_BLOCK"]:
+                    mac = features["extra"]["DISTRIBUTED_LINK_TRACKER_BLOCK"]["birth_droid_file_identifier"][-12:]
+                    mac = ":".join(a + b for a, b in zip(mac[::2], mac[1::2]))
+                    lnk_result_section.add_tag("file.shortcut.tracker_mac", mac)
+
             # Adapted code from previous logic. May be best replaced by new heuristics and logic.
             bp = str(lbp).strip()
             rp = str(features["data"].get("relative_path", "")).strip()
@@ -340,6 +358,23 @@ class Characterize(ServiceBase):
             if process_cmdline:
                 lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
 
+            cmd_code = ""
+            if filename_extracted in ["cmd", "cmd.exe"]:
+                cmd_code = get_cmd_command(f"{filename_extracted} {cla}".encode())
+            elif filename_extracted in ["powershell", "powershell.exe"]:
+                cmd_code = get_powershell_command(f"{filename_extracted} {cla}".encode())
+
+            if cmd_code:
+                sha256hash = hashlib.sha256(cmd_code).hexdigest()
+                cmd_file_path = os.path.join(self.working_directory, sha256hash)
+                with open(cmd_file_path, "wb") as cmd_f:
+                    cmd_f.write(cmd_code)
+                request.add_extracted(
+                    cmd_file_path,
+                    sha256hash,
+                    "Extracted LNK execution code",
+                )
+
             def _datetime_to_str(obj):
                 if isinstance(obj, datetime.datetime):
                     return obj.isoformat()
@@ -351,11 +386,15 @@ class Characterize(ServiceBase):
             request.add_supplementary(temp_path, "features.json", "Features extracted from the LNK file")
 
             if lnk.appended_data:
-                appended_data_fd, appended_data_path = mkstemp(dir=self.working_directory)
+                sha256hash = hashlib.sha256(lnk.appended_data).hexdigest()
+                appended_data_path = os.path.join(self.working_directory, sha256hash)
                 with open(appended_data_path, "wb") as appended_data_f:
                     appended_data_f.write(lnk.appended_data)
                 request.add_extracted(
                     appended_data_path,
-                    os.path.basename(appended_data_path),
+                    sha256hash,
                     "Additional data at the end of the LNK file",
                 )
+                heur = Heuristic(6)
+                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                heur_section.set_item("Length", len(lnk.appended_data))

@@ -16,14 +16,20 @@
             "file.date.last_modified": [
                 "2021:10:29 16:03:59+00:00"
             ],
-            "file.name.extracted": [
-                "StormII.exe"
-            ],
             "file.shortcut.icon_location": [
                 "%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe"
             ],
+            "file.shortcut.machine_id": [
+                "585948"
+            ],
+            "file.shortcut.tracker_mac": [
+                "00:50:56:A0:F2:10"
+            ],
             "file.shortcut.command_line": [
                 ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\""
+            ],
+            "file.name.extracted": [
+                "StormII.exe"
             ]
         }
     }
