@@ -290,10 +290,11 @@ class Characterize(ServiceBase):
                     heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                     heur_section.set_item("icon_location", features["data"]["icon_location"])
 
-            timestamps = [
-                ("creation_time", features["header"]["creation_time"]),
-                ("modified_time", features["header"]["modified_time"]),
-            ]
+            timestamps = []
+            if features["header"]["creation_time"]:
+                timestamps.append(("creation_time", features["header"]["creation_time"]))
+            if features["header"]["modified_time"]:
+                timestamps.append(("modified_time", features["header"]["modified_time"]))
 
             if request.task.depth != 0:
                 heur2_earliest_ts = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(
