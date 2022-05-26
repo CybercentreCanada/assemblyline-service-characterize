@@ -80,7 +80,10 @@ def generalize_result(result):
                 [x["sha256"] for x in result["response"]["supplementary"]]
             )
         if "extracted" in result["response"]:
-            trimed_result["response"]["extracted"] = sorted([x["sha256"] for x in result["response"]["extracted"]])
+            trimed_result["response"]["extracted"] = sorted(
+                [{"name": x["name"], "sha256": x["sha256"]} for x in result["response"]["extracted"]],
+                key=lambda x: x["sha256"],
+            )
 
     if "result" in result:
         trimed_result["result"] = {}
@@ -168,12 +171,14 @@ class TestService:
             assert test_result == correct_result
 
         for extracted_file in test_result["response"]["extracted"]:
-            result_dir_files.remove(extracted_file)
-            correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, extracted_file)
+            if not overwrite_results or extracted_file["name"] in result_dir_files:
+                result_dir_files.remove(extracted_file["name"])
+
+            correct_path = os.path.join(SELF_LOCATION, "tests", "results", sample, extracted_file["name"])
             with open(correct_path, "rb") as f:
                 correct_result = f.read()
 
-            test_path = os.path.join(cls.working_directory, extracted_file)
+            test_path = os.path.join(cls.working_directory, extracted_file["name"])
             with open(test_path, "rb") as f:
                 test_result = f.read()
 

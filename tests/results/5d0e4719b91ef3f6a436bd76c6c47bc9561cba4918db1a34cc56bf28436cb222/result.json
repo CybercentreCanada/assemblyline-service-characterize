@@ -4,7 +4,10 @@
             "156b9ff9509f641297f395302360c2add7691a8933bf981ce1de8747aabfd55c"
         ],
         "extracted": [
-            "9d95f759e876a9157e0070e1b407fc109669ff9db9531b0e3d76ae8f053f1769"
+            {
+                "name": "c6e637541b.bat",
+                "sha256": "c6e637541b4a1bfe216a4721990db987633a7ae90fc511fe0c5282f4ad777b00"
+            }
         ]
     },
     "result": {

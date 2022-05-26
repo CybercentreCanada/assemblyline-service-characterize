@@ -4,7 +4,10 @@
             "38d01cf55b9dd77ca23d7ab8db629b1ca3f7761df3f53744be60588f8a86fbda"
         ],
         "extracted": [
-            "5bce9fc83e62a82805eedfb2c3a4c8013c3d2c67c5c13dbe2eb3ea03d85c0403"
+            {
+                "name": "5bce9fc83e.ps1",
+                "sha256": "5bce9fc83e62a82805eedfb2c3a4c8013c3d2c67c5c13dbe2eb3ea03d85c0403"
+            }
         ]
     },
     "result": {
