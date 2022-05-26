@@ -226,7 +226,7 @@ class Characterize(ServiceBase):
                             e_res.add_tag(tag_type, v)
 
         # 4. Lnk management.
-        if request.file_type == "meta/shortcut/windows":
+        if request.file_type == "shortcut/windows":
             with open(request.file_path, "rb") as indata:
                 lnk = LnkParse3.lnk_file(indata)
 
