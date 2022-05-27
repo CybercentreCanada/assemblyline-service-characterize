@@ -4,7 +4,10 @@
             "8bfc33dea495669961ef7b71c08fc4b0c2e5c74c06729a9c72b39f940d141484"
         ],
         "extracted": [
-            "b3611423514051f092012b5073a863a55ebc0718957b69ac4c2f54b6b42c8d5e"
+            {
+                "name": "d2539292de.bat",
+                "sha256": "d2539292defb9decbe46f22231dcc6d6b4035da3a774346d42f1d32113cbbe17"
+            }
         ]
     },
     "result": {

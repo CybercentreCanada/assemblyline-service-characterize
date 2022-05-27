@@ -25,40 +25,40 @@ heuristics:
   - heur_id: 1
     name: Suspicious command line arguments
     score: 500
-    filetype: "*"
+    filetype: "shortcut/windows"
     description: Found a suspicious command line
 
   - description: >-
-       Only applies to windows shortcut files. A very recent timestamp is found.
-    filetype: "*"
+      A very recent timestamp is found.
+    filetype: "shortcut/windows"
     heur_id: 2
     name: Recent timestamp found
     score: 500
 
   - description: >-
-       Only applies to windows shortcut files. A timestamp from the future is found. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
-    filetype: "*"
+      A timestamp from the future is found. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
+    filetype: "shortcut/windows"
     heur_id: 3
     name: Future timestamp found
     score: 1
 
   - description: >-
-       The shortcut used an icon that could be deceptively used to hide a malicious behaviour or simply a suspicious one.
-    filetype: "*"
+      The shortcut used an icon that could be deceptively used to hide a malicious behaviour or simply a suspicious one.
+    filetype: "shortcut/windows"
     heur_id: 4
     name: Suspicious icon used
     score: 250
 
   - description: >-
-       The shortcut was probably created in a Virtual Machine.
-    filetype: "*"
+      The shortcut was probably created in a Virtual Machine.
+    filetype: "shortcut/windows"
     heur_id: 5
     name: Probably created in a VM
     score: 1
 
   - description: >-
-       The shortcut contains additional data after the end of the terminal block. It is either corrupted of will be used as the next stage of a malicious behaviour.
-    filetype: "*"
+      The shortcut contains additional data after the end of the terminal block. It is either corrupted of will be used as the next stage of a malicious behaviour.
+    filetype: "shortcut/windows"
     heur_id: 6
     name: Additional data after terminal block
     score: 200

@@ -129,7 +129,7 @@ class Characterize(ServiceBase):
             body=json.dumps(entropy_graph_data),
         )
 
-        if request.file_type != "meta/shortcut/windows":
+        if request.file_type != "shortcut/windows":
             # 2. Get hachoir metadata
             parser = createParser(request.file_path)
             if parser is not None:
@@ -354,13 +354,13 @@ class Characterize(ServiceBase):
             if process_cmdline:
                 lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
 
-            cmd_code = ""
+            cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
-                cmd_code = get_cmd_command(f"{filename_extracted} {cla}".encode())
+                cmd_code = (get_cmd_command(f"{filename_extracted} {cla}".encode()), "bat")
                 if "rundll32 " in cla:  # We are already checking for rundll32.exe as part of risky_executable
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
             elif filename_extracted in ["powershell", "powershell.exe"]:
-                cmd_code = get_powershell_command(f"{filename_extracted} {cla}".encode())
+                cmd_code = (get_powershell_command(f"{filename_extracted} {cla}".encode()), "ps1")
 
             if heur_1_items:
                 heur = Heuristic(1)
@@ -368,13 +368,14 @@ class Characterize(ServiceBase):
                 heur_section.update_items(heur_1_items)
 
             if cmd_code:
-                sha256hash = hashlib.sha256(cmd_code).hexdigest()
-                cmd_file_path = os.path.join(self.working_directory, sha256hash)
+                sha256hash = hashlib.sha256(cmd_code[0]).hexdigest()
+                cmd_filename = f"{sha256hash[0:10]}.{cmd_code[1]}"
+                cmd_file_path = os.path.join(self.working_directory, cmd_filename)
                 with open(cmd_file_path, "wb") as cmd_f:
-                    cmd_f.write(cmd_code)
+                    cmd_f.write(cmd_code[0])
                 request.add_extracted(
                     cmd_file_path,
-                    sha256hash,
+                    cmd_filename,
                     "Extracted LNK execution code",
                 )
 
