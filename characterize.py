@@ -129,7 +129,7 @@ class Characterize(ServiceBase):
             body=json.dumps(entropy_graph_data),
         )
 
-        if request.file_type != "meta/shortcut/windows":
+        if request.file_type != "shortcut/windows":
             # 2. Get hachoir metadata
             parser = createParser(request.file_path)
             if parser is not None:
