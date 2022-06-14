@@ -5,8 +5,8 @@ import os
 from pathlib import Path
 
 import pytest
-from assemblyline.common.dict_utils import flatten
 from assemblyline.common import forge
+from assemblyline.common.dict_utils import flatten
 from assemblyline.odm.messages.task import Task as ServiceTask
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.task import Task

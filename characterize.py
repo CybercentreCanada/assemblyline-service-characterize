@@ -4,7 +4,6 @@ import datetime
 import hashlib
 import json
 import os
-import re
 import subprocess
 from typing import Dict, List, Optional, Tuple, Union
 
@@ -59,7 +58,6 @@ TAG_MAP = {
     },
 }
 
-BAD_LINK_RE = re.compile("http[s]?://|powershell|cscript|wscript|mshta|<script")
 EXIFTOOL_DATE_FMT = "%Y:%m:%d %H:%M:%S%z"
 
 
@@ -243,9 +241,7 @@ class Characterize(ServiceBase):
             if "command_line_arguments" in features["data"]:
                 if any(x in features["data"]["command_line_arguments"].lower() for x in risky_executable):
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
-                if " && " in features["data"]["command_line_arguments"]:
-                    heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
-                elif BAD_LINK_RE.search(features["data"]["command_line_arguments"].lower()):
+                elif " && " in features["data"]["command_line_arguments"]:
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
 
             lbp = ""
