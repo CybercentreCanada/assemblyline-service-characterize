@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import subprocess
+from configparser import ConfigParser
 from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
@@ -398,3 +399,25 @@ class Characterize(ServiceBase):
                 heur = Heuristic(6)
                 heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 heur_section.set_item("Length", len(lnk.appended_data))
+
+        # 5. URL file management
+        if request.file_type == "shortcut/web":
+            config = ConfigParser()
+            config.read(request.file_path)
+
+            res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
+            for k, v in config["InternetShortcut"].items():
+                res.set_item(k, v)
+
+                if k == "url":
+                    if v.startswith("http://") or v.startswith("https://"):
+                        res.add_tag("network.static.uri", v)
+                    if v.startswith("file:"):
+                        heur = Heuristic(1)
+                        heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=res)
+                        heur_section.set_item("url", v)
+
+            config.pop("InternetShortcut", None)
+            if config.sections():
+                extra_res = ResultKeyValueSection("Extra sections", parent=res)
+                extra_res.set_item("Names", ", ".join(config.sections()))

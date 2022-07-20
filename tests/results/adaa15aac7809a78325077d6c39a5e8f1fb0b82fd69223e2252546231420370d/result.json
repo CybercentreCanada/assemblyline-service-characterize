@@ -1,0 +1,14 @@
+{
+    "response": {
+        "supplementary": [],
+        "extracted": []
+    },
+    "result": {
+        "heuristics": [],
+        "tags": {
+            "network.static.uri": [
+                "https://goo.su/rV1U"
+            ]
+        }
+    }
+}
