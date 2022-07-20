@@ -412,7 +412,7 @@ class Characterize(ServiceBase):
                 if k == "url":
                     if v.startswith("http://") or v.startswith("https://"):
                         res.add_tag("network.static.uri", v)
-                    if v.startswith("file:"):
+                    elif v.startswith("file:"):
                         heur = Heuristic(1)
                         heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=res)
                         heur_section.set_item("url", v)
