@@ -210,7 +210,7 @@ class Characterize(ServiceBase):
                             exif = subprocess.run(
                                 ["exiftool", f"-{k}", "-T", request.file_path], capture_output=True, check=False
                             )
-                            v = exif.stdout.decode("utf-8", errors="ignore")
+                            v = exif.stdout.decode("utf-8", errors="ignore").strip()
                         exif_body[build_key(k)] = v
                 if exif_body:
                     e_res = ResultSection(
