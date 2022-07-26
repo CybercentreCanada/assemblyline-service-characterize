@@ -125,7 +125,7 @@ class Characterize(ServiceBase):
             f"File entropy: {round(entropy, 3)}",
             parent=request.result,
             body_format=BODY_FORMAT.GRAPH_DATA,
-            body=json.dumps(entropy_graph_data),
+            body=json.dumps(entropy_graph_data, allow_nan=False),
         )
 
         if request.file_type != "shortcut/windows":
@@ -175,7 +175,7 @@ class Characterize(ServiceBase):
                         if kv_body:
                             res = ResultSection(
                                 f"Metadata extracted by hachoir-metadata [Parser: {parser_id}]",
-                                body=json.dumps(kv_body),
+                                body=json.dumps(kv_body, allow_nan=False),
                                 body_format=BODY_FORMAT.KEY_VALUE,
                                 parent=request.result,
                             )
@@ -189,12 +189,9 @@ class Characterize(ServiceBase):
             exif_data = json.loads(exif.stdout.decode("utf-8", errors="ignore"))
             res_data = exif_data[0]
             if "Error" not in res_data:
-                exif_body = {
-                    build_key(k): v
-                    for k, v in res_data.items()
-                    if v
-                    and k
-                    not in [
+                exif_body = {}
+                for k, v in res_data.items():
+                    if v and k not in [
                         "SourceFile",
                         "ExifToolVersion",
                         "FileName",
@@ -208,12 +205,17 @@ class Characterize(ServiceBase):
                         "FileTypeExtension",
                         "MIMEType",
                         "Warning",
-                    ]
-                }
+                    ]:
+                        if v in [float("inf"), -float("inf"), float("nan")]:
+                            exif = subprocess.run(
+                                ["exiftool", f"-{k}", "-T", request.file_path], capture_output=True, check=False
+                            )
+                            v = exif.stdout.decode("utf-8", errors="ignore")
+                        exif_body[build_key(k)] = v
                 if exif_body:
                     e_res = ResultSection(
                         "Metadata extracted by ExifTool",
-                        body=json.dumps(exif_body),
+                        body=json.dumps(exif_body, allow_nan=False),
                         body_format=BODY_FORMAT.KEY_VALUE,
                         parent=request.result,
                     )
