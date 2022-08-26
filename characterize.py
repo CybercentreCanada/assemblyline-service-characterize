@@ -366,7 +366,7 @@ class Characterize(ServiceBase):
             if process_cmdline:
                 lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
 
-            filename_extracted = filename_extracted.rsplit("\\")[-1].strip()
+            filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 
             cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
