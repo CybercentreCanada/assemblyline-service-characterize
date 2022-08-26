@@ -63,6 +63,13 @@ heuristics:
     name: Additional data after terminal block
     score: 200
 
+  - description: >-
+      The shortcut no base path, relative path, net name or target, but contains target hidden in the extra section
+    filetype: "shortcut/*"
+    heur_id: 7
+    name: Target hidden in extra section
+    score: 100
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG
   cpu_cores: 0.5
