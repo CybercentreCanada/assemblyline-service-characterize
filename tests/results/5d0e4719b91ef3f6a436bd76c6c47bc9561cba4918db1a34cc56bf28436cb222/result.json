@@ -32,7 +32,7 @@
                 "EB:33:6A:3B:D0:E3"
             ],
             "file.shortcut.command_line": [
-                "..\\..\\..\\..\\Windows\\System32\\cmd.exe /c start rundll32 namr.dll,PluginInit"
+                "C:\\Windows\\System32\\cmd.exe /c start rundll32 namr.dll,PluginInit"
             ],
             "file.name.extracted": [
                 "cmd.exe"

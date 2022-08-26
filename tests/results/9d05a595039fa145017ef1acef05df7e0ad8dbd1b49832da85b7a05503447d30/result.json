@@ -21,7 +21,7 @@
                 "42:01:0A:96:00:00"
             ],
             "file.shortcut.command_line": [
-                "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
+                "C:\\Users\\admin\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
             ],
             "file.name.extracted": [
                 "DiagnosticsHub.StandardCollector.Service.exe.bat"

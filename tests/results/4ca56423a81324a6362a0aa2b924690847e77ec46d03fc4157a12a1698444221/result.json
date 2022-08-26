@@ -27,7 +27,7 @@
                 "B2:63:FD:AF:B6:EF"
             ],
             "file.shortcut.command_line": [
-                "..\\Windows\\System32\\rundll32.exe info.dat,msuspend"
+                "C:\\Windows\\System32\\rundll32.exe info.dat,msuspend"
             ],
             "file.name.extracted": [
                 "rundll32.exe"

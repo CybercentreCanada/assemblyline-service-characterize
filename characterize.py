@@ -344,14 +344,29 @@ class Characterize(ServiceBase):
             nn = str(features["data"].get("net_name", "")).strip()
             t = str(target).strip().rsplit("\\")[-1].strip()
             cla = str(features["data"].get("command_line_arguments", "")).strip()
+            # Optional extras to use in case none of the other are filled
+            extra_targets = {
+                k: v
+                for k, v in features.get("extra", {}).get("ENVIRONMENTAL_VARIABLES_LOCATION_BLOCK", {}).items()
+                if k.startswith("target_")
+            }
 
-            filename_extracted = (bp or rp or t or nn).rsplit("\\")[-1].strip()
-            if filename_extracted:
-                lnk_result_section.add_tag(tag_type="file.name.extracted", value=(bp or rp or t or nn).rsplit("\\")[-1])
+            filename_extracted = bp or rp or t or nn
+            if filename_extracted.rsplit("\\")[-1].strip():
+                lnk_result_section.add_tag(tag_type="file.name.extracted", value=filename_extracted.rsplit("\\")[-1])
+            elif extra_targets:
+                heur = Heuristic(7)
+                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                for k, v in extra_targets.items():
+                    filename_extracted = v
+                    heur_section.set_item(k, v)
+                    heur_section.add_tag(tag_type="file.name.extracted", value=v.rsplit("\\")[-1])
 
-            process_cmdline = f"{(rp or bp or t or nn)} {cla}".strip()
+            process_cmdline = f"{filename_extracted} {cla}".strip()
             if process_cmdline:
                 lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
+
+            filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 
             cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
