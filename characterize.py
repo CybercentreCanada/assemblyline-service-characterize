@@ -277,7 +277,7 @@ class Characterize(ServiceBase):
                         heur_1_items["target_file_dosname"] = target
 
             if "icon_location" in features["data"]:
-                deceptive_icons = ["wordpad.exe", "shell32.dll"]
+                deceptive_icons = ["wordpad.exe", "shell32.dll", "explorer.exe"]
 
                 lnk_result_section.add_tag(
                     tag_type="file.shortcut.icon_location", value=features["data"]["icon_location"]
