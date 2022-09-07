@@ -1,14 +1,77 @@
 {
-    "response": {
-        "supplementary": [],
-        "extracted": []
-    },
-    "result": {
-        "heuristics": [],
+  "extra": {
+    "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 1.5, 1.5, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, -0.0, 0.8112781244591328, 1.5, 0.8112781244591328, -0.0, -0.0, 2.0, 2.0, 2.0, 2.0, 1.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 4.968",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 8, \"word_count\": 8}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"url\": \"https://goo.su/rV1U\", \"idlist\": \"\", \"hotkey\": \"0\", \"iconindex\": \"0\", \"iconfile\": \"E:\\\\yb.ico\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "network.static.uri": [
+          "network": {
+            "static": {
+              "uri": [
                 "https://goo.su/rV1U"
-            ]
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by Ini Reader",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"Names\": \"{000214A0-0000-0000-C000-000000000046}\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Extra sections",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [],
+    "tags": {
+      "network.static.uri": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "https://goo.su/rV1U"
         }
-    }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }
