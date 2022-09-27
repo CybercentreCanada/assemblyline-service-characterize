@@ -1,6 +1,9 @@
 import hachoir.core.config as hachoir_config
+import os
 
-from characterize import Characterize
+from assemblyline.common.importing import load_module_by_path
+
+Characterize = load_module_by_path("characterize.Characterize", os.path.join(os.path.dirname(__file__), ".."))
 
 
 class TestCharacterize:

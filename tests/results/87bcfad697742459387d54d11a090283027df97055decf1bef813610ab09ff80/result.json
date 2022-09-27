@@ -1,10 +1,39 @@
 {
-    "response": {
-        "supplementary": [],
-        "extracted": []
-    },
-    "result": {
-        "heuristics": [],
-        "tags": {}
-    }
+  "extra": {
+    "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.8977826095973, 4.616715329220475, 4.598023740435427, 4.610529047835606, 4.458587436336886, 4.631164614748204, 4.567238398069974, 4.619515295672153, 4.671224291846276, 4.43650179770792, 4.642397361239506, 4.426216806998313, 4.6672106512586975, 4.4692260994359465, 3.6886319336064504, 3.699681470360035, 3.022227040020265, 2.5300811625657507, 3.699681470360035, 2.6970287854463475, 3.3332635244777773, 3.5335904681728736, 3.676753951860662, 3.8555896541994743, 3.5510724042295303, 4.22004331765993, 4.060184792304866, 4.076566185666966, 3.0955440917163433, 3.3586805101436714, 3.4401892711610804, 4.391674074315805, 3.6435850033523383, 3.16232490427665, 4.283724880915377, 3.0661492596815143, 3.2674599809874336, 3.797821000116184, 3.5510724042295303, 3.5234980056894627, 4.049748472751953, 3.20374736694515, 3.805734538067861, 3.3706467020478708, 3.4319856703138925, 2.1167708086281323, 1.750323634645686, 1.1727749269587513, 2.1049351818705513, 3.203294615067323]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 4.402",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"document_ignorable\": \"w14 w15 w16se wp14\", \"document_body_ppara_id\": \"55180ECA\", \"document_body_ptext_id\": 77777777, \"document_body_prsid_r\": \"004A4F94\", \"document_body_prsid_rdefault\": \"004A4F94\", \"document_body_prsid_p\": \"004A4F94\", \"document_body_pppr_rpr_rfonts_ascii\": \"Century Gothic\", \"document_body_pppr_rpr_rfonts_hansi\": \"Century Gothic\", \"document_body_pppr_rpr_color_val\": \"1F2B55\", \"document_body_pppr_rpr_sz_val\": 32, \"document_body_pppr_rpr_sz_cs_val\": 32, \"document_body_prrpr_rfonts_ascii\": \"Century Gothic\", \"document_body_prrpr_rfonts_hansi\": \"Century Gothic\", \"document_body_prrpr_color_val\": \"1F2B55\", \"document_body_prrpr_sz_val\": 32, \"document_body_prrpr_sz_cs_val\": 32, \"document_body_prt\": \"EVOLUTIONS DU DOCUMENT\", \"document_body_tbl_tbl_pr_tbl_ww\": 9640, \"document_body_tbl_tbl_pr_tbl_wtype\": \"dxa\", \"document_body_tbl_tbl_pr_tbl_ind_w\": -227, \"document_body_tbl_tbl_pr_tbl_ind_type\": \"dxa\", \"document_body_tbl_tbl_pr_tbl_borders_top_val\": \"single\", \"document_body_tbl_tbl_pr_tbl_borders_top_sz\": 4, \"document_body_tbl_tbl_pr_tbl_borders_top_color\": \"A6A6A6\", \"document_body_tbl_tbl_pr_tbl_borders_left_val\": \"single\", \"document_body_tbl_tbl_pr_tbl_borders_left_sz\": 4, \"document_body_tbl_tbl_pr_tbl_borders_left_color\": \"A6A6A6\", \"document_body_tbl_tbl_pr_tbl_borders_bottom_val\": \"single\", \"document_body_tbl_tbl_pr_tbl_borders_bottom_sz\": 4, \"document_body_tbl_tbl_pr_tbl_borders_bottom_color\": \"A6A6A6\", \"document_body_tbl_tbl_pr_tbl_borders_right_val\": \"single\", \"document_body_tbl_tbl_pr_tbl_borders_right_sz\": 4, \"document_body_tbl_tbl_pr_tbl_borders_right_color\": \"A6A6A6\", \"document_body_tbl_tbl_pr_tbl_borders_inside_hval\": \"single\", \"document_body_tbl_tbl_pr_tbl_borders_inside_hsz\": 4, \"document_body_tbl_tbl_pr_tbl_borders_inside_hcolor\": \"A6A6A6\", \"document_body_tbl_tbl_pr_tbl_borders_inside_vval\": \"single\", \"document_body_tbl_tbl_pr_tbl_borders_inside_vsz\": 4, \"document_body_tbl_tbl_pr_tbl_borders_inside_vcolor\": \"A6A6A6\", \"document_body_tbl_tbl_pr_tbl_cell_mar_top_w\": 85, \"document_body_tbl_tbl_pr_tbl_cell_mar_top_type\": \"dxa\", \"document_body_tbl_tbl_pr_tbl_cell_mar_left_w\": 57, \"document_body_tbl_tbl_pr_tbl_cell_mar_left_type\": \"dxa\", \"document_body_tbl_tbl_pr_tbl_cell_mar_bottom_w\": 85, \"document_body_tbl_tbl_pr_tbl_cell_mar_bottom_type\": \"dxa\", \"document_body_tbl_tbl_pr_tbl_cell_mar_right_w\": 57, \"document_body_tbl_tbl_pr_tbl_cell_mar_right_type\": \"dxa\", \"document_body_tbl_tbl_pr_tbl_look_val\": \"0480\", \"document_body_tbl_tbl_pr_tbl_look_first_column\": 1, \"document_body_tbl_tbl_pr_tbl_look_no_vband\": 1, \"document_body_tbl_tbl_grid_grid_col_w\": 1029, \"document_body_tbl_tr_rsid_r\": \"004A4F94\", \"document_body_tbl_tr_para_id\": \"6683E701\", \"document_body_tbl_tr_text_id\": 77777777, \"document_body_tbl_tr_rsid_tr\": \"004A4F94\", \"document_body_tbl_tr_tc_tc_pr_tc_ww\": 9640, \"document_body_tbl_tr_tc_tc_pr_tc_wtype\": \"dxa\", \"document_body_tbl_tr_tc_tc_pr_grid_span_val\": 4, \"document_body_tbl_tr_tc_tc_pr_tc_borders_top_val\": \"single\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_top_sz\": 4, \"document_body_tbl_tr_tc_tc_pr_tc_borders_top_color\": \"A6A6A6\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_left_val\": \"single\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_left_sz\": 4, \"document_body_tbl_tr_tc_tc_pr_tc_borders_left_color\": \"A6A6A6\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_bottom_val\": \"single\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_bottom_sz\": 4, \"document_body_tbl_tr_tc_tc_pr_tc_borders_bottom_color\": \"A6A6A6\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_right_val\": \"single\", \"document_body_tbl_tr_tc_tc_pr_tc_borders_right_sz\": 4, \"document_body_tbl_tr_tc_tc_pr_tc_borders_right_color\": \"A6A6A6\", \"document_body_tbl_tr_tc_tc_pr_shd_val\": \"clear\", \"document_body_tbl_tr_tc_tc_pr_shd_color\": \"auto\", \"document_body_tbl_tr_tc_tc_pr_shd_fill\": \"D9D9D9\", \"document_body_tbl_tr_tc_ppara_id\": \"16FC4230\", \"document_body_tbl_tr_tc_ptext_id\": 77777777, \"document_body_tbl_tr_tc_prsid_r\": \"004A4F94\", \"document_body_tbl_tr_tc_prsid_rdefault\": \"004A4F94\", \"document_body_tbl_tr_tc_pppr_ind_left\": 142, \"document_body_tbl_tr_tc_pppr_ind_right\": 142, \"document_body_tbl_tr_tc_prt\": \"ABC123\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [],
+    "tags": {},
+    "temp_submission_data": {}
+  }
 }

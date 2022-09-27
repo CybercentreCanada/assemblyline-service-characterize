@@ -1,24 +1,117 @@
 {
-    "response": {
-        "supplementary": [
-            "4edf04a119ca46c8273e5dab10e72c02ce3634f8c29aabbc9579894606f2905e"
-        ],
-        "extracted": []
-    },
-    "result": {
-        "heuristics": [
-            4
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 250,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.498778124459133, 0.3997900666170139, 3.334282221599798, 1.748689844084022, 2.4777930388928713, 0.3997900666170139, 2.0550416913014384, 2.4777930388928713, 0.9255636700495734, 2.2042028044502624, 1.9064514568588302, 1.1183927290103626, 2.5058269522460908, 2.5389097655573916, 2.6639097655573916, 2.426108500731241, 2.452819531114783, 2.7889097655573916, 3.021782221599798, 3.7373008763572906, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.20062232431271465, 2.875, 2.2667028044502624, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.686189844084022, 3.6858203810934294, 3.8993974703476995, 2.5160353655857572, 2.6014097655573916, 2.390319531114783, -0.0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 2.208",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"(none)\", \"icon_index\": 70, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"msoffice.exe\", \"command_line_arguments\": \"bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition\", \"icon_file_name\": \"%windir%/system32/shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.name.extracted": [
+          "file": {
+            "name": {
+              "extracted": [
                 "msoffice.exe"
-            ],
-            "file.shortcut.icon_location": [
-                "%windir%/system32/shell32.dll"
-            ],
-            "file.shortcut.command_line": [
+              ]
+            },
+            "shortcut": {
+              "command_line": [
                 "msoffice.exe bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
-            ]
+              ],
+              "icon_location": [
+                "%windir%/system32/shell32.dll"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"%windir%/system32/shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "4edf04a119ca46c8273e5dab10e72c02ce3634f8c29aabbc9579894606f2905e"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "msoffice.exe"
         }
-    }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "msoffice.exe bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition"
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "%windir%/system32/shell32.dll"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }

