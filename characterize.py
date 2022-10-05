@@ -276,19 +276,6 @@ class Characterize(ServiceBase):
                     if any(x in target.lower() for x in risky_executable):
                         heur_1_items["target_file_dosname"] = target
 
-            if "icon_location" in features["data"]:
-                deceptive_icons = ["wordpad.exe", "shell32.dll", "explorer.exe"]
-
-                lnk_result_section.add_tag(
-                    tag_type="file.shortcut.icon_location", value=features["data"]["icon_location"]
-                )
-                if any(
-                    features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x) for x in deceptive_icons
-                ):
-                    heur = Heuristic(4)
-                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
-                    heur_section.set_item("icon_location", features["data"]["icon_location"])
-
             timestamps = []
             if features["header"]["creation_time"]:
                 timestamps.append(("creation_time", features["header"]["creation_time"]))
@@ -353,18 +340,31 @@ class Characterize(ServiceBase):
 
             filename_extracted = bp or rp or t or nn
             if filename_extracted.rsplit("\\")[-1].strip():
-                lnk_result_section.add_tag(tag_type="file.name.extracted", value=filename_extracted.rsplit("\\")[-1])
+                lnk_result_section.add_tag("file.name.extracted", filename_extracted.rsplit("\\")[-1])
             elif extra_targets:
                 heur = Heuristic(7)
                 heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 for k, v in extra_targets.items():
                     filename_extracted = v
                     heur_section.set_item(k, v)
-                    heur_section.add_tag(tag_type="file.name.extracted", value=v.rsplit("\\")[-1])
+                    heur_section.add_tag("file.name.extracted", v.rsplit("\\")[-1])
+
+            if "icon_location" in features["data"]:
+                deceptive_icons = ["wordpad.exe", "shell32.dll", "explorer.exe", "msedge.exe"]
+
+                lnk_result_section.add_tag("file.shortcut.icon_location", features["data"]["icon_location"])
+                if any(
+                    features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x)
+                    and not filename_extracted.endswith(x)
+                    for x in deceptive_icons
+                ):
+                    heur = Heuristic(4)
+                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    heur_section.set_item("icon_location", features["data"]["icon_location"])
 
             process_cmdline = f"{filename_extracted} {cla}".strip()
             if process_cmdline:
-                lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
+                lnk_result_section.add_tag("file.shortcut.command_line", process_cmdline)
 
             filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 
