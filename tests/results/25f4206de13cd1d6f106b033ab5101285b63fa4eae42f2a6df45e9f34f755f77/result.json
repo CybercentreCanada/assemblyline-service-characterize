@@ -1,42 +1,190 @@
 {
-    "response": {
-        "supplementary": [
-            "8bfc33dea495669961ef7b71c08fc4b0c2e5c74c06729a9c72b39f940d141484"
-        ],
-        "extracted": [
-            {
-                "name": "d2539292de.bat",
-                "sha256": "d2539292defb9decbe46f22231dcc6d6b4035da3a774346d42f1d32113cbbe17"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1,
-            5
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 501,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.538011611618207, 3.5906314390239964, 3.680165331217427, 1.3410173717321385, 4.195909270873606, 1.8916085136217475, 3.368546576667349, 3.0443941193584534, 2.071439706933589, 3.855931060301677, 2.303831637608537, 2.538011611618207, 1.8916085136217475, 4.222593650305008, 2.3246507615479635, 2.8397005586868334, 2.6963072011385814, 2.779094498080773, 2.756913261744642, 2.7413638163281506, 2.8175193223507025, 3.809397528383803, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.39045213081320695, 2.9231819981463323, 1.0934255569822822, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.7752593054584659, 3.7094320646611725, 3.4048269576665082, 4.923181998146335, 4.741363816328152, 0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 2.934",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"Archive\", \"create_date\": \"2022:02:11 18:01:47+00:00\", \"access_date\": \"2022:04:19 09:59:03+00:00\", \"modify_date\": \"2022:02:11 18:01:47+00:00\", \"target_file_size\": 289792, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32.exe mkl2n.dll,kXlNkCKgFC\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-30fdj39\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.date.creation": [
+          "file": {
+            "date": {
+              "creation": [
                 "2022:02:11 18:01:47+00:00"
-            ],
-            "file.date.last_modified": [
+              ],
+              "last_modified": [
                 "2022:02:11 18:01:47+00:00"
-            ],
-            "file.shortcut.icon_location": [
-                "%systemroot%\\system32\\imageres.dll"
-            ],
-            "file.shortcut.machine_id": [
-                "desktop-30fdj39"
-            ],
-            "file.shortcut.tracker_mac": [
-                "EB:33:6A:3B:D0:E3"
-            ],
-            "file.shortcut.command_line": [
-                "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
-            ],
-            "file.name.extracted": [
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "name": {
+              "extracted": [
                 "cmd.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
+              ],
+              "icon_location": [
+                "%systemroot%\\system32\\imageres.dll"
+              ],
+              "machine_id": [
+                "desktop-30fdj39"
+              ],
+              "tracker_mac": [
+                "EB:33:6A:3B:D0:E3"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"machine_identifier\": \"desktop-30fdj39\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 5,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Probably created in a VM",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"command_line_arguments\": \"/c start rundll32.exe mkl2n.dll,kXlNkCKgFC\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "d2539292de.bat",
+        "sha256": "d2539292defb9decbe46f22231dcc6d6b4035da3a774346d42f1d32113cbbe17"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "8bfc33dea495669961ef7b71c08fc4b0c2e5c74c06729a9c72b39f940d141484"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 5,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.date.creation": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2022:02:11 18:01:47+00:00"
         }
-    }
+      ],
+      "file.date.last_modified": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2022:02:11 18:01:47+00:00"
+        }
+      ],
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "cmd.exe"
+        }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "%systemroot%\\system32\\imageres.dll"
+        }
+      ],
+      "file.shortcut.machine_id": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "desktop-30fdj39"
+        }
+      ],
+      "file.shortcut.tracker_mac": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "EB:33:6A:3B:D0:E3"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }
