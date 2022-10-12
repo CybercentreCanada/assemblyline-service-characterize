@@ -7,7 +7,7 @@
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.538011611618207, 3.5906314390239964, 3.680165331217427, 1.3410173717321385, 4.195909270873606, 1.8916085136217475, 3.368546576667349, 3.0443941193584534, 2.071439706933589, 3.855931060301677, 2.303831637608537, 2.538011611618207, 1.8916085136217475, 4.222593650305008, 2.3246507615479635, 2.8397005586868334, 2.6963072011385814, 2.779094498080773, 2.756913261744642, 2.7413638163281506, 2.8175193223507025, 3.809397528383803, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.39045213081320695, 2.9231819981463323, 1.0934255569822822, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.7752593054584659, 3.7094320646611725, 3.4048269576665082, 4.923181998146335, 4.741363816328152, 0]}}",
         "body_format": "GRAPH_DATA",
-        "classification": "TLP:WHITE",
+        "classification": "TLP:W",
         "depth": 0,
         "heuristic": null,
         "tags": {},
@@ -18,7 +18,7 @@
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"Archive\", \"create_date\": \"2022:02:11 18:01:47+00:00\", \"access_date\": \"2022:04:19 09:59:03+00:00\", \"modify_date\": \"2022:02:11 18:01:47+00:00\", \"target_file_size\": 289792, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32.exe mkl2n.dll,kXlNkCKgFC\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-30fdj39\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:WHITE",
+        "classification": "TLP:W",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -40,7 +40,7 @@
         "auto_collapse": false,
         "body": null,
         "body_format": "TEXT",
-        "classification": "TLP:WHITE",
+        "classification": "TLP:W",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -73,7 +73,7 @@
         "auto_collapse": false,
         "body": "{\"machine_identifier\": \"desktop-30fdj39\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:WHITE",
+        "classification": "TLP:W",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],
@@ -91,7 +91,7 @@
         "auto_collapse": false,
         "body": "{\"command_line_arguments\": \"/c start rundll32.exe mkl2n.dll,kXlNkCKgFC\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:WHITE",
+        "classification": "TLP:W",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],
