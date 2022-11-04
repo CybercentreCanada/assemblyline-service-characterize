@@ -370,11 +370,15 @@ class Characterize(ServiceBase):
 
             cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
-                cmd_code = (get_cmd_command(f"{filename_extracted} {cla}".encode()), "bat")
+                file_content = "REM Batch extracted by Characterize\n".encode()
+                file_content += get_cmd_command(f"{filename_extracted} {cla}".encode())
+                cmd_code = (file_content, "bat")
                 if "rundll32 " in cla:  # We are already checking for rundll32.exe as part of risky_executable
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
             elif filename_extracted in ["powershell", "powershell.exe"]:
-                cmd_code = (get_powershell_command(f"{filename_extracted} {cla}".encode()), "ps1")
+                file_content = "#!/usr/bin/env pwsh\n".encode()
+                file_content += get_powershell_command(f"{filename_extracted} {cla}".encode())
+                cmd_code = (file_content, "ps1")
 
             if heur_1_items:
                 heur = Heuristic(1)
