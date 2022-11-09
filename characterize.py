@@ -427,7 +427,7 @@ class Characterize(ServiceBase):
             config.read(request.file_path)
 
             res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
-            for k, v in config["InternetShortcut"].items():
+            for k, v in config.items("InternetShortcut", raw=True):
                 res.set_item(k, v)
 
                 if k == "url":
