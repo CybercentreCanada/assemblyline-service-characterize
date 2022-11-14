@@ -430,7 +430,7 @@ class Characterize(ServiceBase):
             for k, v in config.items("InternetShortcut", raw=True):
                 res.set_item(k, v)
 
-                if k == "url":
+                if k.lower() == "url":
                     if v.startswith("http://") or v.startswith("https://"):
                         res.add_tag("network.static.uri", v)
                     elif v.startswith("file:"):
