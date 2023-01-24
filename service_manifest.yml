@@ -70,6 +70,12 @@ heuristics:
     name: Target hidden in extra section
     score: 100
 
+  - description: Used for tracking Internet Shortcuts
+    filetype: "shortcut/web"
+    heur_id: 8
+    name: Internet Shortcut
+    score: 1
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG
   cpu_cores: 0.5

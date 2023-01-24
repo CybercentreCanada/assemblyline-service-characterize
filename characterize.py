@@ -432,11 +432,13 @@ class Characterize(ServiceBase):
 
                 if k.lower() == "url":
                     if v.startswith("http://") or v.startswith("https://"):
+                        res.set_heuristic(8)
                         res.add_tag("network.static.uri", v)
                     elif v.startswith("file:"):
                         heur = Heuristic(1)
                         heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=res)
                         heur_section.set_item("url", v)
+                        heur_section.add_tag("network.static.uri", v)
 
             config.pop("InternetShortcut", None)
             if config.sections():
