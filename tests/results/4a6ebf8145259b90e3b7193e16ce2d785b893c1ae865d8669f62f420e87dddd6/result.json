@@ -1,17 +1,17 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 1,
+    "score": 500,
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 1.5, 1.5, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, -0.0, 0.8112781244591328, 1.5, 0.8112781244591328, -0.0, -0.0, 2.0, 2.0, 2.0, 2.0, 1.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 1.5, 2.0, 1.5, 1.5, 2.0, 1.5, 0.8112781244591328, 0.0, 1.5, 0.8112781244591328, 0.0, 0.0, 2.0, 2.0, 2.0, 1.5, 1.0, 0.0]}}",
         "body_format": "GRAPH_DATA",
         "classification": "TLP:W",
         "depth": 0,
         "heuristic": null,
         "tags": {},
-        "title_text": "File entropy: 4.968",
+        "title_text": "File entropy: 5.236",
         "zeroize_on_tag_safe": false
       },
       {
@@ -27,15 +27,26 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"https://goo.su/rV1U\", \"idlist\": \"\", \"hotkey\": \"0\", \"iconindex\": \"0\", \"iconfile\": \"E:\\\\yb.ico\"}",
+        "body": "{\"iconindex\": \"1\", \"hotkey\": \"0\", \"idlist\": \"\", \"url\": \"file://62.173.147.122/Agenzia/entrat.exe\", \"iconfile\": \"C:\\\\Windows\\\\system32\\\\SHELL32.dll\"}",
         "body_format": "KEY_VALUE",
         "classification": "TLP:W",
         "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by Ini Reader",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"url\": \"file://62.173.147.122/Agenzia/entrat.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
         "heuristic": {
           "attack_ids": [],
           "frequency": 1,
-          "heur_id": 8,
-          "score": 1,
+          "heur_id": 1,
+          "score": 500,
           "score_map": {},
           "signatures": {}
         },
@@ -43,12 +54,12 @@
           "network": {
             "static": {
               "uri": [
-                "https://goo.su/rV1U"
+                "file://62.173.147.122/Agenzia/entrat.exe"
               ]
             }
           }
         },
-        "title_text": "Metadata extracted by Ini Reader",
+        "title_text": "Suspicious command line arguments",
         "zeroize_on_tag_safe": false
       },
       {
@@ -72,16 +83,16 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 8,
+        "heur_id": 1,
         "signatures": []
       }
     ],
     "tags": {
       "network.static.uri": [
         {
-          "heur_id": 8,
+          "heur_id": 1,
           "signatures": [],
-          "value": "https://goo.su/rV1U"
+          "value": "file://62.173.147.122/Agenzia/entrat.exe"
         }
       ]
     },
