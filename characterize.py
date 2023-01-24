@@ -370,7 +370,7 @@ class Characterize(ServiceBase):
 
             cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
-                file_content = "REM Batch extracted by Characterize\n".encode()
+                file_content = "REM Batch extracted by Assemblyline\n".encode()
                 file_content += get_cmd_command(f"{filename_extracted} {cla}".encode())
                 cmd_code = (file_content, "bat")
                 if "rundll32 " in cla:  # We are already checking for rundll32.exe as part of risky_executable
