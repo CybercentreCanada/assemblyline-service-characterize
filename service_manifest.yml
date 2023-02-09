@@ -25,7 +25,7 @@ heuristics:
   - heur_id: 1
     name: Suspicious command line arguments
     score: 500
-    filetype: "shortcut/windows"
+    filetype: "shortcut/*"
     description: Found a suspicious command line
 
   - description: >-
@@ -44,7 +44,7 @@ heuristics:
 
   - description: >-
       The shortcut used an icon that could be deceptively used to hide a malicious behaviour or simply a suspicious one.
-    filetype: "shortcut/windows"
+    filetype: "shortcut/*"
     heur_id: 4
     name: Suspicious icon used
     score: 250
@@ -58,10 +58,23 @@ heuristics:
 
   - description: >-
       The shortcut contains additional data after the end of the terminal block. It is either corrupted of will be used as the next stage of a malicious behaviour.
-    filetype: "shortcut/windows"
+    filetype: "shortcut/*"
     heur_id: 6
     name: Additional data after terminal block
     score: 200
+
+  - description: >-
+      The shortcut no base path, relative path, net name or target, but contains target hidden in the extra section
+    filetype: "shortcut/*"
+    heur_id: 7
+    name: Target hidden in extra section
+    score: 100
+
+  - description: Used for tracking Internet Shortcuts
+    filetype: "shortcut/web"
+    heur_id: 8
+    name: Internet Shortcut
+    score: 1
 
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG

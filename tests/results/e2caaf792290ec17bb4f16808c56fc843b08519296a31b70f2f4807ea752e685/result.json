@@ -1,36 +1,162 @@
 {
-    "response": {
-        "supplementary": [
-            "6c09088c88732e20d0c68de1adf3861998935d70007e1250c138debddd0deb04"
-        ],
-        "extracted": []
-    },
-    "result": {
-        "heuristics": [
-            4
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 250,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.4425080971906141, 3.531630646367965, 3.7216117239699025, 0.2974722489192897, 4.142664355548851, 2.139835523706203, 1.163540201121071, 3.531630646367965, 3.4263674884732285, 0.8795064608120067, 2.641120933813017, 2.289017989818658, 2.078491674029184, 2.24928706865216, 3.21363885794868, 3.3211043305784913, 0.5907239186406503, 2.746384091707754, 2.8795064608120073, 3.6163485660751657, 3.115834092163221, 0.5907239186406503, 2.641120933813017, 2.139835523706203, 2.289017989818658, 2.641120933813017, 2.394281147713395, 2.53585777591828, 2.4995443056081323, 2.641120933813017, 2.394281147713395, 2.641120933813017, 2.2890179898186584, 2.746384091707754, 2.4995443056081323, 2.641120933813017, 2.394281147713395, 2.430594618023543, 2.2890179898186584, 3.108375700053943, 3.21363885794868, 1.163540201121071, 4.0374011976541135, 0.8795064608120067, 1.163540201121071, 1.7732143550933817, 4.247927513443588, 4.247927513443588, 4.247927513443588, 2.1609640474436813]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 4.493",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, Description, RelativePath, CommandArgs, IconFile, Unicode, NoLinkInfo\", \"file_attributes\": \"Hidden, System\", \"create_date\": \"2021:10:29 16:03:57+00:00\", \"access_date\": \"2021:10:29 16:04:01+00:00\", \"modify_date\": \"2021:10:29 16:03:59+00:00\", \"target_file_size\": 44154880, \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"StormII.exe\", \"description\": \"@%SystemRoot%\\\\system32\\\\Shell32.dll,-22581\", \"relative_path\": \".\\\\StormII.exe\", \"command_line_arguments\": \"\\\"C:\\\\Program Files\\\\WinPcap\\\\Wordpad.lnk\\\"\", \"icon_file_name\": \"%ProgramFiles%\\\\Windows NT\\\\Accessories\\\\wordpad.exe\", \"machine_id\": 585948}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.date.creation": [
+          "file": {
+            "date": {
+              "creation": [
                 "2021:10:29 16:03:57+00:00"
-            ],
-            "file.date.last_modified": [
+              ],
+              "last_modified": [
                 "2021:10:29 16:03:59+00:00"
-            ],
-            "file.shortcut.icon_location": [
-                "%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe"
-            ],
-            "file.shortcut.machine_id": [
-                "585948"
-            ],
-            "file.shortcut.tracker_mac": [
-                "00:50:56:A0:F2:10"
-            ],
-            "file.shortcut.command_line": [
-                ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\""
-            ],
-            "file.name.extracted": [
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "name": {
+              "extracted": [
                 "StormII.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\""
+              ],
+              "icon_location": [
+                "%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe"
+              ],
+              "machine_id": [
+                "585948"
+              ],
+              "tracker_mac": [
+                "00:50:56:A0:F2:10"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"%ProgramFiles%\\\\Windows NT\\\\Accessories\\\\wordpad.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "6c09088c88732e20d0c68de1adf3861998935d70007e1250c138debddd0deb04"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.date.creation": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021:10:29 16:03:57+00:00"
         }
-    }
+      ],
+      "file.date.last_modified": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021:10:29 16:03:59+00:00"
+        }
+      ],
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "StormII.exe"
+        }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\""
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe"
+        }
+      ],
+      "file.shortcut.machine_id": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "585948"
+        }
+      ],
+      "file.shortcut.tracker_mac": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "00:50:56:A0:F2:10"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }

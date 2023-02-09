@@ -4,8 +4,8 @@ import datetime
 import hashlib
 import json
 import os
-import re
 import subprocess
+from configparser import ConfigParser
 from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
@@ -59,7 +59,6 @@ TAG_MAP = {
     },
 }
 
-BAD_LINK_RE = re.compile("http[s]?://|powershell|cscript|wscript|mshta|<script")
 EXIFTOOL_DATE_FMT = "%Y:%m:%d %H:%M:%S%z"
 
 
@@ -126,7 +125,7 @@ class Characterize(ServiceBase):
             f"File entropy: {round(entropy, 3)}",
             parent=request.result,
             body_format=BODY_FORMAT.GRAPH_DATA,
-            body=json.dumps(entropy_graph_data),
+            body=json.dumps(entropy_graph_data, allow_nan=False),
         )
 
         if request.file_type != "shortcut/windows":
@@ -176,7 +175,7 @@ class Characterize(ServiceBase):
                         if kv_body:
                             res = ResultSection(
                                 f"Metadata extracted by hachoir-metadata [Parser: {parser_id}]",
-                                body=json.dumps(kv_body),
+                                body=json.dumps(kv_body, allow_nan=False),
                                 body_format=BODY_FORMAT.KEY_VALUE,
                                 parent=request.result,
                             )
@@ -190,12 +189,9 @@ class Characterize(ServiceBase):
             exif_data = json.loads(exif.stdout.decode("utf-8", errors="ignore"))
             res_data = exif_data[0]
             if "Error" not in res_data:
-                exif_body = {
-                    build_key(k): v
-                    for k, v in res_data.items()
-                    if v
-                    and k
-                    not in [
+                exif_body = {}
+                for k, v in res_data.items():
+                    if v and k not in [
                         "SourceFile",
                         "ExifToolVersion",
                         "FileName",
@@ -209,12 +205,17 @@ class Characterize(ServiceBase):
                         "FileTypeExtension",
                         "MIMEType",
                         "Warning",
-                    ]
-                }
+                    ]:
+                        if v in [float("inf"), -float("inf"), float("nan")]:
+                            exif = subprocess.run(
+                                ["exiftool", f"-{k}", "-T", request.file_path], capture_output=True, check=False
+                            )
+                            v = exif.stdout.decode("utf-8", errors="ignore").strip()
+                        exif_body[build_key(k)] = v
                 if exif_body:
                     e_res = ResultSection(
                         "Metadata extracted by ExifTool",
-                        body=json.dumps(exif_body),
+                        body=json.dumps(exif_body, allow_nan=False),
                         body_format=BODY_FORMAT.KEY_VALUE,
                         parent=request.result,
                     )
@@ -243,9 +244,7 @@ class Characterize(ServiceBase):
             if "command_line_arguments" in features["data"]:
                 if any(x in features["data"]["command_line_arguments"].lower() for x in risky_executable):
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
-                if " && " in features["data"]["command_line_arguments"]:
-                    heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
-                elif BAD_LINK_RE.search(features["data"]["command_line_arguments"].lower()):
+                elif " && " in features["data"]["command_line_arguments"]:
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
 
             lbp = ""
@@ -276,19 +275,6 @@ class Characterize(ServiceBase):
 
                     if any(x in target.lower() for x in risky_executable):
                         heur_1_items["target_file_dosname"] = target
-
-            if "icon_location" in features["data"]:
-                deceptive_icons = ["wordpad.exe", "shell32.dll"]
-
-                lnk_result_section.add_tag(
-                    tag_type="file.shortcut.icon_location", value=features["data"]["icon_location"]
-                )
-                if any(
-                    features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x) for x in deceptive_icons
-                ):
-                    heur = Heuristic(4)
-                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
-                    heur_section.set_item("icon_location", features["data"]["icon_location"])
 
             timestamps = []
             if features["header"]["creation_time"]:
@@ -345,22 +331,54 @@ class Characterize(ServiceBase):
             nn = str(features["data"].get("net_name", "")).strip()
             t = str(target).strip().rsplit("\\")[-1].strip()
             cla = str(features["data"].get("command_line_arguments", "")).strip()
+            # Optional extras to use in case none of the other are filled
+            extra_targets = {
+                k: v
+                for k, v in features.get("extra", {}).get("ENVIRONMENTAL_VARIABLES_LOCATION_BLOCK", {}).items()
+                if k.startswith("target_")
+            }
 
-            filename_extracted = (bp or rp or t or nn).rsplit("\\")[-1].strip()
-            if filename_extracted:
-                lnk_result_section.add_tag(tag_type="file.name.extracted", value=(bp or rp or t or nn).rsplit("\\")[-1])
+            filename_extracted = bp or rp or t or nn
+            if filename_extracted.rsplit("\\")[-1].strip():
+                lnk_result_section.add_tag("file.name.extracted", filename_extracted.rsplit("\\")[-1])
+            elif extra_targets:
+                heur = Heuristic(7)
+                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                for k, v in extra_targets.items():
+                    filename_extracted = v
+                    heur_section.set_item(k, v)
+                    heur_section.add_tag("file.name.extracted", v.rsplit("\\")[-1])
 
-            process_cmdline = f"{(rp or bp or t or nn)} {cla}".strip()
+            if "icon_location" in features["data"]:
+                deceptive_icons = ["wordpad.exe", "shell32.dll", "explorer.exe", "msedge.exe"]
+
+                lnk_result_section.add_tag("file.shortcut.icon_location", features["data"]["icon_location"])
+                if any(
+                    features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x)
+                    and not filename_extracted.endswith(x)
+                    for x in deceptive_icons
+                ):
+                    heur = Heuristic(4)
+                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    heur_section.set_item("icon_location", features["data"]["icon_location"])
+
+            process_cmdline = f"{filename_extracted} {cla}".strip()
             if process_cmdline:
-                lnk_result_section.add_tag(tag_type="file.shortcut.command_line", value=process_cmdline)
+                lnk_result_section.add_tag("file.shortcut.command_line", process_cmdline)
+
+            filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 
             cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
-                cmd_code = (get_cmd_command(f"{filename_extracted} {cla}".encode()), "bat")
+                file_content = "REM Batch extracted by Assemblyline\n".encode()
+                file_content += get_cmd_command(f"{filename_extracted} {cla}".encode())
+                cmd_code = (file_content, "bat")
                 if "rundll32 " in cla:  # We are already checking for rundll32.exe as part of risky_executable
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
             elif filename_extracted in ["powershell", "powershell.exe"]:
-                cmd_code = (get_powershell_command(f"{filename_extracted} {cla}".encode()), "ps1")
+                file_content = "#!/usr/bin/env pwsh\n".encode()
+                file_content += get_powershell_command(f"{filename_extracted} {cla}".encode())
+                cmd_code = (file_content, "ps1")
 
             if heur_1_items:
                 heur = Heuristic(1)
@@ -402,3 +420,27 @@ class Characterize(ServiceBase):
                 heur = Heuristic(6)
                 heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 heur_section.set_item("Length", len(lnk.appended_data))
+
+        # 5. URL file management
+        if request.file_type == "shortcut/web":
+            config = ConfigParser()
+            config.read(request.file_path)
+
+            res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
+            for k, v in config.items("InternetShortcut", raw=True):
+                res.set_item(k, v)
+
+                if k.lower() == "url":
+                    if v.startswith("http://") or v.startswith("https://"):
+                        res.set_heuristic(8)
+                        res.add_tag("network.static.uri", v)
+                    elif v.startswith("file:"):
+                        heur = Heuristic(1)
+                        heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=res)
+                        heur_section.set_item("url", v)
+                        heur_section.add_tag("network.static.uri", v)
+
+            config.pop("InternetShortcut", None)
+            if config.sections():
+                extra_res = ResultKeyValueSection("Extra sections", parent=res)
+                extra_res.set_item("Names", ", ".join(config.sections()))

@@ -1,0 +1,79 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 1,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 5.123",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 3, \"word_count\": 3}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"url\": \"http://www.altarsoft.com/split_files.shtml\", \"modified\": \"500425EA770BCC01B2\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 8,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {
+          "network": {
+            "static": {
+              "uri": [
+                "http://www.altarsoft.com/split_files.shtml"
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by Ini Reader",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 8,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "network.static.uri": [
+        {
+          "heur_id": 8,
+          "signatures": [],
+          "value": "http://www.altarsoft.com/split_files.shtml"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

