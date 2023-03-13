@@ -253,6 +253,13 @@ class Characterize(ServiceBase):
                 if "common_path_suffix" in features["link_info"]:
                     lbp = f"{lbp}{features['link_info']['common_path_suffix']}"
                 if any(x in lbp.lower() for x in risky_executable):
+                    if "mshta.exe" in lbp.lower() and "command_line_arguments" in features["data"]:
+                        cla = features["data"]["command_line_arguments"]
+                        if " " not in cla and (cla.startswith("https://") or cla.startswith("http://")):
+                            heur = Heuristic(9)
+                            heur_section = ResultSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                            heur_section.add_line(f"Download of {cla}")
+                            heur_section.add_tag("network.static.uri", cla)
                     heur_1_items["local_base_path"] = features["link_info"]["local_base_path"]
 
             if "relative_path" in features["data"]:
