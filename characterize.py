@@ -97,6 +97,24 @@ def get_type_val(data: str, src_name: str) -> Tuple[str, str]:
     return key, val
 
 
+def contains_inf_nan(v):
+    if isinstance(v, dict):
+        for d in v.keys():
+            if contains_inf_nan(d):
+                return True
+        for d in v.values():
+            if contains_inf_nan(d):
+                return True
+        return False
+    elif isinstance(v, list):
+        for d in v:
+            if contains_inf_nan(d):
+                return True
+        return False
+    else:
+        return v in [float("inf"), -float("inf"), float("nan")]
+
+
 #########################################################
 #                  Scan Execution Class                 #
 #########################################################
@@ -206,7 +224,7 @@ class Characterize(ServiceBase):
                         "MIMEType",
                         "Warning",
                     ]:
-                        if v in [float("inf"), -float("inf"), float("nan")]:
+                        if contains_inf_nan(v):
                             exif = subprocess.run(
                                 ["exiftool", f"-{k}", "-T", request.file_path], capture_output=True, check=False
                             )
