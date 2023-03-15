@@ -76,7 +76,7 @@ heuristics:
     name: Internet Shortcut
     score: 1
 
-  - description: A windows short shortcut containing a simple execution of mshta with a link is very suspicious
+  - description: A windows shortcut containing a simple execution of mshta with a link is very suspicious
     filetype: "shortcut/"
     heur_id: 9
     name: Mshta shortcut execution
