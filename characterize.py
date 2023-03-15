@@ -97,6 +97,24 @@ def get_type_val(data: str, src_name: str) -> Tuple[str, str]:
     return key, val
 
 
+def contains_inf_nan(v):
+    if isinstance(v, dict):
+        for d in v.keys():
+            if contains_inf_nan(d):
+                return True
+        for d in v.values():
+            if contains_inf_nan(d):
+                return True
+        return False
+    elif isinstance(v, list):
+        for d in v:
+            if contains_inf_nan(d):
+                return True
+        return False
+    else:
+        return v in [float("inf"), -float("inf"), float("nan")]
+
+
 #########################################################
 #                  Scan Execution Class                 #
 #########################################################
@@ -206,7 +224,7 @@ class Characterize(ServiceBase):
                         "MIMEType",
                         "Warning",
                     ]:
-                        if v in [float("inf"), -float("inf"), float("nan")]:
+                        if contains_inf_nan(v):
                             exif = subprocess.run(
                                 ["exiftool", f"-{k}", "-T", request.file_path], capture_output=True, check=False
                             )
@@ -253,6 +271,13 @@ class Characterize(ServiceBase):
                 if "common_path_suffix" in features["link_info"]:
                     lbp = f"{lbp}{features['link_info']['common_path_suffix']}"
                 if any(x in lbp.lower() for x in risky_executable):
+                    if "mshta.exe" in lbp.lower() and "command_line_arguments" in features["data"]:
+                        cla = features["data"]["command_line_arguments"]
+                        if " " not in cla and (cla.startswith("https://") or cla.startswith("http://")):
+                            heur = Heuristic(9)
+                            heur_section = ResultSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                            heur_section.add_line(f"Download of {cla}")
+                            heur_section.add_tag("network.static.uri", cla)
                     heur_1_items["local_base_path"] = features["link_info"]["local_base_path"]
 
             if "relative_path" in features["data"]:
