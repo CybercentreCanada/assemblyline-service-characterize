@@ -7,7 +7,7 @@
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.91829583405449, 4.136842188131013, 1.7201755214643453, 3.9387218755408684, 1.6896763215021662, 3.200825794518089, 3.584962500721157, 1.2220198859116513, 2.1431558784658327, 3.766150648454356, 2.9993896755123957, 1.91829583405449, 2.8327230088457287, 3.7720552088742014, 2.792481250360579, 2.2806721295208874, 1.9764892117991657, 1.2220198859116513, 3.200825794518089, 3.9701755214643457, 2.4972243200613984, 2.7091479170272454, 2.625814583693912, 2.7091479170272454, 2.625814583693912, 2.5424812503605785, 2.7091479170272454, 2.059822545132499, 3.93456081428629, 2.364005462854221, 4.501629167387823, 4.501629167387823, 4.501629167387823, 3.5016291673878235, 3.200825794518089, 2.413890986728065, 2.2806721295208874, 3.599483981787689, 2.364005462854221, 2.364005462854221, 1.91829583405449, 2.4972243200613984, 2.580557653394732, 4.168295834054491, 1.6896763215021662, 2.3443609377704338, 1.91829583405449, 4.220175521464346, 1.91829583405449, 0.0]}}",
         "body_format": "GRAPH_DATA",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {},
@@ -18,7 +18,7 @@
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:12:26 21:31:16+00:00\", \"access_date\": \"2022:02:07 12:15:39+00:00\", \"modify_date\": \"2021:12:26 21:31:16+00:00\", \"target_file_size\": 71680, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"rundll32.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\rundll32.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\rundll32.exe\", \"command_line_arguments\": \"info.dat,msuspend\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-i8bn9qk\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -40,7 +40,7 @@
         "auto_collapse": false,
         "body": null,
         "body_format": "TEXT",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -73,7 +73,7 @@
         "auto_collapse": false,
         "body": "{\"machine_identifier\": \"desktop-i8bn9qk\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],
@@ -91,7 +91,7 @@
         "auto_collapse": false,
         "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\rundll32.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\rundll32.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\rundll32.exe\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],

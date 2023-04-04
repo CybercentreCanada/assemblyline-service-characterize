@@ -7,7 +7,7 @@
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.8044310370213306, 3.4993896755123943, 2.8686716140875377, 2.9972243200613975, 2.9996207352134867, 2.858893912251748, 3.3757557301105034, 3.2508145836939106, 2.868671614087538, 3.6591591278514213, 2.5249323161649144, 3.8873194111116605, 2.827004947420871, 1.7615269675321181, 4.711709439035873, 4.073934896284056, 2.870241927891954, 3.125814583693911, 2.927694271103767, 3.0684210940655055, 3.0684210940655055, 3.0841479170272446, 3.110087760732172, 3.209089063443837, 4.496115365169273, 0.9096600071481376, 0.0, 0.0, 0.0, 2.0752748769955525, 3.110087760732172, 2.3098225451324987, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.9398308304329914, 4.209962500721156, 4.8609023444260835, 4.34948398178769, 2.322963320548892, 2.4672804071431447, 3.2924223967771704, 2.4190957221707596, 3.067227245585081, 0.0]}}",
         "body_format": "GRAPH_DATA",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {},
@@ -18,7 +18,7 @@
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, LinkInfo, Description, RelativePath, WorkingDir, IconFile, Unicode, ExpIcon\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:08:05 22:41:46+00:00\", \"access_date\": \"2022:10:01 11:45:36+00:00\", \"modify_date\": \"2021:08:05 06:45:01+00:00\", \"target_file_size\": 3311504, \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"msedge.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\", \"description\": \"Przegl\\u0105daj sie\\u0107 web\", \"relative_path\": \"..\\\\..\\\\..\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\", \"working_directory\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\", \"machine_id\": \"desktop-u99lq3c\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -40,7 +40,7 @@
         "auto_collapse": false,
         "body": null,
         "body_format": "TEXT",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -73,7 +73,7 @@
         "auto_collapse": false,
         "body": "{\"machine_identifier\": \"desktop-u99lq3c\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],
