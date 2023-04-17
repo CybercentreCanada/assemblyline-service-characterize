@@ -7,7 +7,7 @@
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.5569010760354058, 2.675698135367987, 3.6901165175936654, 1.4392540172118764, 2.409267252251469, 3.8521687236032816, 0.6402064333604702, 2.0157404324930677, 3.4045428133422924, 3.1751231351134614, 0.3227569588973983, 2.675698135367987, 2.133387491316597, 3.4045428133422924, 3.6168746059562227, 0.3227569588973983, 2.409267252251469, 2.2916201934279394, 3.4992275471326932, 3.4992275471326932, 1.4392540172118764, 2.133387491316597, 1.4392540172118764, 1.1400677626718574, 1.5569010760354058, 3.6168746059562227, 3.572469458770136, 1.6087001655198914, 2.011920928594794, 2.5580510765444577, 2.2916201934279394, 2.5580510765444577, 2.17397313460441, 2.5580510765444577, 2.1295679874183233, 2.4404040177209283, 2.2916201934279394, 2.322756958897399, 2.2916201934279394, 2.4404040177209283, 1.5569010760354058, 3.286895754518763, 2.9314931674619147, 2.675698135367987, 3.969815782426811, 4.08746284125034, 4.08746284125034, 4.08746284125034, 2.2810361125534233, 0.0]}}",
         "body_format": "GRAPH_DATA",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {},
@@ -18,7 +18,7 @@
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"Archive\", \"create_date\": \"2022:02:11 18:01:47+00:00\", \"access_date\": \"2022:03:31 06:32:01+00:00\", \"modify_date\": \"2022:02:11 18:01:47+00:00\", \"target_file_size\": 289792, \"icon_index\": 85, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32 namr.dll,PluginInit\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-30fdj39\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -40,7 +40,7 @@
         "auto_collapse": false,
         "body": null,
         "body_format": "TEXT",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {
@@ -73,7 +73,7 @@
         "auto_collapse": false,
         "body": "{\"machine_identifier\": \"desktop-30fdj39\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],
@@ -91,7 +91,7 @@
         "auto_collapse": false,
         "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32 namr.dll,PluginInit\"}",
         "body_format": "KEY_VALUE",
-        "classification": "TLP:W",
+        "classification": "TLP:C",
         "depth": 1,
         "heuristic": {
           "attack_ids": [],
