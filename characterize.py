@@ -446,6 +446,20 @@ class Characterize(ServiceBase):
                 heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 heur_section.set_item("Length", len(lnk.appended_data))
 
+            for extra_data in lnk.extras:
+                if isinstance(extra_data, LnkParse3.extra.unknown.UnknownExtra):
+                    sha256hash = hashlib.sha256(extra_data.extra_data).hexdigest()
+                    appended_data_path = os.path.join(self.working_directory, sha256hash)
+                    with open(appended_data_path, "wb") as appended_data_f:
+                        appended_data_f.write(extra_data.extra_data)
+                    request.add_extracted(
+                        appended_data_path,
+                        sha256hash,
+                        "Unknown Extra data",
+                    )
+                    section = ResultKeyValueSection("Unknown Extra data", parent=lnk_result_section)
+                    section.set_item("Length", len(extra_data.extra_data))
+
         # 5. URL file management
         if request.file_type == "shortcut/web":
             config = ConfigParser()
