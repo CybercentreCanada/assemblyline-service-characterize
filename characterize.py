@@ -4,6 +4,7 @@ import datetime
 import hashlib
 import json
 import os
+import re
 import subprocess
 from configparser import ConfigParser
 from typing import Dict, List, Optional, Tuple, Union
@@ -11,6 +12,7 @@ from typing import Dict, List, Optional, Tuple, Union
 import hachoir.core.config as hachoir_config
 import LnkParse3
 from assemblyline.common.entropy import calculate_partition_entropy
+from assemblyline.odm.base import UNC_PATH_REGEX
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
@@ -374,10 +376,16 @@ class Characterize(ServiceBase):
                     heur_section.set_item(k, v)
                     heur_section.add_tag("file.name.extracted", v.rsplit("\\")[-1])
 
+            unc_result = None
             if "icon_location" in features["data"]:
                 deceptive_icons = ["wordpad.exe", "shell32.dll", "explorer.exe", "msedge.exe"]
 
                 lnk_result_section.add_tag("file.shortcut.icon_location", features["data"]["icon_location"])
+                if re.match(UNC_PATH_REGEX, features["data"]["icon_location"]):
+                    heur = Heuristic(10)
+                    unc_result = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    unc_result.add_tag("network.static.unc_path", features["data"]["icon_location"])
+                    unc_result.set_item("icon_location", features["data"]["icon_location"])
                 if any(
                     features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x)
                     and not filename_extracted.endswith(x)
@@ -390,6 +398,12 @@ class Characterize(ServiceBase):
             process_cmdline = f"{filename_extracted} {cla}".strip()
             if process_cmdline:
                 lnk_result_section.add_tag("file.shortcut.command_line", process_cmdline)
+            if re.match(UNC_PATH_REGEX, process_cmdline):
+                if unc_result is None:
+                    heur = Heuristic(10)
+                    unc_result = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                unc_result.add_tag("network.static.unc_path", process_cmdline)
+                unc_result.set_item("cmdline", process_cmdline)
 
             filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 
