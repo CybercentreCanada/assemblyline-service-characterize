@@ -82,6 +82,12 @@ heuristics:
     name: Mshta shortcut execution
     score: 500
 
+  - description: A windows shortcut with a full UNC path
+    filetype: "shortcut/"
+    heur_id: 10
+    name: UNC path found
+    score: 100
+
 docker_config:
   image: ${REGISTRY}cccs/assemblyline-service-characterize:$SERVICE_TAG
   cpu_cores: 1
