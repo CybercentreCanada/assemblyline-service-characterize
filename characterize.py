@@ -12,16 +12,11 @@ from typing import Dict, List, Optional, Tuple, Union
 import hachoir.core.config as hachoir_config
 import LnkParse3
 from assemblyline.common.entropy import calculate_partition_entropy
+from assemblyline.common.identify import CUSTOM_BATCH_ID, CUSTOM_PS1_ID
 from assemblyline.odm.base import UNC_PATH_REGEX
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
-from assemblyline_v4_service.common.result import (
-    BODY_FORMAT,
-    Heuristic,
-    Result,
-    ResultKeyValueSection,
-    ResultSection,
-)
+from assemblyline_v4_service.common.result import BODY_FORMAT, Heuristic, Result, ResultKeyValueSection, ResultSection
 from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
@@ -409,13 +404,13 @@ class Characterize(ServiceBase):
 
             cmd_code = None
             if filename_extracted in ["cmd", "cmd.exe"]:
-                file_content = "REM Batch extracted by Assemblyline\n".encode()
+                file_content = CUSTOM_BATCH_ID
                 file_content += get_cmd_command(f"{filename_extracted} {cla}".encode())
                 cmd_code = (file_content, "bat")
                 if "rundll32 " in cla:  # We are already checking for rundll32.exe as part of risky_executable
                     heur_1_items["command_line_arguments"] = features["data"]["command_line_arguments"]
             elif filename_extracted in ["powershell", "powershell.exe"]:
-                file_content = "#!/usr/bin/env pwsh\n".encode()
+                file_content = CUSTOM_PS1_ID
                 file_content += get_powershell_command(f"{filename_extracted} {cla}".encode())
                 cmd_code = (file_content, "ps1")
 
