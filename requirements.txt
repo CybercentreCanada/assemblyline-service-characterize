@@ -3,3 +3,4 @@ git+https://github.com/cccs-rs/hachoir
 # Using fork to get wmetcalf's extra-data parsing
 git+https://github.com/gdesmar/LnkParse3
 multidecoder==0.0.13
+assemblyline-service-utilities
