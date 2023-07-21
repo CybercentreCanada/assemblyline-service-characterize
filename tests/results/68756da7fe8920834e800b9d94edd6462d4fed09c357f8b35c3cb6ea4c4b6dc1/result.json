@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.5774062828523452, 0.0, 1.0201433152964863, 2.519574335951535, 2.6624314788086783, 4.034087620114631, 3.0178650529206683, 3.96265904868606, 3.128085278891394, 2.714377817267326, 2.519574335951535, 3.5495234595978316, 1.5131168549735339, 3.529696439528413, 3.0178650529206683, 4.164497779200461, 0.8773870642966131, 1.4416882835449623, 2.6893917467430875, 2.378783493486176, 3.797902689682947, 4.351823225551765, 1.6488348542809166, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.2320872216997276, 2.6893917467430875, 2.8322488896002307, 2.6893917467430875, 1.6488348542809166, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}",
+        "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
@@ -17,6 +18,7 @@
       {
         "auto_collapse": false,
         "body": "{\"flags\": \"IconFile, Unicode, ExpString\", \"file_attributes\": \"(none)\", \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"icon_file_name\": \"\\\\\\\\104.156.149.33@80\\\\yes\\\\ico\\\\5.ico\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -28,6 +30,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -35,9 +38,6 @@
         "tags": {
           "file": {
             "shortcut": {
-              "command_line": [
-                "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe"
-              ],
               "icon_location": [
                 "\\\\104.156.149.33@80\\yes\\ico\\5.ico"
               ]
@@ -50,6 +50,7 @@
       {
         "auto_collapse": false,
         "body": "{\"target_ansi\": \"\\\\\\\\104.156.149.33@80\\\\yes\\\\4556qXbHiTtYxMXnMwXziAARUlvy.exe\", \"target_unicode\": \"\\\\\\\\104.156.149.33@80\\\\yes\\\\4556qXbHiTtYxMXnMwXziAARUlvy.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -76,6 +77,7 @@
       {
         "auto_collapse": false,
         "body": "{\"icon_location\": \"\\\\\\\\104.156.149.33@80\\\\yes\\\\ico\\\\5.ico\", \"cmdline\": \"\\\\\\\\104.156.149.33@80\\\\yes\\\\4556qXbHiTtYxMXnMwXziAARUlvy.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -130,13 +132,6 @@
           "heur_id": 7,
           "signatures": [],
           "value": "4556qXbHiTtYxMXnMwXziAARUlvy.exe"
-        }
-      ],
-      "file.shortcut.command_line": [
-        {
-          "heur_id": null,
-          "signatures": [],
-          "value": "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe"
         }
       ],
       "file.shortcut.icon_location": [

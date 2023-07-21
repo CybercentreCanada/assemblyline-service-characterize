@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.6366407419411675, 0.0, 2.706890595608519, 2.338268928076465, 2.820111964470926, 3.7232314287976203, 3.4729055953200563, 0.21084230031853213, 2.886778631137593, 2.486778631137593, 2.7534452978042596, 2.5906616522333263, 2.2779565475879124, 2.594949047732144, 2.5949490477321437, 2.820111964470926, 2.886778631137593, 2.820111964470926, 2.8201119644709265, 2.820111964470926, 2.506890595608519, 4.0402239289418524, 3.822579761842492, 4.231401845392171, 1.949869837094248, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.640223928941852, 2.886778631137593, 2.753445297804259, 2.506890595608519, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}",
+        "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
@@ -17,6 +18,7 @@
       {
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, RelativePath, CommandArgs, IconFile, Unicode, ExpIcon\", \"file_attributes\": \"(none)\", \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"Documento-8234a23ab38d237b76f379d082e6298cxYo8pxMjmh.bat\", \"relative_path\": \"..\\\\..\\\\..\\\\Documento-8234a23ab38d237b76f379d082e6298cxYo8pxMjmh.bat\", \"command_line_arguments\": \"HZUuh\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -28,6 +30,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -55,6 +58,7 @@
       {
         "auto_collapse": false,
         "body": "{\"icon_location\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,

