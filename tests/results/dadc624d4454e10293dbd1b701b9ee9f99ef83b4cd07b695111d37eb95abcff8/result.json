@@ -6,6 +6,7 @@
       {
         "auto_collapse": false,
         "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}",
+        "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
@@ -17,6 +18,7 @@
       {
         "auto_collapse": false,
         "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"(none)\", \"line_count\": 1, \"word_count\": 5}",
+        "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
