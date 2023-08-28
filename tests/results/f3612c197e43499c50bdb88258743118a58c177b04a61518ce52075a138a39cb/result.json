@@ -5,19 +5,19 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 1.5, 2.0, 1.5, 1.5, 2.0, 1.5, 0.8112781244591328, 0.0, 1.5, 0.8112781244591328, 0.0, 0.0, 2.0, 2.0, 2.0, 1.5, 1.0, 0.0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}",
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
         "tags": {},
-        "title_text": "File entropy: 5.236",
+        "title_text": "File entropy: 5.182",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
-        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 8, \"word_count\": 8}",
+        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 5, \"word_count\": 5}",
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -29,7 +29,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"iconindex\": \"1\", \"hotkey\": \"0\", \"idlist\": \"\", \"url\": \"file://62.173.147.122/Agenzia/entrat.exe\", \"iconfile\": \"C:\\\\Windows\\\\system32\\\\SHELL32.dll\"}",
+        "body": "{\"url\": \"file:\\\\\\\\94.156.253.211@80\\\\Downloads\\\\run-dwnl-restart.lnk\", \"showcommand\": \"7\", \"iconindex\": \"123\", \"iconfile\": \"C:\\\\Windows\\\\System32\\\\shell32.dll\"}",
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -41,7 +41,7 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"file://62.173.147.122/Agenzia/entrat.exe\"}",
+        "body": "{\"url\": \"file:\\\\\\\\94.156.253.211@80\\\\Downloads\\\\run-dwnl-restart.lnk\"}",
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -57,30 +57,18 @@
         "tags": {
           "file": {
             "path": [
-              "/Agenzia/entrat.exe"
+              "\\Downloads\\run-dwnl-restart.lnk"
             ]
           },
           "network": {
             "static": {
               "uri": [
-                "file://62.173.147.122/Agenzia/entrat.exe"
+                "file:\\\\94.156.253.211@80\\Downloads\\run-dwnl-restart.lnk"
               ]
             }
           }
         },
         "title_text": "Suspicious command line arguments",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": "{\"Names\": \"{000214A0-0000-0000-C000-000000000046}\"}",
-        "body_config": {},
-        "body_format": "KEY_VALUE",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": null,
-        "tags": {},
-        "title_text": "Extra sections",
         "zeroize_on_tag_safe": false
       }
     ]
@@ -102,14 +90,14 @@
         {
           "heur_id": 1,
           "signatures": [],
-          "value": "/Agenzia/entrat.exe"
+          "value": "\\Downloads\\run-dwnl-restart.lnk"
         }
       ],
       "network.static.uri": [
         {
           "heur_id": 1,
           "signatures": [],
-          "value": "file://62.173.147.122/Agenzia/entrat.exe"
+          "value": "file:\\\\94.156.253.211@80\\Downloads\\run-dwnl-restart.lnk"
         }
       ]
     },
