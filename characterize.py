@@ -13,7 +13,7 @@ import hachoir.core.config as hachoir_config
 import LnkParse3
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.common.identify import CUSTOM_BATCH_ID, CUSTOM_PS1_ID
-from assemblyline.odm.base import UNC_PATH_REGEX
+from assemblyline.odm.base import DOMAIN_ONLY_REGEX, IP_ONLY_REGEX, UNC_PATH_REGEX
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import BODY_FORMAT, Heuristic, Result, ResultKeyValueSection, ResultSection
@@ -487,8 +487,34 @@ class Characterize(ServiceBase):
                         heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=res)
                         heur_section.set_item("url", v)
                         heur_section.add_tag("network.static.uri", v)
+                        heur_section.add_tag("file.path", get_filepath_from_fileuri(v))
 
             config.pop("InternetShortcut", None)
             if config.sections():
                 extra_res = ResultKeyValueSection("Extra sections", parent=res)
                 extra_res.set_item("Names", ", ".join(config.sections()))
+
+
+def get_filepath_from_fileuri(fileuri : str):
+    if not fileuri.startswith("file:"):
+        return None
+
+    filepath = fileuri[5:].lstrip("/\\")
+
+    if len(filepath) > 9 and filepath[:9] == "localhost" and filepath[9] in ["/", "\\"]:
+        filepath = filepath[10:].lstrip("/\\")
+
+    host_part = filepath.split("/")[0].split("\\")[0]
+    original_host_part = host_part
+    if "@" in host_part and re.match(r"\d+", host_part.split("@", 1)[1]):
+        host_part = host_part.split("@", 1)[0]
+    if re.match(DOMAIN_ONLY_REGEX, host_part) or re.match(IP_ONLY_REGEX, host_part):
+        filepath = filepath[len(original_host_part):].lstrip("/\\")
+
+    if filepath.split("/")[0].split("\\")[0].count(":") == 1:
+        return filepath
+
+    prepend = "/"
+    if "/" not in filepath and "\\" in filepath:
+        prepend = "\\"
+    return f"{prepend}{filepath}"
