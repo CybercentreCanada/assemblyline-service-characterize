@@ -1,5 +1,5 @@
-# Using fork temporarily while https://github.com/vstinner/hachoir/pull/69 is reviewed
-git+https://github.com/cccs-rs/hachoir
+# Install hachoir from source
+git+https://github.com/vstinner/hachoir
 # Using fork to get wmetcalf's extra-data parsing
 git+https://github.com/gdesmar/LnkParse3
 multidecoder==0.0.13
