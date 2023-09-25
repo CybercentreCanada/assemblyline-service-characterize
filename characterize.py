@@ -21,7 +21,7 @@ from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
-from multidecoder.analyzers.shell import get_cmd_command, get_powershell_command
+from multidecoder.decoders.shell import get_cmd_command, get_powershell_command
 
 TAG_MAP = {
     "ole2": {
