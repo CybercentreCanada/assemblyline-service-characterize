@@ -16,7 +16,8 @@ from assemblyline.common.identify import CUSTOM_BATCH_ID, CUSTOM_PS1_ID
 from assemblyline.odm.base import DOMAIN_ONLY_REGEX, IP_ONLY_REGEX, UNC_PATH_REGEX
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
-from assemblyline_v4_service.common.result import BODY_FORMAT, Heuristic, Result, ResultKeyValueSection, ResultSection
+from assemblyline_v4_service.common.result import BODY_FORMAT, Heuristic, Result, ResultKeyValueSection, \
+    ResultSection, ResultGraphSection
 from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
@@ -134,14 +135,10 @@ class Characterize(ServiceBase):
         with open(request.file_path, "rb") as fin:
             (entropy, part_entropies) = calculate_partition_entropy(fin)
 
-        entropy_graph_data = {"type": "colormap", "data": {"domain": [0, 8], "values": part_entropies}}
-
-        ResultSection(
-            f"File entropy: {round(entropy, 3)}",
-            parent=request.result,
-            body_format=BODY_FORMAT.GRAPH_DATA,
-            body=json.dumps(entropy_graph_data, allow_nan=False),
-        )
+        graph_section = ResultGraphSection(f"File entropy: {round(entropy, 3)}")
+        graph_section.set_colormap(0, 8, part_entropies)
+        graph_section.promote_as_entropy()
+        request.result.add_section(graph_section)
 
         if request.file_type != "shortcut/windows":
             # 2. Get hachoir metadata
@@ -495,7 +492,7 @@ class Characterize(ServiceBase):
                 extra_res.set_item("Names", ", ".join(config.sections()))
 
 
-def get_filepath_from_fileuri(fileuri : str):
+def get_filepath_from_fileuri(fileuri: str):
     if not fileuri.startswith("file:"):
         return None
 
