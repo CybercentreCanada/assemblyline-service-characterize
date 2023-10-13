@@ -11,13 +11,21 @@ from typing import Dict, List, Optional, Tuple, Union
 
 import hachoir.core.config as hachoir_config
 import LnkParse3
+import yaml
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.common.identify import CUSTOM_BATCH_ID, CUSTOM_PS1_ID
 from assemblyline.odm.base import DOMAIN_ONLY_REGEX, IP_ONLY_REGEX, UNC_PATH_REGEX
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
-from assemblyline_v4_service.common.result import BODY_FORMAT, Heuristic, Result, ResultKeyValueSection, \
-    ResultSection, ResultGraphSection
+from assemblyline_v4_service.common.result import (
+    BODY_FORMAT,
+    Heuristic,
+    Result,
+    ResultGraphSection,
+    ResultKeyValueSection,
+    ResultOrderedKeyValueSection,
+    ResultSection,
+)
 from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
@@ -130,6 +138,23 @@ class Characterize(ServiceBase):
 
     def execute(self, request: ServiceRequest) -> None:
         request.result = Result()
+
+        if request.file_type.startswith("uri/"):
+            with open(request.file_path, "r") as f:
+                data = yaml.safe_load(f)
+
+            data.pop("uri")
+            headers = data.pop("headers", {})
+            if data or headers:
+                params_section = ResultOrderedKeyValueSection(
+                    f"{request.task.fileinfo.uri_info.scheme.upper()} Params", parent=request.result
+                )
+                for k, v in data.items():
+                    params_section.add_item(k, v)
+                for k, v in headers.items():
+                    params_section.add_item(k, v)
+                params_section.promote_as_uri_params()
+            return
 
         # 1. Calculate entropy map
         with open(request.file_path, "rb") as fin:
