@@ -15,6 +15,7 @@ import yaml
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.common.identify import CUSTOM_BATCH_ID, CUSTOM_PS1_ID
 from assemblyline.odm.base import DOMAIN_ONLY_REGEX, IP_ONLY_REGEX, UNC_PATH_REGEX
+from assemblyline.odm.models.result import PARENT_RELATION
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
@@ -461,7 +462,12 @@ class Characterize(ServiceBase):
             temp_path = os.path.join(self.working_directory, "features.json")
             with open(temp_path, "w") as f:
                 json.dump(features, f, default=_datetime_to_str)
-            request.add_supplementary(temp_path, "features.json", "Features extracted from the LNK file")
+            request.add_supplementary(
+                temp_path,
+                "features.json",
+                "Features extracted from the LNK file",
+                parent_relation=PARENT_RELATION.EXTRACTED,
+            )
 
             if lnk.appended_data:
                 sha256hash = hashlib.sha256(lnk.appended_data).hexdigest()
@@ -531,7 +537,7 @@ def get_filepath_from_fileuri(fileuri: str):
     if "@" in host_part and re.match(r"\d+", host_part.split("@", 1)[1]):
         host_part = host_part.split("@", 1)[0]
     if re.match(DOMAIN_ONLY_REGEX, host_part) or re.match(IP_ONLY_REGEX, host_part):
-        filepath = filepath[len(original_host_part):].lstrip("/\\")
+        filepath = filepath[len(original_host_part) :].lstrip("/\\")
 
     if filepath.split("/")[0].split("\\")[0].count(":") == 1:
         return filepath
