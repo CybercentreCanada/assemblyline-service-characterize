@@ -466,7 +466,6 @@ class Characterize(ServiceBase):
                 temp_path,
                 "features.json",
                 "Features extracted from the LNK file",
-                parent_relation=PARENT_RELATION.EXTRACTED,
             )
 
             if lnk.appended_data:
