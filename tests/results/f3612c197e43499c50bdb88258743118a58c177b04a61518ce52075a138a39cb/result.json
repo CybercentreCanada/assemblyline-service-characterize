@@ -5,12 +5,13 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.181682061053918]}}",
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": "ENTROPY",
         "tags": {},
         "title_text": "File entropy: 5.182",
         "zeroize_on_tag_safe": false
@@ -23,6 +24,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Metadata extracted by ExifTool",
         "zeroize_on_tag_safe": false
@@ -35,6 +37,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Metadata extracted by Ini Reader",
         "zeroize_on_tag_safe": false
@@ -54,6 +57,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {
           "file": {
             "path": [
@@ -68,7 +72,7 @@
             }
           }
         },
-        "title_text": "Suspicious command line arguments",
+        "title_text": "Suspicious shortcut elements",
         "zeroize_on_tag_safe": false
       }
     ]
