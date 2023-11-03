@@ -15,10 +15,10 @@ import yaml
 from assemblyline.common.entropy import calculate_partition_entropy
 from assemblyline.common.identify import CUSTOM_BATCH_ID, CUSTOM_PS1_ID
 from assemblyline.odm.base import DOMAIN_ONLY_REGEX, IP_ONLY_REGEX, UNC_PATH_REGEX
+from assemblyline.odm.models.result import BODY_FORMAT
 from assemblyline_v4_service.common.base import ServiceBase
 from assemblyline_v4_service.common.request import ServiceRequest
 from assemblyline_v4_service.common.result import (
-    BODY_FORMAT,
     Heuristic,
     Result,
     ResultGraphSection,
