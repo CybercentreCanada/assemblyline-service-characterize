@@ -5,12 +5,13 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.725235434382858, 3.3629613523404243, 2.869541297597716, 2.708514994641224, 3.8843135277997978, 2.708514994641224, 3.300555342766645, 2.258637091169717, 4.222208536590743, 2.7757140325142533, 3.157912166762854, 3.1963737052243917, 3.3244454874942027, 0.0, 0.0, 0.0, 0.0, 2.828116154299239, 0.37119390349406906, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.11886749115226, 0.0, 0.0, 0.0, 0.0, 2.5465935642949384, 1.4377544837306804, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.914258009319946, 4.354285871987246, 4.786790198827112, 3.6838554275221678, 2.6528225031764996, 2.5683127888314132, 2.899740941970648, 0.0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.156833038239749, 3.771951268197278, 2.6431772147067596, 0.9113771778182536, 0.0, 1.2270259643450396, 1.082595095601575, 0.0, 2.5374272479837394, 4.233976322426592]}}",
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": "ENTROPY",
         "tags": {},
         "title_text": "File entropy: 2.525",
         "zeroize_on_tag_safe": false
@@ -23,6 +24,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "date": {
@@ -46,6 +48,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "name": {
@@ -87,6 +90,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {
           "network": {
             "static": {
@@ -114,6 +118,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Probably created in a VM",
         "zeroize_on_tag_safe": false
@@ -133,8 +138,9 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
-        "title_text": "Suspicious command line arguments",
+        "title_text": "Suspicious shortcut elements",
         "zeroize_on_tag_safe": false
       }
     ]

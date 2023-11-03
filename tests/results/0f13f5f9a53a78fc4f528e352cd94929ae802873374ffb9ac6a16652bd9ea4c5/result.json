@@ -5,12 +5,13 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.3740665169105444, 0.35010382786665806, 3.876724451974264, 2.352161723514434, 0.35010382786665806, 2.6135197342325185, 1.540520964530438, 1.8168232355905944, 3.4952075414928547, 0.5235878925732217, 2.762702200344974, 1.8168232355905944, 1.0374011976541118, 3.0095419864445954, 0.35010382786665806, 2.5048047271711127, 2.7883088224543333, 2.8935719803490696, 2.640686704705996, 2.946203559296438, 2.89357198034907, 3.0187005988270554, 3.018700598827056, 2.6100678850658494, 3.600470699387591, 4.030436394851733, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5235878925732217, 2.7356772435069647, 1.6589284987484891, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.4878893855830697, 3.458453829233059, 2.4198877698227546, 2.5052854671342417, 0.699857857026928]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.607629527057367, 2.3046959684677426, 2.8917478433647865, 3.7677323404301664, 1.2426604202879628, 1.12701655065387, 0.0, 2.2932893956950466]}}",
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": "ENTROPY",
         "tags": {},
         "title_text": "File entropy: 2.406",
         "zeroize_on_tag_safe": false
@@ -23,6 +24,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Metadata extracted by ExifTool",
         "zeroize_on_tag_safe": false
@@ -35,6 +37,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "name": {
@@ -70,6 +73,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Suspicious icon used",
         "zeroize_on_tag_safe": false
@@ -89,8 +93,9 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
-        "title_text": "Suspicious command line arguments",
+        "title_text": "Suspicious shortcut elements",
         "zeroize_on_tag_safe": false
       }
     ]
