@@ -11,6 +11,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": "ENTROPY",
         "tags": {},
         "title_text": "File entropy: 7.994",
         "zeroize_on_tag_safe": false
@@ -23,6 +24,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Metadata extracted by ExifTool",
         "zeroize_on_tag_safe": false
@@ -35,6 +37,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "shortcut": {
@@ -65,6 +68,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {
           "file": {
             "name": {
@@ -85,6 +89,7 @@
         "classification": "TLP:C",
         "depth": 1,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Unknown Extra data",
         "zeroize_on_tag_safe": false

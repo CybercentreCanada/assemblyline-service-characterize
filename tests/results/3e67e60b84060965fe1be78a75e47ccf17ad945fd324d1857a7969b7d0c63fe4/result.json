@@ -5,12 +5,13 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.2294929810935873, 1.2294929810935873, 3.030741093360389, 3.002443082045922, 2.9852865479058437, 2.9852865479058432, 2.9852865479058432, 3.0933521729550133, 3.0478976275004683, 2.6499481955839457, 3.0933521729550137, 2.9584787779711323, 2.877220922856673, 2.804958607467416, 3.7750422109451454, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0307410933603887, 0.7291887428275772, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.6213151687396952, 4.231270254607576, 1.2884110369765287, 0.0, 0.0, 0.0, 0.31221953325757146, 3.0024430820459216, 2.6671047297240245, 1.0333003793584077, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.026796212432111, 3.7230216034244434, 2.7773934753840637, 0.9644816308219891, 0.0, 1.8317081695769473, 0.7387393763296761, 1.080260055621016, 0.0]}}",
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": "ENTROPY",
         "tags": {},
         "title_text": "File entropy: 1.892",
         "zeroize_on_tag_safe": false
@@ -23,6 +24,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Metadata extracted by ExifTool",
         "zeroize_on_tag_safe": false
@@ -35,6 +37,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "shortcut": {
@@ -65,6 +68,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {
           "file": {
             "name": {
@@ -92,8 +96,9 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
-        "title_text": "Suspicious command line arguments",
+        "title_text": "Suspicious shortcut elements",
         "zeroize_on_tag_safe": false
       }
     ]

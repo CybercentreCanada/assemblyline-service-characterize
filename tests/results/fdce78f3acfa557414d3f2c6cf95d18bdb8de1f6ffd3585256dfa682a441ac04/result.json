@@ -5,12 +5,13 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [1.498778124459133, 0.3997900666170139, 3.334282221599798, 1.748689844084022, 2.4777930388928713, 0.3997900666170139, 2.0550416913014384, 2.4777930388928713, 0.9255636700495734, 2.2042028044502624, 1.9064514568588302, 1.1183927290103626, 2.5058269522460908, 2.5389097655573916, 2.6639097655573916, 2.426108500731241, 2.452819531114783, 2.7889097655573916, 3.021782221599798, 3.7373008763572906, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.20062232431271465, 2.875, 2.2667028044502624, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.686189844084022, 3.6858203810934294, 3.8993974703476995, 2.5160353655857572, 2.6014097655573916, 2.390319531114783, 0.0]}}",
+        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.4320891045466677, 2.5332907227662584, 3.056381964220971, 0.8665059442761638, 0.26419595655263933, 0.0, 3.3866840394101163]}}",
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": "ENTROPY",
         "tags": {},
         "title_text": "File entropy: 2.208",
         "zeroize_on_tag_safe": false
@@ -23,6 +24,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {},
         "title_text": "Metadata extracted by ExifTool",
         "zeroize_on_tag_safe": false
@@ -35,6 +37,7 @@
         "classification": "TLP:C",
         "depth": 0,
         "heuristic": null,
+        "promote_to": null,
         "tags": {
           "file": {
             "name": {
@@ -70,6 +73,7 @@
           "score_map": {},
           "signatures": {}
         },
+        "promote_to": null,
         "tags": {},
         "title_text": "Suspicious icon used",
         "zeroize_on_tag_safe": false

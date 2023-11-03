@@ -23,10 +23,10 @@ submission_params: []
 
 heuristics:
   - heur_id: 1
-    name: Suspicious command line arguments
+    name: Suspicious shortcut elements
     score: 500
     filetype: "shortcut/"
-    description: Found a suspicious command line
+    description: Found suspicious shortcut element(s)
 
   - description: >-
       A very recent timestamp is found.
