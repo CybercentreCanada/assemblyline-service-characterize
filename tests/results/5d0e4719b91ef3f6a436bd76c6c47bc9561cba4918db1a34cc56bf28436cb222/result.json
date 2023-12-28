@@ -5,7 +5,21 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.8392328384328724, 3.5747489914568003, 3.682550251437909, 4.955815573129147]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              3.8392328384328724,
+              3.5747489914568003,
+              3.682550251437909,
+              4.955815573129147
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +32,24 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"Archive\", \"create_date\": \"2022:02:11 18:01:47+00:00\", \"access_date\": \"2022:03:31 06:32:01+00:00\", \"modify_date\": \"2022:02:11 18:01:47+00:00\", \"target_file_size\": 289792, \"icon_index\": 85, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32 namr.dll,PluginInit\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-30fdj39\"}",
+        "body": {
+          "access_date": "2022:03:31 06:32:01+00:00",
+          "command_line_arguments": "/c start rundll32 namr.dll,PluginInit",
+          "create_date": "2022:02:11 18:01:47+00:00",
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode",
+          "hot_key": "(none)",
+          "icon_file_name": "%systemroot%\\system32\\imageres.dll",
+          "icon_index": 85,
+          "local_base_path": "C:\\Windows\\System32\\cmd.exe",
+          "machine_id": "desktop-30fdj39",
+          "modify_date": "2022:02:11 18:01:47+00:00",
+          "relative_path": "..\\..\\..\\..\\Windows\\System32\\cmd.exe",
+          "run_window": "Normal",
+          "target_file_dosname": "cmd.exe",
+          "target_file_size": 289792
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -77,7 +108,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-30fdj39\"}",
+        "body": {
+          "machine_identifier": "desktop-30fdj39"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -97,7 +130,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c start rundll32 namr.dll,PluginInit\"}",
+        "body": {
+          "command_line_arguments": "/c start rundll32 namr.dll,PluginInit",
+          "local_base_path": "C:\\Windows\\System32\\cmd.exe",
+          "relative_path": "..\\..\\..\\..\\Windows\\System32\\cmd.exe",
+          "target_file_dosname": "Windows\\System32\\cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

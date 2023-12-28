@@ -5,7 +5,21 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.781370403313523, 3.5536167963559087, 4.06319504091023, 4.225167159199131]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.781370403313523,
+              3.5536167963559087,
+              4.06319504091023,
+              4.225167159199131
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +32,24 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, Unicode\", \"file_attributes\": \"Archive\", \"create_date\": \"2020:11:19 19:07:04+00:00\", \"access_date\": \"2020:11:19 19:07:04+00:00\", \"modify_date\": \"2020:11:19 19:07:04+00:00\", \"target_file_size\": 1419464, \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"DIAGNO~1.BAT\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Users\\\\\", \"net_name\": 8, \"net_provider_type\": \"Unknown (0x20000)\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\..\\\\..\\\\hdwwiz\\\\DiagnosticsHub.StandardCollector.Service.exe.bat\", \"machine_id\": \"work\"}",
+        "body": {
+          "access_date": "2020:11:19 19:07:04+00:00",
+          "create_date": "2020:11:19 19:07:04+00:00",
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "flags": "IDList, LinkInfo, RelativePath, Unicode",
+          "hot_key": "(none)",
+          "icon_index": "(none)",
+          "local_base_path": "C:\\Users\\",
+          "machine_id": "work",
+          "modify_date": "2020:11:19 19:07:04+00:00",
+          "net_name": 8,
+          "net_provider_type": "Unknown (0x20000)",
+          "relative_path": "..\\..\\..\\..\\..\\..\\..\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat",
+          "run_window": "Normal",
+          "target_file_dosname": "DIAGNO~1.BAT",
+          "target_file_size": 1419464
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

