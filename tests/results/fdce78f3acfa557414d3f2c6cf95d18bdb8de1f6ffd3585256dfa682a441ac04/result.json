@@ -5,7 +5,24 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.4320891045466677, 2.5332907227662584, 3.056381964220971, 0.8665059442761638, 0.26419595655263933, 0.0, 3.3866840394101163]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.4320891045466677,
+              2.5332907227662584,
+              3.056381964220971,
+              0.8665059442761638,
+              0.26419595655263933,
+              0.0,
+              3.3866840394101163
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +35,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"(none)\", \"icon_index\": 70, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"msoffice.exe\", \"command_line_arguments\": \"bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition\", \"icon_file_name\": \"%windir%/system32/shell32.dll\"}",
+        "body": {
+          "command_line_arguments": "bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition",
+          "file_attributes": "(none)",
+          "flags": "IDList, CommandArgs, IconFile, Unicode, ExpString",
+          "hot_key": "(none)",
+          "icon_file_name": "%windir%/system32/shell32.dll",
+          "icon_index": 70,
+          "run_window": "Normal",
+          "target_file_dosname": "msoffice.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +86,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"%windir%/system32/shell32.dll\"}",
+        "body": {
+          "icon_location": "%windir%/system32/shell32.dll"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

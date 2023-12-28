@@ -5,7 +5,27 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.137423675596734, 3.8322896415232703, 3.905245762378632, 3.777497022063244, 3.712358608736156, 1.0816737736237914, 1.8087524793414316, 0.0, 4.674802994027891, 3.5041312997715424]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.137423675596734,
+              3.8322896415232703,
+              3.905245762378632,
+              3.777497022063244,
+              3.712358608736156,
+              1.0816737736237914,
+              1.8087524793414316,
+              0.0,
+              4.674802994027891,
+              3.5041312997715424
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +38,25 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, Description, RelativePath, WorkingDir, IconFile, Unicode, ExpIcon\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:08:05 22:41:46+00:00\", \"access_date\": \"2022:10:01 11:45:36+00:00\", \"modify_date\": \"2021:08:05 06:45:01+00:00\", \"target_file_size\": 3311504, \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"msedge.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\", \"description\": \"Przegl\\u0105daj sie\\u0107 web\", \"relative_path\": \"..\\\\..\\\\..\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\", \"working_directory\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\", \"machine_id\": \"desktop-u99lq3c\"}",
+        "body": {
+          "access_date": "2022:10:01 11:45:36+00:00",
+          "create_date": "2021:08:05 22:41:46+00:00",
+          "description": "Przegl\u0105daj sie\u0107 web",
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "flags": "IDList, LinkInfo, Description, RelativePath, WorkingDir, IconFile, Unicode, ExpIcon",
+          "hot_key": "(none)",
+          "icon_file_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "icon_index": "(none)",
+          "local_base_path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "machine_id": "desktop-u99lq3c",
+          "modify_date": "2021:08:05 06:45:01+00:00",
+          "relative_path": "..\\..\\..\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "run_window": "Normal",
+          "target_file_dosname": "msedge.exe",
+          "target_file_size": 3311504,
+          "working_directory": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -77,7 +115,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-u99lq3c\"}",
+        "body": {
+          "machine_identifier": "desktop-u99lq3c"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

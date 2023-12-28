@@ -5,7 +5,23 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.275727807416996, 3.302442678523099, 4.366222285758316, 0.8090657314843556, 1.2770230555507183, 0.0]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              3.275727807416996,
+              3.302442678523099,
+              4.366222285758316,
+              0.8090657314843556,
+              1.2770230555507183,
+              0.0
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +34,17 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, RelativePath, CommandArgs, IconFile, Unicode, ExpIcon\", \"file_attributes\": \"(none)\", \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"Documento-8234a23ab38d237b76f379d082e6298cxYo8pxMjmh.bat\", \"relative_path\": \"..\\\\..\\\\..\\\\Documento-8234a23ab38d237b76f379d082e6298cxYo8pxMjmh.bat\", \"command_line_arguments\": \"HZUuh\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body": {
+          "command_line_arguments": "HZUuh",
+          "file_attributes": "(none)",
+          "flags": "IDList, RelativePath, CommandArgs, IconFile, Unicode, ExpIcon",
+          "hot_key": "(none)",
+          "icon_file_name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "icon_index": "(none)",
+          "relative_path": "..\\..\\..\\Documento-8234a23ab38d237b76f379d082e6298cxYo8pxMjmh.bat",
+          "run_window": "Normal",
+          "target_file_dosname": "Documento-8234a23ab38d237b76f379d082e6298cxYo8pxMjmh.bat"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +86,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"C:\\\\Program Files (x86)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"}",
+        "body": {
+          "icon_location": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

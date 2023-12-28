@@ -5,7 +5,18 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.235572239409129]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              5.235572239409129
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +29,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 8, \"word_count\": 8}",
+        "body": {
+          "line_count": 8,
+          "mimeencoding": "us-ascii",
+          "newlines": "Windows CRLF",
+          "word_count": 8
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -31,7 +47,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"iconindex\": \"1\", \"hotkey\": \"0\", \"idlist\": \"\", \"url\": \"file://62.173.147.122/Agenzia/entrat.exe\", \"iconfile\": \"C:\\\\Windows\\\\system32\\\\SHELL32.dll\"}",
+        "body": {
+          "hotkey": "0",
+          "iconfile": "C:\\Windows\\system32\\SHELL32.dll",
+          "iconindex": "1",
+          "idlist": "",
+          "url": "file://62.173.147.122/Agenzia/entrat.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -44,7 +66,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"file://62.173.147.122/Agenzia/entrat.exe\"}",
+        "body": {
+          "url": "file://62.173.147.122/Agenzia/entrat.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -77,7 +101,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"Names\": \"{000214A0-0000-0000-C000-000000000046}\"}",
+        "body": {
+          "Names": "{000214A0-0000-0000-C000-000000000046}"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
