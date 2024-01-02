@@ -1,0 +1,265 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 0,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              2.0209342351245962,
+              1.6273410132559458,
+              1.0289582622795694,
+              3.2941770479461088,
+              3.6281495760904647,
+              3.638409535987067,
+              3.7465921011078107,
+              3.5981445908561422,
+              4.283744258202168,
+              2.6739040314799905,
+              3.988066077074097,
+              3.518102788268247,
+              3.6010400345270033,
+              3.5536094811634906,
+              1.4450691642712428,
+              1.7806893356629319,
+              2.475774391030028,
+              3.423379260050341,
+              6.763544758839778,
+              7.6440988668240335,
+              7.714724509188496,
+              7.019868476064278,
+              4.792468594745558,
+              3.9016299562331063,
+              3.279896942472778,
+              3.1131490175488703,
+              1.1425303585469118,
+              1.8732998326218306,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0102766897517022,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.961381922526686,
+              1.8697754215201108,
+              3.1592348062608435,
+              5.092638643997243,
+              1.9089053500752153,
+              2.7973716690234864,
+              2.6947048991303264,
+              5.663386160063945,
+              3.539931410501531,
+              3.308292682030718,
+              4.209359174284274,
+              4.640301495682432,
+              1.1149744309823064
+            ]
+          },
+          "type": "colormap"
+        },
+        "body_config": {},
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": "ENTROPY",
+        "tags": {},
+        "title_text": "File entropy: 3.913",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "author": "Admin",
+          "creation_date": "2023-11-01 09:39:00",
+          "doc_sum_info_17": "3582",
+          "doc_sum_info_19": "False",
+          "doc_sum_info_22": "False",
+          "doc_sum_info_23": "1048576",
+          "encrypted": "False",
+          "endian": "Little endian",
+          "last_modification": "2023-11-05 17:11:00",
+          "links_dirty": "False",
+          "nb_page": "3",
+          "num_characters": "3054",
+          "num_lines": "25",
+          "num_paragraphs": "7",
+          "num_words": "535",
+          "producer": "Microsoft Office Word",
+          "revision_number": "3",
+          "scale": "False",
+          "security": "0",
+          "template": "Normal.dotm",
+          "total_editing_time": "0:01:00"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "date": {
+              "creation": [
+                "2023-11-01 09:39:00"
+              ],
+              "last_modified": [
+                "2023-11-05 17:11:00"
+              ]
+            },
+            "ole": {
+              "summary": {
+                "author": [
+                  "Admin"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Metadata extracted by hachoir-metadata [Parser: ole2]",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "app_version": 16.0,
+          "author": "Admin",
+          "char_count_with_spaces": 3582,
+          "characters": 3054,
+          "code_page": "Windows Latin 1 (Western European)",
+          "comp_obj_user_type": "Microsoft Word 97-2003 Document",
+          "comp_obj_user_type_len": 32,
+          "create_date": "2023:11:01 09:39:00",
+          "doc_flags": "1Table, ExtChar",
+          "heading_pairs": [
+            "Title",
+            1
+          ],
+          "hyperlinks_changed": "No",
+          "identification": "Word 8.0",
+          "language_code": "English (US)",
+          "last_modified_by": "Admin",
+          "last_printed": "0000:00:00 00:00:00",
+          "lines": 25,
+          "links_up_to_date": "No",
+          "modify_date": "2023:11:05 17:11:00",
+          "pages": 3,
+          "paragraphs": 7,
+          "revision_number": 3,
+          "scale_crop": "No",
+          "security": "None",
+          "shared_doc": "No",
+          "software": "Microsoft Office Word",
+          "system": "Windows",
+          "template": "Normal.dotm",
+          "total_edit_time": "1 minute",
+          "word97": "No",
+          "words": 535
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "date": {
+              "creation": [
+                "2023:11:01 09:39:00"
+              ],
+              "last_modified": [
+                "2023:11:05 17:11:00"
+              ]
+            },
+            "ole": {
+              "summary": {
+                "author": [
+                  "Admin"
+                ],
+                "codepage": [
+                  "Windows Latin 1 (Western European)"
+                ],
+                "last_saved_by": [
+                  "Admin"
+                ]
+              }
+            }
+          }
+        },
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [],
+    "tags": {
+      "file.date.creation": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2023-11-01 09:39:00"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2023:11:01 09:39:00"
+        }
+      ],
+      "file.date.last_modified": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2023-11-05 17:11:00"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "2023:11:05 17:11:00"
+        }
+      ],
+      "file.ole.summary.author": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Admin"
+        },
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Admin"
+        }
+      ],
+      "file.ole.summary.codepage": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Windows Latin 1 (Western European)"
+        }
+      ],
+      "file.ole.summary.last_saved_by": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "Admin"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}
