@@ -1,0 +1,150 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 500,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              5.5501506903666655,
+              5.530911093951782
+            ]
+          },
+          "type": "colormap"
+        },
+        "body_config": {},
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": "ENTROPY",
+        "tags": {},
+        "title_text": "File entropy: 5.78",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "line_count": 12,
+          "mimeencoding": "iso-8859-1",
+          "newlines": "Windows CRLF",
+          "word_count": 24
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "hotkey": "0",
+          "iconfile": "C:\\Users\\User\\OneDrive\\\u00d0\u00e0\u00e1\u00ee\u00f7\u00e8\u00e9 \u00f1\u00f2\u00ee\u00eb\\\u00e8\u00ea\u00ee\u00ed\u00ea\u00e8\\Alarm (5 of 8).ico",
+          "iconindex": "0",
+          "idlist": "",
+          "url": "file://89.23.96.228@80/file/Booking_Information.exe"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Metadata extracted by Ini Reader",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "url": "file://89.23.96.228@80/file/Booking_Information.exe"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 1,
+          "score": 500,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {
+          "file": {
+            "path": [
+              "/file/Booking_Information.exe"
+            ]
+          },
+          "network": {
+            "static": {
+              "uri": [
+                "file://89.23.96.228@80/file/Booking_Information.exe"
+              ]
+            }
+          }
+        },
+        "title_text": "Suspicious shortcut elements",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "Names": "{000214A0-0000-0000-C000-000000000046}, InternetShortcut.A, InternetShortcut.W"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Extra sections",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 1,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "file.path": [
+        {
+          "heur_id": 1,
+          "signatures": [],
+          "value": "/file/Booking_Information.exe"
+        }
+      ],
+      "network.static.uri": [
+        {
+          "heur_id": 1,
+          "signatures": [],
+          "value": "file://89.23.96.228@80/file/Booking_Information.exe"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

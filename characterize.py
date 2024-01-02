@@ -521,7 +521,10 @@ class Characterize(ServiceBase):
         # 5. URL file management
         if request.file_type == "shortcut/web":
             config = ConfigParser()
-            config.read(request.file_path, encoding="UTF-8")
+            try:
+                config.read(request.file_path, encoding="UTF-8")
+            except UnicodeDecodeError:
+                config.read(request.file_path, encoding="cp1252")
 
             res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
             for k, v in config.items("InternetShortcut", raw=True):
