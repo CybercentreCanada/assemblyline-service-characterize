@@ -6,6 +6,7 @@ import json
 import os
 import re
 import subprocess
+import tempfile
 from configparser import ConfigParser
 from typing import Dict, List, Optional, Tuple, Union
 
@@ -520,13 +521,22 @@ class Characterize(ServiceBase):
 
         # 5. URL file management
         if request.file_type == "shortcut/web":
-            config = ConfigParser()
-            try:
-                config.read(request.file_path, encoding="UTF-8")
-            except UnicodeDecodeError:
-                config.read(request.file_path, encoding="cp1252")
-
             res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
+            config = ConfigParser()
+            file_contents = request.file_contents
+            file_path = request.file_path
+            if file_contents.endswith(b"\x00"):
+                with tempfile.NamedTemporaryFile(dir=self.working_directory, delete=False) as fh:
+                    fh.write(file_contents.rstrip(b"\x00"))
+                file_path = fh.name
+                heur = Heuristic(6)
+                heur_section = ResultSection(heur.name, heuristic=heur, parent=res, auto_collapse=True)
+
+            try:
+                config.read(file_path, encoding="UTF-8")
+            except UnicodeDecodeError:
+                config.read(file_path, encoding="cp1252")
+
             for k, v in config.items("InternetShortcut", raw=True):
                 res.set_item(k, v)
 
