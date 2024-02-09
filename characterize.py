@@ -1,5 +1,6 @@
 from __future__ import absolute_import
 
+import copy
 import datetime
 import hashlib
 import json
@@ -259,13 +260,11 @@ class Characterize(ServiceBase):
                         parent=request.result,
                     )
 
-                    CURRENT_TAG_MAP = TAG_MAP.get(None, {})
-                    CURRENT_TAG_MAP.update(TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}))
-                    print(f'Getting TAGS for {res_data.get("FileTypeExtension", "UNK").upper()}')
-                    for tag_name, tag_type in CURRENT_TAG_MAP.items():
+                    current_tag_map = copy.deepcopy(TAG_MAP.get(None, {}))
+                    current_tag_map.update(TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}))
+                    for tag_name, tag_type in current_tag_map.items():
                         if tag_name in exif_body:
                             e_res.add_tag(tag_type, exif_body[tag_name])
-                            print(f'Tagging {tag_name} ({tag_type})')
 
                     if request.file_type == "text/json":
 
