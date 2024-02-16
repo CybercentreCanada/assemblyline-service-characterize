@@ -5,7 +5,18 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.508501766202998]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.508501766202998
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +29,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"mimeencoding\": \"utf-8\", \"byte_order_mark\": \"No\", \"newlines\": \"Unix LF\", \"line_count\": 4, \"word_count\": 2}",
+        "body": {
+          "byte_order_mark": "No",
+          "line_count": 4,
+          "mimeencoding": "utf-8",
+          "newlines": "Unix LF",
+          "word_count": 2
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -31,7 +48,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"https://google.ca/ae\\u00e9\\u00e0aea\"}",
+        "body": {
+          "url": "https://google.ca/ae\u00e9\u00e0aea"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

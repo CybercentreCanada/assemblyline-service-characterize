@@ -5,7 +5,22 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.109901763518267, 3.893288184292347, 3.61075818909452, 5.160394794293397, 3.857830191864972]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.109901763518267,
+              3.893288184292347,
+              3.61075818909452,
+              5.160394794293397,
+              3.857830191864972
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +33,24 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata\", \"file_attributes\": \"Archive\", \"create_date\": \"2021:12:26 21:31:16+00:00\", \"access_date\": \"2022:02:07 12:15:39+00:00\", \"modify_date\": \"2021:12:26 21:31:16+00:00\", \"target_file_size\": 71680, \"icon_index\": 5, \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"target_file_dosname\": \"rundll32.exe\", \"drive_type\": \"Fixed Disk\", \"local_base_path\": \"C:\\\\Windows\\\\System32\\\\rundll32.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\rundll32.exe\", \"command_line_arguments\": \"info.dat,msuspend\", \"icon_file_name\": \"%systemroot%\\\\system32\\\\imageres.dll\", \"machine_id\": \"desktop-i8bn9qk\"}",
+        "body": {
+          "access_date": "2022:02:07 12:15:39+00:00",
+          "command_line_arguments": "info.dat,msuspend",
+          "create_date": "2021:12:26 21:31:16+00:00",
+          "drive_type": "Fixed Disk",
+          "file_attributes": "Archive",
+          "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata",
+          "hot_key": "(none)",
+          "icon_file_name": "%systemroot%\\system32\\imageres.dll",
+          "icon_index": 5,
+          "local_base_path": "C:\\Windows\\System32\\rundll32.exe",
+          "machine_id": "desktop-i8bn9qk",
+          "modify_date": "2021:12:26 21:31:16+00:00",
+          "relative_path": "..\\Windows\\System32\\rundll32.exe",
+          "run_window": "Normal",
+          "target_file_dosname": "rundll32.exe",
+          "target_file_size": 71680
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -77,7 +109,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"machine_identifier\": \"desktop-i8bn9qk\"}",
+        "body": {
+          "machine_identifier": "desktop-i8bn9qk"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -97,7 +131,11 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"local_base_path\": \"C:\\\\Windows\\\\System32\\\\rundll32.exe\", \"relative_path\": \"..\\\\Windows\\\\System32\\\\rundll32.exe\", \"target_file_dosname\": \"Windows\\\\System32\\\\rundll32.exe\"}",
+        "body": {
+          "local_base_path": "C:\\Windows\\System32\\rundll32.exe",
+          "relative_path": "..\\Windows\\System32\\rundll32.exe",
+          "target_file_dosname": "Windows\\System32\\rundll32.exe"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

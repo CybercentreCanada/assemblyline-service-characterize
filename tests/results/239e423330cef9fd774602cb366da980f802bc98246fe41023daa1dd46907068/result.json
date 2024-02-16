@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 500,
+    "score": 700,
     "sections": [
       {
         "auto_collapse": false,
@@ -12,7 +12,7 @@
               8
             ],
             "values": [
-              5.235572239409129
+              5.290112337135948
             ]
           },
           "type": "colormap"
@@ -24,35 +24,16 @@
         "heuristic": null,
         "promote_to": "ENTROPY",
         "tags": {},
-        "title_text": "File entropy: 5.236",
+        "title_text": "File entropy: 5.29",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
         "body": {
-          "line_count": 8,
-          "mimeencoding": "us-ascii",
-          "newlines": "Windows CRLF",
-          "word_count": 8
-        },
-        "body_config": {},
-        "body_format": "KEY_VALUE",
-        "classification": "TLP:C",
-        "depth": 0,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Metadata extracted by ExifTool",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": {
-          "hotkey": "0",
-          "iconfile": "C:\\Windows\\system32\\SHELL32.dll",
-          "iconindex": "1",
-          "idlist": "",
-          "url": "file://62.173.147.122/Agenzia/entrat.exe"
+          "iconfile": "C:\\Windows\\System32\\shell32.dll",
+          "iconindex": "0",
+          "showcommand": "7",
+          "url": "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
         },
         "body_config": {},
         "body_format": "KEY_VALUE",
@@ -65,9 +46,29 @@
         "zeroize_on_tag_safe": false
       },
       {
+        "auto_collapse": true,
+        "body": null,
+        "body_config": {},
+        "body_format": "TEXT",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 6,
+          "score": 200,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Additional data after terminal block",
+        "zeroize_on_tag_safe": false
+      },
+      {
         "auto_collapse": false,
         "body": {
-          "url": "file://62.173.147.122/Agenzia/entrat.exe"
+          "url": "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
         },
         "body_config": {},
         "body_format": "KEY_VALUE",
@@ -85,33 +86,18 @@
         "tags": {
           "file": {
             "path": [
-              "/Agenzia/entrat.exe"
+              "/Downloads/fight.zip/fight.exe"
             ]
           },
           "network": {
             "static": {
               "uri": [
-                "file://62.173.147.122/Agenzia/entrat.exe"
+                "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
               ]
             }
           }
         },
         "title_text": "Suspicious shortcut elements",
-        "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": {
-          "Names": "{000214A0-0000-0000-C000-000000000046}"
-        },
-        "body_config": {},
-        "body_format": "KEY_VALUE",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": null,
-        "promote_to": null,
-        "tags": {},
-        "title_text": "Extra sections",
         "zeroize_on_tag_safe": false
       }
     ]
@@ -126,6 +112,11 @@
         "attack_ids": [],
         "heur_id": 1,
         "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 6,
+        "signatures": []
       }
     ],
     "tags": {
@@ -133,14 +124,14 @@
         {
           "heur_id": 1,
           "signatures": [],
-          "value": "/Agenzia/entrat.exe"
+          "value": "/Downloads/fight.zip/fight.exe"
         }
       ],
       "network.static.uri": [
         {
           "heur_id": 1,
           "signatures": [],
-          "value": "file://62.173.147.122/Agenzia/entrat.exe"
+          "value": "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
         }
       ]
     },

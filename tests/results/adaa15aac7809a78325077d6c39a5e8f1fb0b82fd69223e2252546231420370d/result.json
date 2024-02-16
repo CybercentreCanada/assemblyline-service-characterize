@@ -5,7 +5,18 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [4.967697500502938]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              4.967697500502938
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +29,12 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"mimeencoding\": \"us-ascii\", \"newlines\": \"Windows CRLF\", \"line_count\": 8, \"word_count\": 8}",
+        "body": {
+          "line_count": 8,
+          "mimeencoding": "us-ascii",
+          "newlines": "Windows CRLF",
+          "word_count": 8
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -31,7 +47,13 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"url\": \"https://goo.su/rV1U\", \"idlist\": \"\", \"hotkey\": \"0\", \"iconindex\": \"0\", \"iconfile\": \"E:\\\\yb.ico\"}",
+        "body": {
+          "hotkey": "0",
+          "iconfile": "E:\\yb.ico",
+          "iconindex": "0",
+          "idlist": "",
+          "url": "https://goo.su/rV1U"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
@@ -59,7 +81,9 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"Names\": \"{000214A0-0000-0000-C000-000000000046}\"}",
+        "body": {
+          "Names": "{000214A0-0000-0000-C000-000000000046}"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",

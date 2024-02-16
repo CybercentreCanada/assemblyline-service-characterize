@@ -1,11 +1,13 @@
 from __future__ import absolute_import
 
+import copy
 import datetime
 import hashlib
 import json
 import os
 import re
 import subprocess
+import tempfile
 from configparser import ConfigParser
 from typing import Dict, List, Optional, Tuple, Union
 
@@ -30,6 +32,7 @@ from hachoir.core.log import Logger
 from hachoir.core.log import log as hachoir_logger
 from hachoir.metadata import extractMetadata
 from hachoir.parser.guess import createParser
+from multidecoder.decoders.network import find_domains, find_emails, find_ips, find_urls
 from multidecoder.decoders.shell import get_cmd_command, get_powershell_command
 
 TAG_MAP = {
@@ -256,12 +259,38 @@ class Characterize(ServiceBase):
                         body_format=BODY_FORMAT.KEY_VALUE,
                         parent=request.result,
                     )
-                    for k, v in exif_body.items():
-                        tag_type = TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}).get(
-                            k, None
-                        ) or TAG_MAP.get(None, {}).get(k, None)
-                        if tag_type:
-                            e_res.add_tag(tag_type, v)
+
+                    current_tag_map = copy.deepcopy(TAG_MAP.get(None, {}))
+                    current_tag_map.update(TAG_MAP.get(res_data.get("FileTypeExtension", "UNK").upper(), {}))
+                    for tag_name, tag_type in current_tag_map.items():
+                        if tag_name in exif_body:
+                            e_res.add_tag(tag_type, exif_body[tag_name])
+
+                    if request.file_type == "text/json":
+
+                        def check_ioc_in_json(item):
+                            if isinstance(item, dict):
+                                for k, v in item.items():
+                                    check_ioc_in_json(v)
+                                return
+                            elif isinstance(item, (list, tuple)):
+                                for sub_item in item:
+                                    check_ioc_in_json(sub_item)
+                                return
+                            elif isinstance(item, str):
+                                item_encoded = item.encode()
+                            elif isinstance(item, bytes):
+                                item_encoded = item
+                            else:
+                                # bools, int, ...
+                                return
+
+                            [e_res.add_tag("network.static.ip", x.value) for x in find_ips(item_encoded)]
+                            [e_res.add_tag("network.static.domain", x.value) for x in find_domains(item_encoded)]
+                            [e_res.add_tag("network.static.uri", x.value) for x in find_urls(item_encoded)]
+                            [e_res.add_tag("network.email.address", x.value) for x in find_emails(item_encoded)]
+
+                        check_ioc_in_json(exif_body)
 
         # 4. Lnk management.
         if request.file_type == "shortcut/windows":
@@ -493,10 +522,22 @@ class Characterize(ServiceBase):
 
         # 5. URL file management
         if request.file_type == "shortcut/web":
-            config = ConfigParser()
-            config.read(request.file_path, encoding="UTF-8")
-
             res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
+            config = ConfigParser()
+            file_contents = request.file_contents
+            file_path = request.file_path
+            if file_contents.endswith(b"\x00"):
+                with tempfile.NamedTemporaryFile(dir=self.working_directory, delete=False) as fh:
+                    fh.write(file_contents.rstrip(b"\x00"))
+                file_path = fh.name
+                heur = Heuristic(6)
+                heur_section = ResultSection(heur.name, heuristic=heur, parent=res, auto_collapse=True)
+
+            try:
+                config.read(file_path, encoding="UTF-8")
+            except UnicodeDecodeError:
+                config.read(file_path, encoding="cp1252")
+
             for k, v in config.items("InternetShortcut", raw=True):
                 res.set_item(k, v)
 
@@ -531,7 +572,7 @@ def get_filepath_from_fileuri(fileuri: str):
     if "@" in host_part and re.match(r"\d+", host_part.split("@", 1)[1]):
         host_part = host_part.split("@", 1)[0]
     if re.match(DOMAIN_ONLY_REGEX, host_part) or re.match(IP_ONLY_REGEX, host_part):
-        filepath = filepath[len(original_host_part):].lstrip("/\\")
+        filepath = filepath[len(original_host_part) :].lstrip("/\\")
 
     if filepath.split("/")[0].split("\\")[0].count(":") == 1:
         return filepath

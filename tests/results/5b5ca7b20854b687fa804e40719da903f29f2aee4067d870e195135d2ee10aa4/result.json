@@ -5,7 +5,22 @@
     "sections": [
       {
         "auto_collapse": false,
-        "body": "{\"type\": \"colormap\", \"data\": {\"domain\": [0, 8], \"values\": [3.8764314661491857, 3.546556398624562, 3.736647588575701, 3.361966256398246, 5.02356353765017]}}",
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              3.8764314661491857,
+              3.546556398624562,
+              3.736647588575701,
+              3.361966256398246,
+              5.02356353765017
+            ]
+          },
+          "type": "colormap"
+        },
         "body_config": {},
         "body_format": "GRAPH_DATA",
         "classification": "TLP:C",
@@ -18,7 +33,18 @@
       },
       {
         "auto_collapse": false,
-        "body": "{\"flags\": \"IDList, LinkInfo, Unicode, NoKnownFolderTracking\", \"file_attributes\": \"Directory\", \"create_date\": \"2019:04:15 20:26:03+00:00\", \"access_date\": \"2019:05:05 20:19:52+00:00\", \"modify_date\": \"2019:04:15 20:26:03+00:00\", \"icon_index\": \"(none)\", \"run_window\": \"Normal\", \"hot_key\": \"(none)\", \"net_name\": \"\\u001c\", \"net_provider_type\": \"RDR2SAMPLE\"}",
+        "body": {
+          "access_date": "2019:05:05 20:19:52+00:00",
+          "create_date": "2019:04:15 20:26:03+00:00",
+          "file_attributes": "Directory",
+          "flags": "IDList, LinkInfo, Unicode, NoKnownFolderTracking",
+          "hot_key": "(none)",
+          "icon_index": "(none)",
+          "modify_date": "2019:04:15 20:26:03+00:00",
+          "net_name": "\u001c",
+          "net_provider_type": "RDR2SAMPLE",
+          "run_window": "Normal"
+        },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
