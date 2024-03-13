@@ -492,33 +492,35 @@ class Characterize(ServiceBase):
                 json.dump(features, f, default=_datetime_to_str)
             request.add_supplementary(temp_path, "features.json", "Features extracted from the LNK file")
 
-            if lnk.appended_data:
-                sha256hash = hashlib.sha256(lnk.appended_data).hexdigest()
-                appended_data_path = os.path.join(self.working_directory, sha256hash)
-                with open(appended_data_path, "wb") as appended_data_f:
-                    appended_data_f.write(lnk.appended_data)
-                request.add_extracted(
-                    appended_data_path,
-                    sha256hash,
-                    "Additional data at the end of the LNK file",
-                )
-                heur = Heuristic(6)
-                heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
-                heur_section.set_item("Length", len(lnk.appended_data))
-
             for extra_data in lnk.extras:
-                if isinstance(extra_data, LnkParse3.extra.unknown.UnknownExtra):
-                    sha256hash = hashlib.sha256(extra_data.extra_data).hexdigest()
+                if isinstance(extra_data, LnkParse3.extra.terminal.Terminal):
+                    appended_data = extra_data.appended_data()
+                    sha256hash = hashlib.sha256(appended_data).hexdigest()
                     appended_data_path = os.path.join(self.working_directory, sha256hash)
                     with open(appended_data_path, "wb") as appended_data_f:
-                        appended_data_f.write(extra_data.extra_data)
+                        appended_data_f.write(appended_data)
+                    request.add_extracted(
+                        appended_data_path,
+                        sha256hash,
+                        "Additional data at the end of the LNK file",
+                    )
+                    heur = Heuristic(6)
+                    heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+                    heur_section.set_item("Length", len(appended_data))
+
+                if isinstance(extra_data, LnkParse3.extra.unknown.Unknown):
+                    unknown_data = extra_data.extra_data()
+                    sha256hash = hashlib.sha256(unknown_data).hexdigest()
+                    appended_data_path = os.path.join(self.working_directory, sha256hash)
+                    with open(appended_data_path, "wb") as appended_data_f:
+                        appended_data_f.write(unknown_data)
                     request.add_extracted(
                         appended_data_path,
                         sha256hash,
                         "Unknown Extra data",
                     )
                     section = ResultKeyValueSection("Unknown Extra data", parent=lnk_result_section)
-                    section.set_item("Length", len(extra_data.extra_data))
+                    section.set_item("Length", len(unknown_data))
 
         # 5. URL file management
         if request.file_type == "shortcut/web":
