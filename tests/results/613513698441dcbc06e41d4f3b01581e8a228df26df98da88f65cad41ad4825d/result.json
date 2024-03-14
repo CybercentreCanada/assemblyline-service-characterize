@@ -1,0 +1,108 @@
+{
+  "extra": {
+    "drop_file": false,
+    "score": 1,
+    "sections": [
+      {
+        "auto_collapse": false,
+        "body": {
+          "data": {
+            "domain": [
+              0,
+              8
+            ],
+            "values": [
+              5.183403019367326,
+              1.9750317496607728
+            ]
+          },
+          "type": "colormap"
+        },
+        "body_config": {},
+        "body_format": "GRAPH_DATA",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": "ENTROPY",
+        "tags": {},
+        "title_text": "File entropy: 4.221",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "line_count": 7,
+          "mimeencoding": "us-ascii",
+          "newlines": "Unix LF",
+          "word_count": 7
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": null,
+        "promote_to": null,
+        "tags": {},
+        "title_text": "Metadata extracted by ExifTool",
+        "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "dsdriveid": "b!000000_000000000_000000000000000000000000000000_0000000000000000",
+          "dsdriveitemid": "0000000000000000000000000000000000",
+          "dsmeetingid": "0771b63e-d80f-4b81-88da-facbf218a7fb",
+          "dstype": "SharePointFileLink",
+          "url": "https://site.com"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 0,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 8,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {
+          "network": {
+            "static": {
+              "uri": [
+                "https://site.com"
+              ]
+            }
+          }
+        },
+        "title_text": "Metadata extracted by Ini Reader",
+        "zeroize_on_tag_safe": false
+      }
+    ]
+  },
+  "files": {
+    "extracted": [],
+    "supplementary": []
+  },
+  "results": {
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 8,
+        "signatures": []
+      }
+    ],
+    "tags": {
+      "network.static.uri": [
+        {
+          "heur_id": 8,
+          "signatures": [],
+          "value": "https://site.com"
+        }
+      ]
+    },
+    "temp_submission_data": {}
+  }
+}

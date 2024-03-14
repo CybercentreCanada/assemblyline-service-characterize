@@ -525,7 +525,7 @@ class Characterize(ServiceBase):
         # 5. URL file management
         if request.file_type == "shortcut/web":
             res = ResultKeyValueSection("Metadata extracted by Ini Reader", parent=request.result)
-            config = ConfigParser()
+            config = ConfigParser(strict=False)
             file_contents = request.file_contents
             file_path = request.file_path
             if file_contents.endswith(b"\x00"):
