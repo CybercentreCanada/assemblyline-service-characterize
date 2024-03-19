@@ -1,5 +1,4 @@
 # Install hachoir from source
 git+https://github.com/vstinner/hachoir
-# Using latest to get extra-data parsing
-git+https://github.com/Matmaus/LnkParse3
+LnkParse3>=1.4.0
 multidecoder
