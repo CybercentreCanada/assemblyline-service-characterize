@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 700,
+    "score": 201,
     "sections": [
       {
         "auto_collapse": false,
@@ -12,7 +12,7 @@
               8
             ],
             "values": [
-              5.290112337135948
+              3.0386162501522507
             ]
           },
           "type": "colormap"
@@ -24,30 +24,44 @@
         "heuristic": null,
         "promote_to": "ENTROPY",
         "tags": {},
-        "title_text": "File entropy: 5.29",
+        "title_text": "File entropy: 3.039",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": false,
         "body": {
-          "iconfile": "C:\\Windows\\System32\\shell32.dll",
+          "iconfile": "C:\\Wi",
           "iconindex": "0",
-          "showcommand": "7",
-          "url": "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
+          "url": "https://site.com"
         },
         "body_config": {},
         "body_format": "KEY_VALUE",
         "classification": "TLP:C",
         "depth": 0,
-        "heuristic": null,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 8,
+          "score": 1,
+          "score_map": {},
+          "signatures": {}
+        },
         "promote_to": null,
-        "tags": {},
+        "tags": {
+          "network": {
+            "static": {
+              "uri": [
+                "https://site.com"
+              ]
+            }
+          }
+        },
         "title_text": "Metadata extracted by Ini Reader",
         "zeroize_on_tag_safe": false
       },
       {
         "auto_collapse": true,
-        "body": "Removed 1 null bytes from shortcut.",
+        "body": "Removed 92 null bytes from shortcut.",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
@@ -64,41 +78,6 @@
         "tags": {},
         "title_text": "Additional data after terminal block",
         "zeroize_on_tag_safe": false
-      },
-      {
-        "auto_collapse": false,
-        "body": {
-          "url": "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
-        },
-        "body_config": {},
-        "body_format": "KEY_VALUE",
-        "classification": "TLP:C",
-        "depth": 1,
-        "heuristic": {
-          "attack_ids": [],
-          "frequency": 1,
-          "heur_id": 1,
-          "score": 500,
-          "score_map": {},
-          "signatures": {}
-        },
-        "promote_to": null,
-        "tags": {
-          "file": {
-            "path": [
-              "/Downloads/fight.zip/fight.exe"
-            ]
-          },
-          "network": {
-            "static": {
-              "uri": [
-                "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
-              ]
-            }
-          }
-        },
-        "title_text": "Suspicious shortcut elements",
-        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -110,28 +89,21 @@
     "heuristics": [
       {
         "attack_ids": [],
-        "heur_id": 1,
+        "heur_id": 6,
         "signatures": []
       },
       {
         "attack_ids": [],
-        "heur_id": 6,
+        "heur_id": 8,
         "signatures": []
       }
     ],
     "tags": {
-      "file.path": [
-        {
-          "heur_id": 1,
-          "signatures": [],
-          "value": "/Downloads/fight.zip/fight.exe"
-        }
-      ],
       "network.static.uri": [
         {
-          "heur_id": 1,
+          "heur_id": 8,
           "signatures": [],
-          "value": "file://5.252.178.69@80/Downloads/fight.zip/fight.exe"
+          "value": "https://site.com"
         }
       ]
     },

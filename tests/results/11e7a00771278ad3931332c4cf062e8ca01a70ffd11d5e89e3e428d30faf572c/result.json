@@ -96,7 +96,7 @@
       },
       {
         "auto_collapse": true,
-        "body": null,
+        "body": "Removed 478524 null bytes from shortcut.",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
