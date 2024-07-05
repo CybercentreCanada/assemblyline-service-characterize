@@ -34,7 +34,7 @@ heuristics:
     filetype: "shortcut/windows"
     heur_id: 2
     name: Recent timestamp found
-    score: 500
+    score: 120
 
   - description: >-
       A timestamp from the future is found. It is not automatically a sign of maliciousness, but rather corruption, bad parsing, or bad practice.
