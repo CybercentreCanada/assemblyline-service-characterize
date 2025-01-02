@@ -1,3 +1,1 @@
 libimage-exiftool-perl
-# Require git to install hachoir from source and forked version of LnkParse3
-git
