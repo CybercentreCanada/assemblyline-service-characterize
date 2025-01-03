@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 0,
+    "score": 100,
     "sections": [
       {
         "auto_collapse": false,
@@ -78,6 +78,36 @@
         "tags": {},
         "title_text": "Extra metadata extracted by LnkParse3",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "link_info_fullpath": "\\\\VBoxSvr\\Compartida\\Windows-Cubase\\Disco local-D\\nuendo_virtual\\Nuendo\\Waves Complete 9 r1 x86 x64 + crack\\crack & instructions"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 10,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {
+          "network": {
+            "static": {
+              "unc_path": [
+                "\\\\VBoxSvr\\Compartida\\Windows-Cubase\\Disco local-D\\nuendo_virtual\\Nuendo\\Waves Complete 9 r1 x86 x64 + crack\\crack & instructions"
+              ]
+            }
+          }
+        },
+        "title_text": "UNC path found",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -91,7 +121,13 @@
     ]
   },
   "results": {
-    "heuristics": [],
+    "heuristics": [
+      {
+        "attack_ids": [],
+        "heur_id": 10,
+        "signatures": []
+      }
+    ],
     "tags": {
       "file.date.creation": [
         {
@@ -105,6 +141,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "2019:04:15 20:26:03+00:00"
+        }
+      ],
+      "network.static.unc_path": [
+        {
+          "heur_id": 10,
+          "signatures": [],
+          "value": "\\\\VBoxSvr\\Compartida\\Windows-Cubase\\Disco local-D\\nuendo_virtual\\Nuendo\\Waves Complete 9 r1 x86 x64 + crack\\crack & instructions"
         }
       ]
     },

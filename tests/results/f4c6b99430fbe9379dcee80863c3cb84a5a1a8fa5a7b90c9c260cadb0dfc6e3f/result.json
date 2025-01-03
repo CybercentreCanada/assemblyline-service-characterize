@@ -1,7 +1,7 @@
 {
   "extra": {
     "drop_file": false,
-    "score": 250,
+    "score": 350,
     "sections": [
       {
         "auto_collapse": false,
@@ -142,6 +142,40 @@
         "tags": {},
         "title_text": "Suspicious icon used",
         "zeroize_on_tag_safe": false
+      },
+      {
+        "auto_collapse": false,
+        "body": {
+          "data_fullpath": "\\\\Mac\\Home\\Desktop\\information priver de andrea.bat",
+          "link_info_fullpath": "\\\\MAC\\HOME\\Desktop\\information priver de andrea.bat",
+          "target_ansi": "\\\\Mac\\Home\\Desktop\\information priver de andrea.bat",
+          "target_unicode": "\\\\Mac\\Home\\Desktop\\information priver de andrea.bat"
+        },
+        "body_config": {},
+        "body_format": "KEY_VALUE",
+        "classification": "TLP:C",
+        "depth": 1,
+        "heuristic": {
+          "attack_ids": [],
+          "frequency": 1,
+          "heur_id": 10,
+          "score": 100,
+          "score_map": {},
+          "signatures": {}
+        },
+        "promote_to": null,
+        "tags": {
+          "network": {
+            "static": {
+              "unc_path": [
+                "\\\\Mac\\Home\\Desktop\\information priver de andrea.bat",
+                "\\\\MAC\\HOME\\Desktop\\information priver de andrea.bat"
+              ]
+            }
+          }
+        },
+        "title_text": "UNC path found",
+        "zeroize_on_tag_safe": false
       }
     ]
   },
@@ -159,6 +193,11 @@
       {
         "attack_ids": [],
         "heur_id": 4,
+        "signatures": []
+      },
+      {
+        "attack_ids": [],
+        "heur_id": 10,
         "signatures": []
       }
     ],
@@ -196,6 +235,18 @@
           "heur_id": null,
           "signatures": [],
           "value": "%SystemRoot%\\System32\\SHELL32.dll"
+        }
+      ],
+      "network.static.unc_path": [
+        {
+          "heur_id": 10,
+          "signatures": [],
+          "value": "\\\\MAC\\HOME\\Desktop\\information priver de andrea.bat"
+        },
+        {
+          "heur_id": 10,
+          "signatures": [],
+          "value": "\\\\Mac\\Home\\Desktop\\information priver de andrea.bat"
         }
       ]
     },

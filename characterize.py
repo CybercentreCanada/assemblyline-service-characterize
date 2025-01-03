@@ -4,6 +4,7 @@ import copy
 import datetime
 import hashlib
 import json
+import ntpath
 import os
 import re
 import struct
@@ -358,8 +359,6 @@ class Characterize(ServiceBase):
 
         target = ""
         if "target" in features:
-            import ntpath
-
             if "items" in features["target"]:
                 last_item = None
                 for item in features["target"]["items"]:
@@ -446,16 +445,13 @@ class Characterize(ServiceBase):
                 heur_section.set_item(k, v)
                 heur_section.add_tag("file.name.extracted", v.rsplit("\\")[-1])
 
-        unc_result = None
+        unc_found = {}
         if "icon_location" in features["data"]:
             deceptive_icons = ["wordpad.exe", "shell32.dll", "explorer.exe", "msedge.exe"]
 
             lnk_result_section.add_tag("file.shortcut.icon_location", features["data"]["icon_location"])
             if re.match(UNC_PATH_REGEX, features["data"]["icon_location"]):
-                heur = Heuristic(10)
-                unc_result = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
-                unc_result.add_tag("network.static.unc_path", features["data"]["icon_location"])
-                unc_result.set_item("icon_location", features["data"]["icon_location"])
+                unc_found["icon_location"] = features["data"]["icon_location"]
             if any(
                 features["data"]["icon_location"].lower().strip('"').strip("'").endswith(x)
                 and not filename_extracted.endswith(x)
@@ -465,15 +461,29 @@ class Characterize(ServiceBase):
                 heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 heur_section.set_item("icon_location", features["data"]["icon_location"])
 
-        process_cmdline = f"{filename_extracted} {cla}".strip()
-        if re.match(UNC_PATH_REGEX, process_cmdline):
-            if unc_result is None:
-                heur = Heuristic(10)
-                unc_result = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
-            unc_result.add_tag("network.static.unc_path", process_cmdline)
-            unc_result.set_item("cmdline", process_cmdline)
-        elif process_cmdline:
-            lnk_result_section.add_tag("file.shortcut.command_line", process_cmdline)
+        lnk_result_section.add_tag("file.shortcut.command_line", f"{filename_extracted} {cla}".strip())
+
+        data_fullpath = ntpath.realpath(ntpath.join(str(features["data"].get("working_directory", "")).strip(), rp))
+        if re.match(UNC_PATH_REGEX, data_fullpath):
+            unc_found["data_fullpath"] = data_fullpath
+        if features["link_info"].get("location", "") == "Network":
+            link_info_fullpath = ntpath.realpath(
+                ntpath.join(
+                    features["link_info"].get("location_info", {}).get("net_name", ""),
+                    features["link_info"].get("common_path_suffix", ""),
+                )
+            )
+            if re.match(UNC_PATH_REGEX, link_info_fullpath):
+                unc_found["link_info_fullpath"] = link_info_fullpath
+        for k, v in extra_targets.items():
+            if re.match(UNC_PATH_REGEX, v):
+                unc_found[k] = v
+        if unc_found:
+            heur = Heuristic(10)
+            unc_result = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
+            for k, v in unc_found.items():
+                unc_result.add_tag("network.static.unc_path", v)
+                unc_result.set_item(k, v)
 
         filename_extracted = filename_extracted.rsplit("\\")[-1].strip().lstrip("./").lower()
 

