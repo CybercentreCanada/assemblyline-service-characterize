@@ -12,25 +12,10 @@
             "cwd": "${workspaceFolder}",
             "args": [
                 "-d",
-                "characterize.Characterize",
+                "characterize.characterize.Characterize",
                 "${file}"
             ],
             "justMyCode": false,
         },
-        {
-            "name": "[Service] Characterize - Privileged",
-            "type": "python",
-            "request": "launch",
-            "module": "assemblyline_v4_service.run_privileged_service",
-            "env": {
-                "SERVICE_MANIFEST_PATH": "service_manifest.yml",
-                "PRIVILEGED": "true",
-                "SERVICE_PATH": "characterize.Characterize",
-                "TASKING_DIR": "/tmp/Characterize"
-            },
-            "console": "internalConsole",
-            "cwd": "${workspaceFolder}",
-            "justMyCode": false,
-        }
     ]
 }

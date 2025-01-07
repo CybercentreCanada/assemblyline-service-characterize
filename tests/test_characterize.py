@@ -4,9 +4,9 @@ import hachoir.core.config as hachoir_config
 import pytest
 from assemblyline.common.importing import load_module_by_path
 
-from characterize import get_filepath_from_fileuri
+from characterize.characterize import get_filepath_from_fileuri
 
-Characterize = load_module_by_path("characterize.Characterize", os.path.join(os.path.dirname(__file__), ".."))
+Characterize = load_module_by_path("characterize.characterize.Characterize", os.path.join(os.path.dirname(__file__), ".."))
 
 
 class TestCharacterize:

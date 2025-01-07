@@ -1,0 +1,23 @@
+{
+  "template": "https://github.com/CybercentreCanada/assemblyline-service-template.git",
+  "commit": "99becf8ed2990a4063a5bb1f8ce878824a5a1a7b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "service_name": "characterize",
+      "__svc_name": "characterize",
+      "__repository": "assemblyline-service-characterize",
+      "__pkg_name": "characterize",
+      "class_name": "Characterize",
+      "short_description": "This service partitions the file and calculates visual entropy for each partition.",
+      "short_description_fr": "Ce service partitionne le fichier et calcule l'entropie visuelle pour chaque partition.",
+      "stage": "CORE",
+      "category": "Static Analysis",
+      "org_name_full": "CybercentreCanada",
+      "org_name_short": "cccs",
+      "license": "mit",
+      "_template": "https://github.com/CybercentreCanada/assemblyline-service-template.git"
+    }
+  },
+  "directory": null
+}
