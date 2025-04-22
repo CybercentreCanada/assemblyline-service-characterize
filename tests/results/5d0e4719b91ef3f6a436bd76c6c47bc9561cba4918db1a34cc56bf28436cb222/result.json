@@ -36,6 +36,7 @@
           "access_date": "2022:03:31 06:32:01+00:00",
           "command_line_arguments": "/c start rundll32 namr.dll,PluginInit",
           "create_date": "2022:02:11 18:01:47+00:00",
+          "drive_serial_number": "4A08-FD24",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode",

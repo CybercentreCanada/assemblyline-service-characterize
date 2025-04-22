@@ -102,23 +102,23 @@
           "tag_links_curies_href": "https://api.w.org/{rel}",
           "tag_links_curies_name": "wp",
           "tag_links_curies_templated": true,
-          "tag_links_predecessor-version_href": "https://season2seasonconstruction.com/wp-json/wp/v2/posts/8426/revisions/8427",
-          "tag_links_predecessor-version_id": 8427,
+          "tag_links_predecessor-_version_href": "https://season2seasonconstruction.com/wp-json/wp/v2/posts/8426/revisions/8427",
+          "tag_links_predecessor-_version_id": 8427,
           "tag_links_replies_embeddable": true,
           "tag_links_replies_href": "https://season2seasonconstruction.com/wp-json/wp/v2/comments?post=8426",
           "tag_links_self_href": "https://season2seasonconstruction.com/wp-json/wp/v2/posts/8426",
-          "tag_links_version-history_count": 1,
-          "tag_links_version-history_href": "https://season2seasonconstruction.com/wp-json/wp/v2/posts/8426/revisions",
-          "tag_links_wpattachment_href": "https://season2seasonconstruction.com/wp-json/wp/v2/media?parent=8426",
-          "tag_links_wpterm_embeddable": [
+          "tag_links_version-_history_count": 1,
+          "tag_links_version-_history_href": "https://season2seasonconstruction.com/wp-json/wp/v2/posts/8426/revisions",
+          "tag_links_wp_attachment_href": "https://season2seasonconstruction.com/wp-json/wp/v2/media?parent=8426",
+          "tag_links_wp_term_embeddable": [
             true,
             true
           ],
-          "tag_links_wpterm_href": [
+          "tag_links_wp_term_href": [
             "https://season2seasonconstruction.com/wp-json/wp/v2/categories?post=8426",
             "https://season2seasonconstruction.com/wp-json/wp/v2/tags?post=8426"
           ],
-          "tag_links_wpterm_taxonomy": [
+          "tag_links_wp_term_taxonomy": [
             "category",
             "post_tag"
           ],

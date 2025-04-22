@@ -42,6 +42,7 @@
           "access_date": "2022:10:01 11:45:36+00:00",
           "create_date": "2021:08:05 22:41:46+00:00",
           "description": "Przegl\u0105daj sie\u0107 web",
+          "drive_serial_number": "3CF4-C0BC",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "flags": "IDList, LinkInfo, Description, RelativePath, WorkingDir, IconFile, Unicode, ExpIcon",

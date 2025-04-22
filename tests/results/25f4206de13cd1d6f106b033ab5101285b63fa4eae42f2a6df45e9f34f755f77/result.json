@@ -39,6 +39,7 @@
           "access_date": "2022:04:19 09:59:03+00:00",
           "command_line_arguments": "/c start rundll32.exe mkl2n.dll,kXlNkCKgFC",
           "create_date": "2022:02:11 18:01:47+00:00",
+          "drive_serial_number": "4A08-FD24",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, ExpString",

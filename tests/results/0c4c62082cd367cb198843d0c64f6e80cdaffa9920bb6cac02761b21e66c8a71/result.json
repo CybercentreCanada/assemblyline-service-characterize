@@ -42,6 +42,7 @@
           "access_date": "2019:12:29 14:27:21+00:00",
           "command_line_arguments": "http://194.180.174.158/18.01/quicker.rtf",
           "create_date": "2019:12:29 14:27:21+00:00",
+          "drive_serial_number": "5A8C-5E7D",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "flags": "IDList, LinkInfo, CommandArgs, IconFile, Unicode, ExpString, ExpIcon",

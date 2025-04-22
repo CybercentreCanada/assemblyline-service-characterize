@@ -35,6 +35,7 @@
         "body": {
           "access_date": "2020:11:19 19:07:04+00:00",
           "create_date": "2020:11:19 19:07:04+00:00",
+          "drive_serial_number": "30BC-8771",
           "drive_type": "Fixed Disk",
           "file_attributes": "Archive",
           "flags": "IDList, LinkInfo, RelativePath, Unicode",
