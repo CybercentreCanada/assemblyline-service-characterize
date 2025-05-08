@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "RunServiceOnce",
+            "name": "RunServiceOnce Characterize",
             "type": "python",
             "request": "launch",
             "module": "assemblyline_v4_service.dev.run_service_once",
@@ -17,5 +17,20 @@
             ],
             "justMyCode": false,
         },
+        {
+            "name": "[Service] Characterize - Privileged",
+            "type": "python",
+            "request": "launch",
+            "module": "assemblyline_v4_service.run_privileged_service",
+            "env": {
+                "SERVICE_MANIFEST_PATH": "service_manifest.yml",
+                "PRIVILEGED": "true",
+                "SERVICE_PATH": "characterize.characterize.Characterize",
+                "TASKING_DIR": "/tmp/Characterize"
+            },
+            "console": "internalConsole",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false,
+        }
     ]
 }
