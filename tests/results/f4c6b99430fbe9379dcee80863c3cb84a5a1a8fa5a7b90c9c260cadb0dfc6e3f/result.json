@@ -94,7 +94,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": ".\\information priver de andrea.bat",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

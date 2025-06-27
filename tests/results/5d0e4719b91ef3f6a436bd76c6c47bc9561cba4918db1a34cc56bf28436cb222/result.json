@@ -74,7 +74,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Windows\\System32\\cmd.exe /c start rundll32 namr.dll,PluginInit",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

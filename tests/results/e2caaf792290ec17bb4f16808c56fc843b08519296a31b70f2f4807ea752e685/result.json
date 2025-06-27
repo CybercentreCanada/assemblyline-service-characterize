@@ -72,7 +72,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": ".\\StormII.exe \"C:\\Program Files\\WinPcap\\Wordpad.lnk\"",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

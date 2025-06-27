@@ -461,6 +461,7 @@ class Characterize(ServiceBase):
                 heur_section = ResultKeyValueSection(heur.name, heuristic=heur, parent=lnk_result_section)
                 heur_section.set_item("icon_location", features["data"]["icon_location"])
 
+        lnk_result_section.add_line(f"{filename_extracted} {cla}".strip())
         lnk_result_section.add_tag("file.shortcut.command_line", f"{filename_extracted} {cla}".strip())
 
         data_fullpath = ntpath.realpath(ntpath.join(str(features["data"].get("working_directory", "")).strip(), rp))

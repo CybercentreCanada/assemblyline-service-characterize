@@ -6,7 +6,9 @@ from assemblyline.common.importing import load_module_by_path
 
 from characterize.characterize import get_filepath_from_fileuri
 
-Characterize = load_module_by_path("characterize.characterize.Characterize", os.path.join(os.path.dirname(__file__), ".."))
+Characterize = load_module_by_path(
+    "characterize.characterize.Characterize", os.path.join(os.path.dirname(__file__), "..")
+)
 
 
 class TestCharacterize:
@@ -51,7 +53,7 @@ class TestCharacterize:
         # Not actually a URI
         ("blob", None),
         # Complex URI
-        ("file:\\\\94.156.253.211@80\\Downloads\\run-dwnl-restart.lnk", "\\Downloads\\run-dwnl-restart.lnk")
+        ("file:\\\\94.156.253.211@80\\Downloads\\run-dwnl-restart.lnk", "\\Downloads\\run-dwnl-restart.lnk"),
     ],
 )
 def test_get_filepath_from_fileuri(fileuri, filepath):

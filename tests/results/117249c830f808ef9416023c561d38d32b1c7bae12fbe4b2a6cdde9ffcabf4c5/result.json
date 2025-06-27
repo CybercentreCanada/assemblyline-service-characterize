@@ -78,7 +78,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

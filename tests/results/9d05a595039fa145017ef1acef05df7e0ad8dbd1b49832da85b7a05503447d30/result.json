@@ -74,7 +74,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Users\\admin\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

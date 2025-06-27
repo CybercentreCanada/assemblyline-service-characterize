@@ -77,7 +77,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

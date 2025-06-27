@@ -57,7 +57,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "msoffice.exe bin/DeleteDateConnectionPosition.dll,DeleteDateConnectionPosition",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

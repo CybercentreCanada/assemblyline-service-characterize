@@ -75,7 +75,7 @@
       },
       {
         "auto_collapse": false,
-        "body": null,
+        "body": "C:\\Windows\\System32\\rundll32.exe info.dat,msuspend",
         "body_config": {},
         "body_format": "TEXT",
         "classification": "TLP:C",
