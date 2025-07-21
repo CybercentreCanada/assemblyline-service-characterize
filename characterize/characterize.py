@@ -318,11 +318,10 @@ class Characterize(ServiceBase):
         try:
             with open(request.file_path, "rb") as indata:
                 lnk = LnkParse3.lnk_file(indata)
+            features = lnk.get_json(get_all=True)
         except struct.error:
             ResultSection("Corrupted Windows Shortcut file", parent=request.result)
             return
-
-        features = lnk.get_json(get_all=True)
 
         lnk_result_section = ResultSection(
             "Extra metadata extracted by LnkParse3",
