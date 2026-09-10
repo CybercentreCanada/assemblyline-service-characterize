@@ -95,6 +95,9 @@
               "command_line": [
                 "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
               ],
+              "drive_serial": [
+                "4A08FD24"
+              ],
               "icon_location": [
                 "%systemroot%\\system32\\imageres.dll"
               ],
@@ -213,6 +216,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "C:\\Windows\\System32\\cmd.exe /c start rundll32.exe mkl2n.dll,kXlNkCKgFC"
+        }
+      ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "4A08FD24"
         }
       ],
       "file.shortcut.icon_location": [

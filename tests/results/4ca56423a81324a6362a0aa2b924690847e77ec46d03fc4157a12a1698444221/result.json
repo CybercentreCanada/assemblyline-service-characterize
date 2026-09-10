@@ -93,6 +93,9 @@
               "command_line": [
                 "C:\\Windows\\System32\\rundll32.exe info.dat,msuspend"
               ],
+              "drive_serial": [
+                "300D05E9"
+              ],
               "icon_location": [
                 "%systemroot%\\system32\\imageres.dll"
               ],
@@ -205,6 +208,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "C:\\Windows\\System32\\rundll32.exe info.dat,msuspend"
+        }
+      ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "300D05E9"
         }
       ],
       "file.shortcut.icon_location": [

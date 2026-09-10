@@ -21,7 +21,7 @@
               1.8087524793414316,
               0.0,
               4.674802994027891,
-              3.5041312997715424
+              3.504131299771542
             ]
           },
           "type": "colormap"
@@ -99,11 +99,17 @@
               "command_line": [
                 "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
               ],
+              "drive_serial": [
+                "3CF4C0BC"
+              ],
               "icon_location": [
                 "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
               ],
               "machine_id": [
                 "desktop-u99lq3c"
+              ],
+              "sid": [
+                "S-1-5-21-3155832591-2105173333-560325454-1001"
               ],
               "tracker_mac": [
                 "DE:E8:9F:93:8E:45"
@@ -184,6 +190,13 @@
           "value": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
         }
       ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "3CF4C0BC"
+        }
+      ],
       "file.shortcut.icon_location": [
         {
           "heur_id": null,
@@ -196,6 +209,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "desktop-u99lq3c"
+        }
+      ],
+      "file.shortcut.sid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "S-1-5-21-3155832591-2105173333-560325454-1001"
         }
       ],
       "file.shortcut.tracker_mac": [

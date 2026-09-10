@@ -13,7 +13,7 @@
             ],
             "values": [
               4.781370403313523,
-              3.5536167963559087,
+              3.5536167963559073,
               4.06319504091023,
               4.225167159199131
             ]
@@ -92,8 +92,14 @@
               "command_line": [
                 "C:\\Users\\admin\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
               ],
+              "drive_serial": [
+                "30BC8771"
+              ],
               "machine_id": [
                 "work"
+              ],
+              "sid": [
+                "S-1-5-21-3711686801-687107597-1149503783-1001"
               ],
               "tracker_mac": [
                 "42:01:0A:96:00:00"
@@ -146,11 +152,25 @@
           "value": "C:\\Users\\admin\\hdwwiz\\DiagnosticsHub.StandardCollector.Service.exe.bat"
         }
       ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "30BC8771"
+        }
+      ],
       "file.shortcut.machine_id": [
         {
           "heur_id": null,
           "signatures": [],
           "value": "work"
+        }
+      ],
+      "file.shortcut.sid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "S-1-5-21-3711686801-687107597-1149503783-1001"
         }
       ],
       "file.shortcut.tracker_mac": [

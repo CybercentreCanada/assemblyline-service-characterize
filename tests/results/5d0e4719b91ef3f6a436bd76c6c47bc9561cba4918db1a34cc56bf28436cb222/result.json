@@ -13,8 +13,8 @@
             ],
             "values": [
               3.8392328384328724,
-              3.5747489914568003,
-              3.682550251437909,
+              3.5747489914568,
+              3.6825502514379087,
               4.955815573129147
             ]
           },
@@ -91,6 +91,9 @@
             "shortcut": {
               "command_line": [
                 "C:\\Windows\\System32\\cmd.exe /c start rundll32 namr.dll,PluginInit"
+              ],
+              "drive_serial": [
+                "4A08FD24"
               ],
               "icon_location": [
                 "%systemroot%\\system32\\imageres.dll"
@@ -210,6 +213,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "C:\\Windows\\System32\\cmd.exe /c start rundll32 namr.dll,PluginInit"
+        }
+      ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "4A08FD24"
         }
       ],
       "file.shortcut.icon_location": [

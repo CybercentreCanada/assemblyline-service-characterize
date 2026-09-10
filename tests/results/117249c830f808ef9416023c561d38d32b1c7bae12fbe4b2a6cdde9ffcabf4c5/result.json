@@ -14,11 +14,11 @@
             "values": [
               4.172670817481952,
               3.6814860524588946,
-              4.106733775632302,
+              4.106733775632301,
               3.407360908247836,
               4.19477163259165,
               4.553814491688465,
-              3.410601180069671,
+              3.410601180069672,
               3.8854116148503945
             ]
           },
@@ -96,11 +96,17 @@
               "command_line": [
                 "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
               ],
+              "drive_serial": [
+                "300D05E9"
+              ],
               "icon_location": [
                 "%systemroot%\\system32\\imageres.dll"
               ],
               "machine_id": [
                 "desktop-i8bn9qk"
+              ],
+              "sid": [
+                "S-1-5-21-3857830970-1578007047-915192291-1001"
               ],
               "tracker_mac": [
                 "53:4E:57:00:00:00"
@@ -216,6 +222,13 @@
           "value": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe cmd.exe /c xcopy /y invoice.dat c:\\programdata\\  && C:\\Windows\\System32\\rundll32.exe c:\\programdata\\invoice.dat,nmrecord"
         }
       ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "300D05E9"
+        }
+      ],
       "file.shortcut.icon_location": [
         {
           "heur_id": null,
@@ -228,6 +241,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "desktop-i8bn9qk"
+        }
+      ],
+      "file.shortcut.sid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "S-1-5-21-3857830970-1578007047-915192291-1001"
         }
       ],
       "file.shortcut.tracker_mac": [

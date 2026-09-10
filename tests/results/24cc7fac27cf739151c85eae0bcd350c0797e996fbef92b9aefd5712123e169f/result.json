@@ -13,7 +13,7 @@
             ],
             "values": [
               2.4131609411447057,
-              2.3525345023777002,
+              2.3525345023777,
               2.629844970157394,
               3.1033590827980992,
               3.641808571859088
@@ -75,6 +75,9 @@
               ],
               "icon_location": [
                 "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\""
+              ],
+              "sid": [
+                "S-1-5-21-3659141204-92303628-3333697829-1000"
               ]
             }
           }
@@ -175,6 +178,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "\"%ProgramFiles%\\Windows NT\\Accessories\\WORDPAD.EXE\""
+        }
+      ],
+      "file.shortcut.sid": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "S-1-5-21-3659141204-92303628-3333697829-1000"
         }
       ]
     },

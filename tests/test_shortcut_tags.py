@@ -64,8 +64,10 @@ def test_shortcut_identity_tags(run_shortcut):
     assert tags["file.shortcut.drive_serial"] == ["5A8C5E7D"]
 
 
-@pytest.mark.parametrize("link_info", [{}, {"location_info": {}}])
-@pytest.mark.parametrize("property_stores", [None, [], [{}]])
+@pytest.mark.parametrize("link_info", [{}, {"location_info": {}}], ids=["Empty link_info", "Empty location_info"])
+@pytest.mark.parametrize(
+    "property_stores", [None, [], [{}]], ids=["None property_store", "[] property_store", "[{}] property_store"]
+)
 def test_missing_shortcut_identity_tags(run_shortcut, link_info, property_stores):
     tags = run_shortcut(link_info, property_stores)
     assert "file.shortcut.sid" not in tags
@@ -93,6 +95,16 @@ def test_drive_serial_normalization(run_shortcut, serial, expected):
         sid_store(value="not a SID"),
         sid_store(value="prefix S-1-5-21-100-200-300-1001"),
         sid_store(value="S-1-5-21-100-200-300-1001 suffix"),
+    ],
+    ids=[
+        "Store with 0-format_id",
+        "Store with property_id=5",
+        "Store with value=None",
+        "Store with value=123",
+        'Store with value=""',
+        'Store with value="not a SID"',
+        "Store with prefixed value",
+        "Store with suffixed value",
     ],
 )
 def test_unrelated_or_invalid_sid_is_not_tagged(run_shortcut, store):

