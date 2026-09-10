@@ -420,6 +420,21 @@ class Characterize(ServiceBase):
                 mac = ":".join(a + b for a, b in zip(mac[::2], mac[1::2]))
                 lnk_result_section.add_tag("file.shortcut.tracker_mac", mac)
 
+        drive_serial = features["link_info"].get("location_info", {}).get("drive_serial_number")
+        if drive_serial is not None:
+            lnk_result_section.add_tag("file.shortcut.drive_serial", f"{int(drive_serial, 16):08X}")
+
+        for property_store in features["extra"].get("METADATA_PROPERTIES_BLOCK", {}).get("property_store", []):
+            # The SID property is ID 4 in this property set; ID 4 in other sets has a different meaning.
+            if property_store.get("format_id", "").upper() != "46588AE2-4CBC-4338-BBFC-139326986DCE":
+                continue
+            for prop in property_store.get("serialized_property_values", []):
+                if prop.get("id") != 4:
+                    continue
+                sid = prop.get("value")
+                if isinstance(sid, str) and re.fullmatch(r"S-1-[0-9]+(?:-[0-9]+)+", sid):
+                    lnk_result_section.add_tag("file.shortcut.sid", sid)
+
         # Adapted code from previous logic. May be best replaced by new heuristics and logic.
         bp = str(lbp).strip()
         rp = str(features["data"].get("relative_path", "")).strip()
